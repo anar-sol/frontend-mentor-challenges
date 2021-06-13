@@ -1,17 +1,42 @@
 /* Base style */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+
 body {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    font-size: .9375rem;;
-    font-weight: 400;
-    color: hsl(0, 0%, 100%);
-    background: hsl(233, 47%, 7%);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: .9375rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  background: hsl(233, 47%, 7%);
+}
+
+/* Components */
+
+.container {
+  width: 100%;
+  padding: 5rem 1.5rem;
+}
+
+
+.card {
+  background: hsl(244, 38%, 16%);
+  border-radius: .5rem;
+  overflow: hidden;
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 73.395%;
+    background: hsl(277, 64%, 61%) url('images/image-header-mobile.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
+  }
 }
