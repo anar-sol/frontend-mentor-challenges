@@ -1,5 +1,6 @@
 /* Base style */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 *,
 *::before,
 *::after {
@@ -49,6 +50,29 @@ body {
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
   margin: 0 0 2rem;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.stats__item:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+.stats__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.stats__title {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
 }
 
 .highlighted {
