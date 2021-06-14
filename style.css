@@ -66,9 +66,9 @@ body {
   text-align: center;
 }
 .stats__title {
-  font-family: "Lexend Deca", sans-serif;
-  font-size: inherit;
+  font-size: 0.75rem;
   font-weight: inherit;
+  letter-spacing: 0.05rem;
   text-align: center;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
