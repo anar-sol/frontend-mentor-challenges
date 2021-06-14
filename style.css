@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   font-size: 0.9375rem;
+  line-height: 1.6;
   font-weight: 400;
   color: white;
   background: #090b1a;
@@ -33,6 +34,25 @@ body {
   padding-top: 73.395%;
   background: #aa5cdb url("images/image-header-mobile.jpg") center/cover no-repeat;
   background-blend-mode: multiply;
+}
+.card__body {
+  padding: 2.5rem 2rem;
+}
+.card__title {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+.card__text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 2rem;
+}
+
+.highlighted {
+  color: #aa5cdb;
 }
 
 /*# sourceMappingURL=style.css.map */
