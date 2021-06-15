@@ -1,7 +1,6 @@
 /* Base style */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 
 *,
@@ -27,15 +26,17 @@ body {
 .container {
   width: 100%;
   min-width: 20rem;
-  max-width: 90rem;
-  padding: 5rem 1.5rem;
+  max-width: 40rem;
+  padding: 5.5rem 1.5rem;
   margin: 0 auto;
 
   @media (min-width: 62em) {
-    padding: 12.22% 8%;
+    max-width: 62rem;
+    padding: 7.5rem 3.5rem;
   }
 
   @media (min-width: 90em) {
+    max-width: 90rem;
     padding: 11rem 10rem;
   }
 }
@@ -51,7 +52,7 @@ body {
   @media (min-width: 62em) {
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
   }
 
   &__img-container {
@@ -82,7 +83,7 @@ body {
     @media (min-width: 62em) {
       width: 50%;
       max-width: 32rem;
-      padding: 2rem 4rem;
+      padding: 3rem 4rem;
     }
 
     @media (min-width: 90em) {
@@ -119,6 +120,7 @@ body {
   }
 }
 
+
 .stats {
   list-style: none;
   padding: 0;
@@ -127,16 +129,20 @@ body {
   display: flex;
   flex-direction: column;
 
+  @media (min-width: 40em) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   @media (min-width: 62em) {
     padding-right: 1rem;
-    flex-direction: row;
     justify-content: space-between;
   }
 
   &__item:not(:last-of-type) {
     margin-bottom: 1.5rem;
 
-    @media (min-width: 62em) {
+    @media (min-width: 40em) {
       margin-bottom: 0;
     }
   }
@@ -165,6 +171,7 @@ body {
     }
   }
 }
+
 
 .highlighted {
   color: hsla(277, 64%, 61%);
