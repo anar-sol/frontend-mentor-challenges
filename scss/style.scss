@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* Variables */
+$very-light-graye: hsl(0, 0%, 95%);
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: hsla(0, 0%, 100%, 0.75);
+    background: $very-light-graye;
+}
+
+
+/* Components */
+
+.container {
+    width: 100%;
+    padding: 5.5rem 1.5rem;
+    margin: 0 auto;
+}
+
+
+.grid {
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+
+.card {
+    padding: 3rem;
+
+    &__icon-container {
+        margin: 0 0 2.25rem;
+    }
+
+    &__icon-img {
+        display: block;
+    }
+
+    &__title {
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: $very-light-graye;
+        margin: 0 0 1.5rem;
+    }
+
+    &__text {
+        margin: 0 0 2rem;
+    }
+
+    &__btn {
+        font-family: inherit;
+        font-size: inherit;
+        background: $very-light-graye;
+        padding: .78rem 2rem;
+        border: 2px solid transparent;
+        border-radius: 1.5rem;
+
+        &:active {
+            color: $very-light-graye;
+            background: transparent;
+            border-color: currentColor;
+        }
+    }
+
+    &--sedans {
+        background: $bright-orange;
+
+        .card__btn:not(:active) {
+            color: $bright-orange;
+        }
+    }
+
+    &--suvs {
+        background: $dark-cyan;
+
+        .card__btn:not(:active) {
+            color: $dark-cyan;
+        }
+    }
+
+    &--luxury {
+        background: $very-dark-cyan;
+
+        .card__btn:not(:active) {
+            color: $very-dark-cyan
+        }
+    }
+}
