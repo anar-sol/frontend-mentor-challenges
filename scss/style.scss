@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+/* Variables */
+
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+$light-gray: hsl(0, 0%, 91%);
+$white: #fff;
+
+$font-size-lg: 1.125rem;
+$font-size-md: .9rem;
+$font-size-sm: .66rem;
+
+$profile-card-width: 20.375rem;
+
+$profile-card-header-height: 8.8rem;
+
+$profile-card-picture-border-width: .3125rem;
+$profile-card-picture-width: 6rem + ($profile-card-picture-border-width * 2);
+
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: $dark-grayish-blue;
+    background: url('images/bg-pattern-top.svg') right 49vw top -550px no-repeat,
+    $dark-cyan url('images/bg-pattern-bottom.svg') left 47vw bottom -600px no-repeat;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    width: $profile-card-width;
+    background: $white;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &__header {
+        height: $profile-card-header-height;
+        background: url('images/bg-pattern-card.svg') center/cover no-repeat;
+    }
+
+    &__body {
+        padding-top: $profile-card-picture-width / 2;
+        position: relative;
+    }
+
+    &__picture {
+        width: $profile-card-picture-width;
+        height: $profile-card-picture-width;
+        border: $profile-card-picture-border-width solid $white;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: ($profile-card-width / 2) - ($profile-card-picture-width / 2);
+        top: - ($profile-card-picture-width / 2);
+    }
+
+    &__info {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid $light-gray;
+    }
+
+    &__personal {
+        text-align: center;
+        margin-bottom: .8rem;
+    }
+
+    &__name {
+        font-size: $font-size-lg;
+        color: $very-dark-desaturated-blue;
+        margin: 0;
+        margin-right: .33rem;
+        display: inline-block;
+    }
+
+    &__age {
+        font-size: $font-size-lg;
+        display: inline-block;
+    }
+
+    &__location {
+        font-size: $font-size-md;
+        text-align: center;
+    }
+}
+
+.stats {
+    list-style: none;
+    padding: 1.5rem 2.5rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        font-size: $font-size-sm;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__value {
+        font-size: $font-size-lg;
+        font-weight: 700;
+        text-align: center;
+        color: $very-dark-desaturated-blue;
+        margin-bottom: .5rem;
+    }
+}

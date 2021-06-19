@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Profile card component</title>
 
@@ -20,14 +22,14 @@
   <main>
     <div class="container">
       <article class="profile-card">
-        <div class="profile-card__bg"></div>
-        <div class="profile-card__picture-container">
-          <img src="image-victor.jpg" alt="Victor Crest profile picture" class="profile-card__picture">
-        </div>
+        <div class="profile-card__header"></div>
         <div class="profile-card__body">
-          <div class="profil-card__info">
-            <h2 class="profile-card__name">Victor Crest</h2>
-            <div class="profile-card__age">26</div>
+          <img src="images/image-victor.jpg" width="96" height="96" alt="Victor Crest profile picture" class="profile-card__picture">
+          <div class="profile-card__info">
+            <div class="profile-card__personal">
+              <h2 class="profile-card__name">Victor Crest</h2>
+              <div class="profile-card__age">26</div>
+            </div>
             <div class="profile-card__location">London</div>
           </div>
           <ul class="profile-card__stats stats">
