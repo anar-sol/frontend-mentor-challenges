@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
   color: #6a6f81;
-  background: url("images/bg-pattern-top.svg") right 49vw top -550px no-repeat, #19a2ae url("images/bg-pattern-bottom.svg") left 47vw bottom -600px no-repeat;
+  background: url("images/bg-pattern-top.svg") right 49vw top -490px no-repeat, #19a2ae url("images/bg-pattern-bottom.svg") left 47vw bottom -590px no-repeat;
 }
 
 .container {
