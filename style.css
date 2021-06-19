@@ -25,7 +25,7 @@ body {
   width: 20.375rem;
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 .profile-card__header {
