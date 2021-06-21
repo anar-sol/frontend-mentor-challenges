@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+/* Variables */
+
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+$light-grayish-blue: hsl(240, 5%, 91%);
+$white: #fff;
+
+$gradient: linear-gradient(0deg, $soft-blue 0%, $soft-violet 50%);
+
+$font-family: 'Kumbh Sans', sans-serif;
+
+$font-size-base: .875rem;
+$font-size-lg: 2rem;
+
+$line-height-base: 1.6;
+
+$font-weight-base: 400;
+$font-weight-bold: 700;
+
+// Container
+
+$container-padding-y: 9.25rem;
+$container-padding-x: 1.5rem;
+
+
+// FAQ
+
+$faq-border-radius: 1.5rem;
+
+// FAQ Illustration
+
+$faq-illustration-width: 16.625rem;
+$faq-illustration-height: 12.25rem + 1rem;
+$faq-illustration-position-left: calc(50% - #{$faq-illustration-width / 2} - 1rem);
+$faq-illustration-position-top: -($faq-illustration-height / 2);
+
+$faq-padding-top: $faq-illustration-height / 2;
+
+// FAQ body
+
+$faq-body-padding-y: 2rem;
+$faq-body-padding-x: 1.5rem;
+
+// Accordion
+
+$accordion-button-padding-y: 1rem;
+$accordion-button-padding-x: 0;
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: $font-weight-base;
+    color: $very-dark-grayish-blue;
+    min-height: 100vh;
+    background: $soft-violet;
+    background: $gradient;
+}
+
+h1,
+h2,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Container */
+
+.container {
+    padding: $container-padding-y $container-padding-x;
+    margin: 0 auto;
+}
+
+
+/* FAQ */
+
+.faq {
+    background: $white;
+    padding-top: $faq-padding-top;
+    border-radius: $faq-border-radius;
+    box-shadow: 0 3rem 3rem 0 rgba(0,0,0,0.41);
+    position: relative;
+
+    &__illustration {
+        width: $faq-illustration-width;
+        height: $faq-illustration-height;
+        background: url('images/illustration-woman-online-mobile.svg') top center / 100% no-repeat,
+            url('images/bg-pattern-mobile.svg') bottom right / 89% no-repeat;
+        position: absolute;
+        left: $faq-illustration-position-left;
+        top: $faq-illustration-position-top;
+    }
+
+    &__body {
+        padding: $faq-body-padding-y $faq-body-padding-x;
+    }
+
+    &__title {
+        font-size: $font-size-lg;
+        line-height: 1.2;
+        text-align: center;
+        color: $very-dark-desaturated-blue;
+        margin-bottom: 1rem;
+    }
+
+    &__question {
+        font-size: inherit;
+    }
+}
+
+.accordion {
+    &__item {
+        padding: $accordion-button-padding-y $accordion-button-padding-x;
+        border-bottom: 1px solid $light-grayish-blue;
+    }
+
+    &__button {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background: none;
+        border: none;
+        width: 100%;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            vertical-align: middle;
+            background: url('images/icon-arrow-down.svg') center / 70% no-repeat;
+        }
+
+        &--expanded {
+            font-weight: $font-weight-bold;
+            color: $very-dark-desaturated-blue;
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__content {
+        transform: scaleY(0);
+        overflow: hidden;
+        display: none;
+
+        &--expanded {
+            transform: scaleY(1);
+            display: initial;
+        }
+    }
+}
