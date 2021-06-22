@@ -120,18 +120,20 @@ p {
         margin-bottom: 1rem;
     }
 
-    &__question {
-        font-size: inherit;
-    }
-}
+    &__questions {
 
-.accordion {
+    }
+
     &__item {
         padding: $accordion-button-padding-y $accordion-button-padding-x;
         border-bottom: 1px solid $light-grayish-blue;
     }
 
-    &__button {
+    &__question {
+        font-size: inherit;
+    }
+
+    &__question-btn {
         font-family: inherit;
         font-size: inherit;
         color: inherit;
@@ -163,7 +165,7 @@ p {
         }
     }
 
-    &__content {
+    &__answer {
         transform: scaleY(0);
         overflow: hidden;
         display: none;
