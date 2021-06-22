@@ -16,10 +16,12 @@ $gradient: linear-gradient(0deg, $soft-blue 0%, $soft-violet 50%);
 
 $font-family: 'Kumbh Sans', sans-serif;
 
-$font-size-base: .875rem;
+$font-size-sm: .75rem;
+$font-size-md: .875rem;
 $font-size-lg: 2rem;
 
-$line-height-base: 1.6;
+$line-height-base: 1.5;
+$line-height-lg: 1.2;
 
 $font-weight-base: 400;
 $font-weight-bold: 700;
@@ -32,6 +34,7 @@ $container-padding-x: 1.5rem;
 
 // FAQ
 
+$faq-padding-bottom: 1rem;
 $faq-border-radius: 1.5rem;
 
 // FAQ Illustration
@@ -45,13 +48,25 @@ $faq-padding-top: $faq-illustration-height / 2;
 
 // FAQ body
 
+$faq-body-max-width: 25rem;
 $faq-body-padding-y: 2rem;
 $faq-body-padding-x: 1.5rem;
 
-// Accordion
+// FAQ title
 
-$accordion-button-padding-y: 1rem;
-$accordion-button-padding-x: 0;
+$faq-title-margin-bottom: 1rem;
+
+// FAQ question btn
+
+$question-btn-padding-y: 1rem;
+$question-btn-padding-x: 0;
+
+$faq-question-btn-arrow-width: 1rem;
+$faq-question-btn-arrow-height: 1rem;
+
+// FAQ answer
+
+$faq-answer-padding-bottom: 1rem;
 
 /* Base style */
 
@@ -64,7 +79,7 @@ $accordion-button-padding-x: 0;
 body {
     margin: 0;
     font-family: $font-family;
-    font-size: $font-size-base;
+    font-size: $font-size-sm;
     line-height: $line-height-base;
     font-weight: $font-weight-base;
     color: $very-dark-grayish-blue;
@@ -75,15 +90,26 @@ body {
 
 h1,
 h2,
-p {
+p,
+button {
     padding: 0;
     margin: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 
 /* Container */
 
 .container {
+    width: 100%;
     padding: $container-padding-y $container-padding-x;
     margin: 0 auto;
 }
@@ -93,7 +119,7 @@ p {
 
 .faq {
     background: $white;
-    padding-top: $faq-padding-top;
+    padding: $faq-padding-top 0 $faq-padding-bottom;
     border-radius: $faq-border-radius;
     box-shadow: 0 3rem 3rem 0 rgba(0,0,0,0.41);
     position: relative;
@@ -109,50 +135,41 @@ p {
     }
 
     &__body {
+        max-width: $faq-body-max-width;
         padding: $faq-body-padding-y $faq-body-padding-x;
+        margin: 0 auto;
     }
 
     &__title {
         font-size: $font-size-lg;
-        line-height: 1.2;
+        line-height: $line-height-lg;
         text-align: center;
         color: $very-dark-desaturated-blue;
-        margin-bottom: 1rem;
-    }
-
-    &__questions {
-
+        margin-bottom: $faq-title-margin-bottom;
     }
 
     &__item {
-        padding: $accordion-button-padding-y $accordion-button-padding-x;
         border-bottom: 1px solid $light-grayish-blue;
     }
 
     &__question {
-        font-size: inherit;
+        font-size: $font-size-md;
     }
 
     &__question-btn {
-        font-family: inherit;
-        font-size: inherit;
-        color: inherit;
-        background: none;
-        border: none;
         width: 100%;
-        margin: 0;
-        cursor: pointer;
+        padding: $question-btn-padding-y $question-btn-padding-x;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         &::after {
             content: '';
-            width: 1rem;
-            height: 1rem;
+            width: $faq-question-btn-arrow-width;
+            height: $faq-question-btn-arrow-height;
             display: inline-block;
             vertical-align: middle;
-            background: url('images/icon-arrow-down.svg') center / 70% no-repeat;
+            background: url('images/icon-arrow-down.svg') center / 66% no-repeat;
         }
 
         &--expanded {
@@ -166,13 +183,15 @@ p {
     }
 
     &__answer {
+        max-width: calc(100% - #{$faq-question-btn-arrow-width});
+        padding-bottom: $faq-answer-padding-bottom;
         transform: scaleY(0);
         overflow: hidden;
         display: none;
 
         &--expanded {
             transform: scaleY(1);
-            display: initial;
+            display: block;
         }
     }
 }
