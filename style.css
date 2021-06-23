@@ -39,6 +39,7 @@ button {
 /* Container */
 .container {
   width: 100%;
+  max-width: 60.5rem;
   padding: 9.25rem 1.5rem;
   margin: 0 auto;
 }
@@ -51,6 +52,15 @@ button {
   box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.41);
   position: relative;
 }
+@media (min-width: 64em) {
+  .faq {
+    padding: 2.25rem 4.75rem 2rem 4.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .faq__illustration {
   width: 16.625rem;
   height: 13.25rem;
@@ -59,10 +69,41 @@ button {
   left: calc(50% - 8.3125rem - 1rem);
   top: -6.625rem;
 }
+@media (min-width: 64em) {
+  .faq__illustration {
+    width: 27.125rem;
+    height: 100%;
+    background: url("images/illustration-woman-online-desktop.svg") left -80px top 50px/100% no-repeat, url("images/bg-pattern-desktop.svg") left -510px top -260px/200% no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+.faq__illustration-box {
+  display: none;
+}
+@media (min-width: 64em) {
+  .faq__illustration-box {
+    display: block;
+    width: 191px;
+    height: 184px;
+    position: absolute;
+    background: url("images/illustration-box-desktop.svg") top 0 left 0 no-repeat;
+    left: -100px;
+    top: 170px;
+  }
+}
 .faq__body {
+  width: 100%;
   max-width: 25rem;
   padding: 2rem 1.5rem;
   margin: 0 auto;
+}
+@media (min-width: 64em) {
+  .faq__body {
+    margin: 0;
+    margin-left: auto;
+  }
 }
 .faq__title {
   font-size: 2rem;
@@ -70,6 +111,12 @@ button {
   text-align: center;
   color: #1d1e35;
   margin-bottom: 1rem;
+}
+@media (min-width: 64em) {
+  .faq__title {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
 }
 .faq__item {
   border-bottom: 1px solid #e7e7e9;
@@ -91,6 +138,8 @@ button {
   display: inline-block;
   vertical-align: middle;
   background: url("images/icon-arrow-down.svg") center/66% no-repeat;
+  transform: rotate(0);
+  transition: transform 300ms ease 50ms;
 }
 .faq__question-btn--expanded {
   font-weight: 700;
@@ -102,12 +151,9 @@ button {
 .faq__answer {
   max-width: calc(100% - 1rem);
   padding-bottom: 1rem;
-  transform: scaleY(0);
-  overflow: hidden;
   display: none;
 }
 .faq__answer--expanded {
-  transform: scaleY(1);
   display: block;
 }
 

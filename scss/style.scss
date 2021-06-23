@@ -37,6 +37,11 @@ $container-padding-x: 1.5rem;
 $faq-padding-bottom: 1rem;
 $faq-border-radius: 1.5rem;
 
+$faq-padding-top-lg: 2.25rem;
+$faq-padding-bottom-lg: 2rem;
+$faq-padding-x-lg: 4.75rem;
+
+
 // FAQ Illustration
 
 $faq-illustration-width: 16.625rem;
@@ -44,7 +49,15 @@ $faq-illustration-height: 12.25rem + 1rem;
 $faq-illustration-position-left: calc(50% - #{$faq-illustration-width / 2} - 1rem);
 $faq-illustration-position-top: -($faq-illustration-height / 2);
 
+$faq-illustration-position-left-lg: -2.625rem;
+$faq-illustration-position-top-lg: 0;
+
+$faq-illustration-width-lg: 27.125rem;
+$faq-illustration-height-lg: 100%;
+
 $faq-padding-top: $faq-illustration-height / 2;
+
+
 
 // FAQ body
 
@@ -55,6 +68,7 @@ $faq-body-padding-x: 1.5rem;
 // FAQ title
 
 $faq-title-margin-bottom: 1rem;
+$faq-title-margin-bottom-lg: 2rem;
 
 // FAQ question btn
 
@@ -110,6 +124,7 @@ button {
 
 .container {
     width: 100%;
+    max-width: 57.5rem + ($container-padding-x * 2);
     padding: $container-padding-y $container-padding-x;
     margin: 0 auto;
 }
@@ -124,6 +139,15 @@ button {
     box-shadow: 0 3rem 3rem 0 rgba(0,0,0,0.41);
     position: relative;
 
+
+    @media (min-width: 64em) {
+        padding: $faq-padding-top-lg $faq-padding-x-lg $faq-padding-bottom-lg $faq-padding-x-lg;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__illustration {
         width: $faq-illustration-width;
         height: $faq-illustration-height;
@@ -132,12 +156,42 @@ button {
         position: absolute;
         left: $faq-illustration-position-left;
         top: $faq-illustration-position-top;
+
+        @media (min-width: 64em) {
+            width: $faq-illustration-width-lg;
+            height: $faq-illustration-height-lg;
+            background: url('images/illustration-woman-online-desktop.svg') left -80px top 50px / 100% no-repeat,
+                url('images/bg-pattern-desktop.svg') left -510px top -260px / 200% no-repeat;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__illustration-box {
+        display: none;
+
+        @media (min-width: 64em) {
+            display: block;
+            width: 191px;
+            height: 184px;
+            position: absolute;
+            background: url('images/illustration-box-desktop.svg') top 0 left 0 no-repeat;
+            left: -100px;
+            top: 170px;
+        }
     }
 
     &__body {
+        width: 100%;
         max-width: $faq-body-max-width;
         padding: $faq-body-padding-y $faq-body-padding-x;
         margin: 0 auto;
+
+        @media (min-width: 64em) {
+            margin: 0;
+            margin-left: auto;
+        }
     }
 
     &__title {
@@ -146,6 +200,11 @@ button {
         text-align: center;
         color: $very-dark-desaturated-blue;
         margin-bottom: $faq-title-margin-bottom;
+
+        @media (min-width: 64em) {
+            text-align: left;
+            margin-bottom: $faq-title-margin-bottom-lg;
+        }
     }
 
     &__item {
@@ -170,6 +229,8 @@ button {
             display: inline-block;
             vertical-align: middle;
             background: url('images/icon-arrow-down.svg') center / 66% no-repeat;
+            transform: rotate(0);
+            transition: transform 300ms ease 50ms;
         }
 
         &--expanded {
@@ -185,12 +246,9 @@ button {
     &__answer {
         max-width: calc(100% - #{$faq-question-btn-arrow-width});
         padding-bottom: $faq-answer-padding-bottom;
-        transform: scaleY(0);
-        overflow: hidden;
         display: none;
 
         &--expanded {
-            transform: scaleY(1);
             display: block;
         }
     }
