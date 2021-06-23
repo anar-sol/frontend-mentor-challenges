@@ -131,6 +131,9 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.faq__question-btn:active {
+  color: #f47c57;
+}
 .faq__question-btn::after {
   content: "";
   width: 1rem;
