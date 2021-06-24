@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+
+/* Variables */
+
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+
+$font-family: 'Spartan', sans-serif;
+
+$font-size-base: .9375rem;
+
+$line-height-base: 1.6;
+$line-height-lg: 1.2;
+
+$font-weight-base: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: $font-weight-base;
+    color: $dark-grayish-magenta;
+    background-color: $white;
+}
+
+h1,
+h2,
+p,
+ul,
+blockquote {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
