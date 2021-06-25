@@ -87,4 +87,43 @@ img {
   line-height: 1.2;
 }
 
+/* Testimonials */
+.testimonials {
+  padding: 1rem 0;
+}
+.testimonials__item {
+  color: white;
+  background: #502050;
+  padding: 2.5rem 2rem 2.25rem 2rem;
+  border-radius: 0.5rem;
+}
+.testimonials__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.testimonials__author {
+  margin-bottom: 1.8rem;
+}
+.testimonials__author-pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.5rem;
+}
+.testimonials__author-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.testimonials__author-status {
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ee68a4;
+}
+.testimonials__content {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
 /*# sourceMappingURL=style.css.map */

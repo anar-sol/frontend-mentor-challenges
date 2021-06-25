@@ -30,6 +30,8 @@ $font-weight-bold: 700;
 
 $spacer: 1rem;
 
+$border-radius: .5rem;
+
 // Social proof
 
 $social-proof-padding-y: $spacer * 5.125;
@@ -47,9 +49,26 @@ $rating-padding-x: 0;
 
 $rating-item-padding-y: $spacer * 0.875;
 $rating-item-padding-x: 0;
-$rating-item-border-radius: .5rem;
+$rating-item-border-radius: $border-radius;
 
 $rating-stars-margin-bottom: $spacer * 0.33;
+
+// Testimonials
+
+$testimonials-padding-y: $spacer;
+$testimonials-padding-x: 0;
+
+$testimonials-item-padding-top: 2.5rem;
+$testimonials-item-padding-bottom: 2.25rem;
+$testimonials-item-padding-x: 2rem;
+$testimonials-item-border-radius: $border-radius;
+
+$testimonials-author-margin-bottom: $spacer * 1.8;
+$testimonials-author-pic-width: 2.5rem;
+$testimonials-author-pic-height: 2.5rem;
+$testimonials-author-name-font-size: $font-size-sm;
+$testimonials-author-pic-margin-right: $spacer * 1.5;
+$testimonials-content-line-height: 1.6;
 
 
 /* Base style */
@@ -150,5 +169,54 @@ img {
     &__content {
         font-size: $font-size-sm;
         line-height: $line-height-sm;
+    }
+}
+
+
+/* Testimonials */
+
+.testimonials {
+    padding: $testimonials-padding-y $testimonials-padding-x;
+
+    &__item {
+        color: $white;
+        background: $very-dark-magenta;
+        padding: $testimonials-item-padding-top $testimonials-item-padding-x
+        $testimonials-item-padding-bottom $testimonials-item-padding-x;
+        border-radius: $testimonials-item-border-radius;
+
+        &:not(:last-child) {
+            margin-bottom: $spacer;
+        }
+    }
+
+    &__author {
+        margin-bottom: $testimonials-author-margin-bottom;
+    }
+
+    &__author-pic {
+        width: $testimonials-author-pic-width;
+        height: $testimonials-author-pic-height;
+        border-radius: 50%;
+        float: left;
+        margin-right: $testimonials-author-pic-margin-right;
+    }
+
+    &__author-name {
+        font-size: $testimonials-author-name-font-size;
+        font-weight: $font-weight-bold;
+    }
+
+    &__author-status {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+        font-weight: $font-weight-base;
+        color: $soft-pink;
+    }
+
+    &__content {
+        font-size: $font-size-sm;
+        line-height: $testimonials-content-line-height;
+        font-weight: $font-weight-medium;
     }
 }
