@@ -3,6 +3,8 @@
 
 /* Variables */
 
+// Base
+
 $very-dark-magenta: hsl(300, 43%, 22%);
 $soft-pink: hsl(333, 80%, 67%);
 
@@ -13,14 +15,41 @@ $white: hsl(0, 0%, 100%);
 
 $font-family: 'Spartan', sans-serif;
 
-$font-size-base: .9375rem;
+$font-size-sm: .8125rem;
+$font-size-base: .875rem;
+$font-size-lg: 2rem;
 
-$line-height-base: 1.6;
-$line-height-lg: 1.2;
+
+$line-height-sm: 1.2;
+$line-height-base: 1.714;
+$line-height-lg: 1;
 
 $font-weight-base: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+
+$spacer: 1rem;
+
+// Social proof
+
+$social-proof-padding-y: $spacer * 5.125;
+$social-proof-padding-x: $spacer * 1.5;
+
+$social-proof-gap: $spacer;
+
+$social-proof-title-margin-bottom: $spacer * 1.25;
+$social-proof-text-margin-bottom: $spacer;
+
+// Rating
+
+$rating-padding-y: $spacer;
+$rating-padding-x: 0;
+
+$rating-item-padding-y: $spacer * 0.875;
+$rating-item-padding-x: 0;
+$rating-item-border-radius: .5rem;
+
+$rating-stars-margin-bottom: $spacer * 0.33;
 
 
 /* Base style */
@@ -50,7 +79,76 @@ blockquote {
     margin: 0;
 }
 
+ul {
+    list-style: none;
+}
+
 img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
+}
+
+
+/* container */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Social proof */
+
+.social-proof {
+    padding: $social-proof-padding-y $social-proof-padding-x;
+    display: grid;
+    gap: $social-proof-gap;
+
+    &__title {
+        font-size: $font-size-lg;
+        line-height: $line-height-lg;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        color: $very-dark-magenta;
+        margin-bottom: $social-proof-title-margin-bottom;
+    }
+
+    &__text {
+        font-weight: $font-weight-medium;
+        text-align: center;
+        margin-bottom: $social-proof-text-margin-bottom;
+    }
+}
+
+
+/* Rating */
+
+.rating {
+    padding: $rating-padding-y $rating-padding-x;
+
+    &__item {
+        color: $very-dark-magenta;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        background: $light-grayish-magenta;
+        padding: $rating-padding-y $rating-padding-x;
+        border-radius: $rating-item-border-radius;
+
+        &:not(:last-child) {
+            margin-bottom: $spacer;
+        }
+    }
+
+    &__stars {
+        margin-bottom: $rating-stars-margin-bottom;
+    }
+
+    &__star-img:not(:last-child) {
+        margin-right: .25rem;
+    }
+
+    &__content {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+    }
 }
