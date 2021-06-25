@@ -16,7 +16,7 @@ $white: hsl(0, 0%, 100%);
 $font-family: 'Spartan', sans-serif;
 
 $font-size-sm: .8125rem;
-$font-size-base: .875rem;
+$font-size-md: .875rem;
 $font-size-lg: 2rem;
 
 
@@ -32,43 +32,77 @@ $spacer: 1rem;
 
 $border-radius: .5rem;
 
+// Container
+
+$container-max-width: 48em;
+
+// Section
+
+$section-padding-y: $spacer;
+$section-padding-x: 0;
+
 // Social proof
 
-$social-proof-padding-y: $spacer * 5.125;
+$social-proof-padding-y: $spacer * 4.125;
 $social-proof-padding-x: $spacer * 1.5;
 
 $social-proof-gap: $spacer;
 
-$social-proof-title-margin-bottom: $spacer * 1.25;
-$social-proof-text-margin-bottom: $spacer;
+// Introduction
+
+$introduction-title-font-size: $font-size-lg;
+$introduction-title-line-height: $line-height-lg;
+$introduction-title-font-weight: $font-weight-bold;
+$introduction-title-color: $very-dark-magenta;
+$introduction-title-margin-bottom: $spacer * 1.25;
+
+$introduction-content-font-weight: $font-weight-medium;
 
 // Rating
 
-$rating-padding-y: $spacer;
-$rating-padding-x: 0;
-
-$rating-item-padding-y: $spacer * 0.875;
+$rating-item-font-weight: $font-weight-bold;
+$rating-item-color: $very-dark-magenta;
+$rating-item-bg: $light-grayish-magenta;
+$rating-item-padding-y: $spacer;
 $rating-item-padding-x: 0;
+$rating-item-margin-bottom: $spacer;
 $rating-item-border-radius: $border-radius;
 
 $rating-stars-margin-bottom: $spacer * 0.33;
 
+$rating-star-pic-margin-right: .25rem;
+
+$rating-content-font-size: $font-size-sm;
+$rating-content-line-height: $line-height-sm;
+
 // Testimonials
 
+$testimonials-color: $white;
+$testimonials-bg: $very-dark-magenta;
 $testimonials-padding-y: $spacer;
 $testimonials-padding-x: 0;
 
 $testimonials-item-padding-top: 2.5rem;
 $testimonials-item-padding-bottom: 2.25rem;
 $testimonials-item-padding-x: 2rem;
+$testimonials-item-margin-bottom: $spacer;
 $testimonials-item-border-radius: $border-radius;
 
 $testimonials-author-margin-bottom: $spacer * 1.8;
 $testimonials-author-pic-width: 2.5rem;
 $testimonials-author-pic-height: 2.5rem;
 $testimonials-author-name-font-size: $font-size-sm;
+$testimonials-author-name-font-weight: $font-weight-bold;
 $testimonials-author-pic-margin-right: $spacer * 1.5;
+
+$testimonials-author-status-font-size: $font-size-sm;
+$testimonials-author-status-line-height: $line-height-sm;
+$testimonials-author-status-font-weight: $font-weight-base;
+$testimonials-author-status-color: $soft-pink;
+
+$testimonials-content-font-size: $font-size-sm;
 $testimonials-content-line-height: 1.6;
+$testimonials-content-font-weight: $font-weight-medium;
 
 
 /* Base style */
@@ -82,7 +116,7 @@ $testimonials-content-line-height: 1.6;
 body {
     margin: 0;
     font-family: $font-family;
-    font-size: $font-size-base;
+    font-size: $font-size-md;
     line-height: $line-height-base;
     font-weight: $font-weight-base;
     color: $dark-grayish-magenta;
@@ -112,7 +146,14 @@ img {
 
 .container {
     width: 100%;
+    max-width: $container-max-width;
     margin: 0 auto;
+}
+
+
+/* section */
+.section {
+    padding: $section-padding-y $section-padding-x;
 }
 
 
@@ -122,20 +163,24 @@ img {
     padding: $social-proof-padding-y $social-proof-padding-x;
     display: grid;
     gap: $social-proof-gap;
+}
+
+
+/* Introduction */
+
+.introduction {
+    text-align: center;
 
     &__title {
-        font-size: $font-size-lg;
-        line-height: $line-height-lg;
-        font-weight: $font-weight-bold;
-        text-align: center;
-        color: $very-dark-magenta;
-        margin-bottom: $social-proof-title-margin-bottom;
+        font-size: $introduction-title-font-size;
+        line-height: $introduction-title-line-height;
+        font-weight: $introduction-title-font-weight;
+        color: $introduction-title-color;
+        margin-bottom: $introduction-title-margin-bottom;
     }
 
-    &__text {
-        font-weight: $font-weight-medium;
-        text-align: center;
-        margin-bottom: $social-proof-text-margin-bottom;
+    &__content {
+        font-weight: $introduction-content-font-weight;
     }
 }
 
@@ -143,18 +188,16 @@ img {
 /* Rating */
 
 .rating {
-    padding: $rating-padding-y $rating-padding-x;
-
     &__item {
-        color: $very-dark-magenta;
-        font-weight: $font-weight-bold;
+        color: $rating-item-color;
+        font-weight: $rating-item-font-weight;
         text-align: center;
-        background: $light-grayish-magenta;
-        padding: $rating-padding-y $rating-padding-x;
+        background: $rating-item-bg;
+        padding: $rating-item-padding-y $rating-item-padding-x;
         border-radius: $rating-item-border-radius;
 
         &:not(:last-child) {
-            margin-bottom: $spacer;
+            margin-bottom: $rating-item-margin-bottom;
         }
     }
 
@@ -163,12 +206,12 @@ img {
     }
 
     &__star-img:not(:last-child) {
-        margin-right: .25rem;
+        margin-right: $rating-star-pic-margin-right;
     }
 
     &__content {
-        font-size: $font-size-sm;
-        line-height: $line-height-sm;
+        font-size: $rating-content-font-size;
+        line-height: $rating-content-line-height;
     }
 }
 
@@ -176,17 +219,15 @@ img {
 /* Testimonials */
 
 .testimonials {
-    padding: $testimonials-padding-y $testimonials-padding-x;
-
     &__item {
-        color: $white;
-        background: $very-dark-magenta;
+        color: $testimonials-color;
+        background: $testimonials-bg;
         padding: $testimonials-item-padding-top $testimonials-item-padding-x
         $testimonials-item-padding-bottom $testimonials-item-padding-x;
         border-radius: $testimonials-item-border-radius;
 
         &:not(:last-child) {
-            margin-bottom: $spacer;
+            margin-bottom: $testimonials-item-margin-bottom;
         }
     }
 
@@ -204,19 +245,19 @@ img {
 
     &__author-name {
         font-size: $testimonials-author-name-font-size;
-        font-weight: $font-weight-bold;
+        font-weight: $testimonials-author-name-font-weight;
     }
 
     &__author-status {
-        font-size: $font-size-sm;
-        line-height: $line-height-sm;
-        font-weight: $font-weight-base;
-        color: $soft-pink;
+        font-size: $testimonials-author-status-font-size;
+        line-height: $testimonials-author-status-line-height;
+        font-weight: $testimonials-author-status-font-weight;
+        color: $testimonials-author-status-color;
     }
 
     &__content {
-        font-size: $font-size-sm;
+        font-size: $testimonials-content-font-size;
         line-height: $testimonials-content-line-height;
-        font-weight: $font-weight-medium;
+        font-weight: $testimonials-content-font-weight;
     }
 }
