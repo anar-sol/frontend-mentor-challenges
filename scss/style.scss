@@ -54,6 +54,7 @@ $social-proof-padding-top-lg: $spacer * 7;
 $social-proof-padding-bottom-lg: $spacer * 5.25;
 
 $social-proof-gap: $spacer;
+$social-proof-gap-lg: $spacer * 2;
 
 // Introduction
 
@@ -196,6 +197,7 @@ img {
         padding: $social-proof-padding-top-lg $social-proof-padding-x
             $social-proof-padding-bottom-lg $social-proof-padding-x;
         grid-template-columns: repeat(2, 1fr);
+        gap: $social-proof-gap-lg;
     }
 }
 
