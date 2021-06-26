@@ -136,6 +136,14 @@ body {
     font-weight: $font-weight-base;
     color: $dark-grayish-magenta;
     background-color: $white;
+
+    background: url('images/bg-pattern-top-desktop.svg') 0 0 / 100% no-repeat,
+    url('images/bg-pattern-bottom-mobile.svg') right 0 bottom 0 no-repeat;
+
+    @media (min-width: $breakpoint-lg) {
+        background: url('images/bg-pattern-top-desktop.svg') 0 0 no-repeat,
+        url('images/bg-pattern-bottom-desktop.svg') right 0 bottom 0 no-repeat;
+    }
 }
 
 h1,
@@ -165,13 +173,8 @@ img {
     min-height: 100vh;
     margin: 0 auto;
 
-    background: url('images/bg-pattern-top-desktop.svg') 0 0 / 100% no-repeat,
-        url('images/bg-pattern-bottom-mobile.svg') right 0 bottom 0 no-repeat;;
-
     @media (min-width: $breakpoint-lg) {
         max-width: $container-max-width-lg;
-        background: url('images/bg-pattern-top-desktop.svg') 0 0 no-repeat,
-        url('images/bg-pattern-bottom-desktop.svg') right 0 bottom 0 no-repeat;
     }
 }
 
