@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Variables */
+
+// Colors
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// Typography
+$font-stack: 'Poppins', sans-serif;
+
+$font-size-regular: 0.9375rem;
+
+$line-height-regular: 1.6;
+$line-height-lg: 1.2;
+
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+
+// Container
+$container-max-width: null;
+
+// Features
+$features-padding-y: 5.25rem;
+$features-padding-x: 2rem;
+
+// Features title
+$features-title-font-size: 1.5rem;
+$features-title-line-height: 1.45;
+$features-title-font-weight: $font-weight-bold;
+$features-title-color: $very-dark-blue;
+$features-title-margin-bottom: 1rem;
+
+$features-title-highlighted-font-weight: $font-weight-light;
+
+// Features text
+$features-text-font-size: $font-size-regular;
+$features-text-line-height: 1.5;
+$features-text-font-weight: $font-weight-regular;
+$features-text-color: $grayish-blue;
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-stack;
+    background: $very-light-gray;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+
+/* container */
+
+.container {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+.features {
+    padding: $features-padding-y $features-padding-x;
+
+    &__title {
+        font-size: $features-title-font-size;
+        line-height: $features-title-line-height;
+        font-weight: $features-title-font-weight;
+        text-align: center;
+        color: $very-dark-blue;
+        margin-bottom: $features-title-margin-bottom;
+
+        &--highlighted {
+            font-weight: $font-weight-light;
+        }
+    }
+
+    &__text {
+        font-size: $features-text-font-size;
+        line-height: $features-text-line-height;
+        font-weight: $features-text-font-weight;
+        text-align: center;
+        color: $features-text-color;
+    }
+}
