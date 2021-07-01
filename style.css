@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/* Variables */
+/* Base style */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #98a6bd;
+  background: #e5eff5;
+}
+
+h1,
+h2,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding: 4.5rem 2rem;
+  margin: 0 auto;
+}
+
+/* Price card */
+.price {
+  border-radius: 0.33rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+}
+.price__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 1.2rem;
+}
+.price__highlighted {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #c0df34;
+  margin-bottom: 1.2rem;
+}
+.price__text {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #98a6bd;
+}
+.price__price {
+  line-height: 1;
+  color: white;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.price__amount {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-right: 0.66rem;
+}
+.price__cta {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background: #c0df34;
+  padding: 0.8rem;
+  border-radius: 0.33rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  display: block;
+}
+.price__list {
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+  color: white;
+}
+.price__section {
+  padding: 1.5rem 1.5rem;
+}
+.price__section--community {
+  background: white;
+  padding-top: 1.85rem;
+  padding-bottom: 1.85rem;
+}
+.price__section--community .price__title {
+  font-size: 1.2rem;
+  color: #2ab2af;
+  margin-bottom: 1.5rem;
+}
+.price__section--subscription {
+  background: #2ab2af;
+}
+.price__section--subscription .price__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.price__section--why-us {
+  background: #00c2bf;
+}
+
+/*# sourceMappingURL=style.css.map */

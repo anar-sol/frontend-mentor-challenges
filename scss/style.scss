@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* Variables */
+
+$cyan: hsl(179, 62%, 43%);
+$light-cyan: hsl(179, 100%, 38%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+$white: hsl(0, 0%, 100%);
+
+$font-stack-base: 'Karla', sans-serif;
+
+$font-size-base: 1rem;
+
+$font-weight-base: 400;
+
+$line-height-base: 1.5;
+
+
+// Container
+
+$container-padding-y: 4.5rem;
+$container-padding-x: 2rem;
+
+// Price card
+
+$price-card-radius: .33rem;
+$price-card-shadow: 0 0 3rem rgba(0, 0, 0, .125);
+
+$price-title-font-size: 1.125rem;
+$price-community-title-font-size: 1.2rem;
+
+$price-title-font-weight: 700;
+$price-title-line-height: 1.2;
+
+$price-title-color: $white;
+$price-community-title-color: $cyan;
+
+$price-title-margin-bottom: 1.2rem;
+$price-community-title-margin-bottom: 1.5rem;
+
+$price-highlighted-font-size: 1rem;
+$price-highlighted-font-weight: 700;
+$price-highlighted-line-height: 1.2;
+$price-highlighted-color: $bright-yellow;
+$price-highlighted-margin-bottom: 1.2rem;
+
+$price-text-font-size: .875rem;
+$price-subscription-text-font-size: 1rem;
+
+$price-text-line-height: 1.8;
+$price-subscription-text-line-height: 1.5;
+
+$price-text-color: $grayish-blue;
+$price-subscription-text-color: $white;
+
+$price-subscription-margin-bottom: 1.5rem;
+
+$price-price-line-height: 1;
+$price-price-color: $white;
+$price-price-margin-bottom: .5rem;
+
+$price-amount-font-size: 2.1rem;
+$price-amount-font-weight: 700;
+$price-amount-margin-right: .66rem;
+
+$price-cta-font-size: 1rem;
+$price-cta-font-weight: 700;
+$price-cta-color: $white;
+$price-cta-bg: $bright-yellow;
+$price-cta-padding: .8rem;
+$price-cta-radius: .33rem;
+$price-cta-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+
+$price-list-font-size: .875rem;
+$price-list-line-height: 1.2rem;
+$price-list-color: $white;
+
+// Section
+
+$section-padding-y: 1.5rem;
+$section-community-padding-y: 1.85rem;
+$section-padding-x: 1.5rem;
+
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-stack-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+    color: $grayish-blue;
+    background: $light-gray;
+}
+
+h1,
+h2,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+    padding: $container-padding-y $container-padding-x;
+    margin: 0 auto;
+}
+
+
+/* Price card */
+
+.price {
+    border-radius: $price-card-radius;
+    box-shadow: $price-card-shadow;
+    overflow: hidden;
+
+    &__title  {
+        font-size: $price-title-font-size;
+        font-weight: $price-title-font-weight;
+        line-height: $price-title-line-height;
+        color: $price-title-color;
+        margin-bottom: $price-title-margin-bottom;
+    }
+
+    &__highlighted {
+        font-size: $price-highlighted-font-size;
+        font-weight: $price-highlighted-font-weight;
+        line-height: $price-highlighted-line-height;
+        color: $price-highlighted-color;
+        margin-bottom: $price-highlighted-margin-bottom;
+    }
+
+    &__text {
+        font-size: $price-text-font-size;
+        line-height: $price-text-line-height;
+        color: $price-text-color;
+    }
+
+    &__price {
+        line-height: $price-price-line-height;
+        color: $price-price-color;
+        margin-bottom: $price-price-margin-bottom;
+        display: flex;
+        align-items: center;
+    }
+
+    &__amount {
+        font-size: $price-amount-font-size;
+        font-weight: $price-amount-font-weight;
+        margin-right: $price-amount-margin-right;
+    }
+
+    &__cta {
+        font-size: $price-cta-font-size;
+        font-weight: $price-cta-font-weight;
+        text-decoration: none;
+        text-align: center;
+        color: $price-cta-color;
+        background: $price-cta-bg;
+        padding: $price-cta-padding;
+        border-radius: $price-cta-radius;
+        box-shadow: $price-cta-shadow;
+        display: block;
+    }
+
+    &__list {
+        font-size: $price-list-font-size;
+        line-height: $price-list-line-height;
+        color: $price-list-color;
+    }
+
+    &__section {
+        padding: $section-padding-y $section-padding-x;
+
+        &--community {
+            background: $white;
+            padding-top: $section-community-padding-y;
+            padding-bottom: $section-community-padding-y;
+
+            .price__title {
+                font-size: $price-community-title-font-size;
+                color: $price-community-title-color;
+                margin-bottom: $price-community-title-margin-bottom;
+            }
+        }
+    
+        &--subscription {
+            background: $cyan;
+
+            .price__text {
+                font-size: $price-subscription-text-font-size;
+                line-height: $price-subscription-text-line-height;
+                color: $price-subscription-text-color;
+                margin-bottom: $price-subscription-margin-bottom;
+            }
+        }
+    
+        &--why-us {
+            background: $light-cyan;
+        }
+    }
+}
