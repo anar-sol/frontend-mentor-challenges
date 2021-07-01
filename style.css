@@ -36,9 +36,14 @@ ul {
 /* Container */
 .container {
   width: 100%;
-  max-width: 43.6875rem;
+  max-width: 28.75rem;
   padding: 4.5rem 2rem;
   margin: 0 auto;
+}
+@media (min-width: 43.75em) {
+  .container {
+    max-width: 43.6875rem;
+  }
 }
 
 /* Price card */

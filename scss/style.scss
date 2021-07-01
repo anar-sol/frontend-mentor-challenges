@@ -23,7 +23,8 @@ $breakpoint-lg: 43.75em;
 
 $container-padding-y: 4.5rem;
 $container-padding-x: 2rem;
-$container-max-width: 39.6875rem + ($container-padding-x * 2);
+$container-max-width: 24.75rem  + ($container-padding-x * 2);
+$container-max-width-lg: 39.6875rem + ($container-padding-x * 2);
 
 // Price card
 
@@ -157,6 +158,10 @@ ul {
     max-width: $container-max-width;
     padding: $container-padding-y $container-padding-x;
     margin: 0 auto;
+
+    @media (min-width: $breakpoint-lg) {
+        max-width: $container-max-width-lg;
+    }
 }
 
 
