@@ -11,6 +11,10 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -22,7 +26,13 @@ p {
 /* container */
 .container {
   width: 100%;
+  max-width: 30rem;
   margin: 0 auto;
+}
+@media (min-width: 42rem) {
+  .container {
+    max-width: 82rem;
+  }
 }
 
 .features {
@@ -51,6 +61,16 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+@media (min-width: 42rem) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 61rem) {
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .features__card {
   background: white;

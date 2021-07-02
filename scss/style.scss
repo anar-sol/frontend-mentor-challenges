@@ -27,9 +27,6 @@ $font-weight-light: 200;
 $font-weight-regular: 400;
 $font-weight-bold: 600;
 
-// Container
-$container-max-width: null;
-
 // Features
 $features-padding-y: 5.25rem;
 $features-padding-x: 2rem;
@@ -63,6 +60,9 @@ $features-card-border-radius: .5rem;
 $features-card-shadow: 0 0.875rem 1.2rem rgba(0, 0, 0, 0.1), 
     0 0.2rem 1rem -0.2rem rgba(0, 0, 0, 0.05);
 
+$features-card-min-width: 19rem;
+$features-card-max-width: 26rem;
+
 // Features card title
 $features-card-title-font-size: 1.2rem;
 $features-card-title-line-height: $line-height-lg;
@@ -86,6 +86,15 @@ $features-card-calculator-border-color: $blue;
 $features-card-logo-width: 3.625rem;
 $features-card-logo-height: 3.625rem;
 
+// Breakpoints
+$breakpoint-md: $features-card-min-width * 2 + $features-padding-x * 2;
+$breakpoint-lg: $features-card-min-width * 3 + $features-padding-x * 2;
+
+// Container
+$container-max-width: $features-card-max-width + $features-padding-x * 2;
+$container-max-width-md: $features-card-max-width * 2 + $features-padding-x * 2;
+$container-max-width-md: $features-card-max-width * 3 + $features-padding-x * 2;
+
 /* Base style */
 
 *,
@@ -98,6 +107,10 @@ body {
     margin: 0;
     font-family: $font-stack;
     background: $very-light-gray;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1,
@@ -113,6 +126,10 @@ p {
     width: 100%;
     max-width: $container-max-width;
     margin: 0 auto;
+
+    @media (min-width: $breakpoint-md) {
+        max-width: $container-max-width-md;
+    }
 }
 
 .features {
@@ -144,6 +161,14 @@ p {
         display: grid;
         grid-template-columns: 1fr;
         gap: $features-grid-gap;
+
+        @media (min-width: $breakpoint-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     &__card {
