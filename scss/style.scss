@@ -16,9 +16,11 @@ $white: hsl(0, 0%, 100%);
 // Typography
 $font-stack: 'Poppins', sans-serif;
 
-$font-size-regular: 0.9375rem;
+$font-size-sm: .8rem;
+$font-size-regular: .9375rem;
 
-$line-height-regular: 1.6;
+$line-height-sm: 1.8;
+$line-height-regular: 1.5;
 $line-height-lg: 1.2;
 
 $font-weight-light: 200;
@@ -34,7 +36,7 @@ $features-padding-x: 2rem;
 
 // Features title
 $features-title-font-size: 1.5rem;
-$features-title-line-height: 1.45;
+$features-title-line-height: $line-height-regular;
 $features-title-font-weight: $font-weight-bold;
 $features-title-color: $very-dark-blue;
 $features-title-margin-bottom: 1rem;
@@ -43,9 +45,46 @@ $features-title-highlighted-font-weight: $font-weight-light;
 
 // Features text
 $features-text-font-size: $font-size-regular;
-$features-text-line-height: 1.5;
+$features-text-line-height: $line-height-regular;
 $features-text-font-weight: $font-weight-regular;
 $features-text-color: $grayish-blue;
+$features-text-margin-bottom: 4.75rem;
+
+// Features grid
+$features-grid-gap: 1.5rem;
+
+// Features card
+$features-card-bg: $white;
+$features-card-padding-y: 1.75rem;
+$features-card-padding-x: 1.75rem;
+
+$features-card-border-radius: .5rem;
+
+$features-card-shadow: 0 0.875rem 1.2rem rgba(0, 0, 0, 0.1), 
+    0 0.2rem 1rem -0.2rem rgba(0, 0, 0, 0.05);
+
+// Features card title
+$features-card-title-font-size: 1.2rem;
+$features-card-title-line-height: $line-height-lg;
+$features-card-title-font-weight: $font-weight-bold;
+$features-card-title-color: $very-dark-blue;
+$features-card-title-margin-bottom: .5rem;
+
+// Features card text
+$features-card-text-font-size: $font-size-sm;
+$features-card-text-line-height: $line-height-sm;
+$features-card-text-font-weight: $font-weight-regular;
+$features-card-text-color: $grayish-blue;
+$features-card-text-margin-bottom: 1.75rem;
+
+$features-card-supervisor-border-color: $cyan;
+$features-card-team-builder-border-color: $red;
+$features-card-karma-border-color: $orange;
+$features-card-calculator-border-color: $blue;
+
+// Features card logo
+$features-card-logo-width: 3.625rem;
+$features-card-logo-height: 3.625rem;
 
 /* Base style */
 
@@ -98,5 +137,92 @@ p {
         font-weight: $features-text-font-weight;
         text-align: center;
         color: $features-text-color;
+        margin-bottom: $features-text-margin-bottom;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $features-grid-gap;
+    }
+
+    &__card {
+        background: $features-card-bg;
+        padding: $features-card-padding-y $features-card-padding-x;
+        border-radius: $features-card-border-radius;
+        box-shadow: $features-card-shadow;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: .25rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--supervisor {
+            &::before {
+                background: $features-card-supervisor-border-color;
+            }
+        }
+
+        &--team-builder {
+            &::before {
+                background: $features-card-team-builder-border-color;
+            }
+        }
+
+        &--karma {
+            &::before {
+                background: $features-card-karma-border-color;
+            }
+        }
+
+        &--calculator {
+            &::before {
+                background: $features-card-calculator-border-color;
+            }
+        }
+    }
+
+    &__card-title {
+        font-size: $features-card-title-font-size;
+        line-height: $features-card-title-line-height;
+        font-weight: $features-card-title-font-weight;
+        color: $features-card-title-color;
+        margin-bottom: $features-card-title-margin-bottom;
+    }
+
+    &__card-text {
+        font-size: $features-card-text-font-size;
+        line-height: $features-card-text-line-height;
+        font-weight: $features-card-text-font-weight;
+        color: $features-card-text-color;
+        margin-bottom: $features-card-text-margin-bottom;
+    }
+
+    &__card-logo {
+        width: $features-card-logo-width;
+        height: $features-card-logo-height;
+        margin-left: auto;
+
+        &--supervisor {
+            background: url('images/icon-supervisor.svg') center / contain no-repeat;
+        }
+
+        &--team-builder {
+            background: url('images/icon-team-builder.svg') center / contain no-repeat;
+        }
+
+        &--karma {
+            background: url('images/icon-karma.svg') center / contain no-repeat;
+        }
+
+        &--calculator {
+            background: url('images/icon-calculator.svg') center / contain no-repeat;
+        }
     }
 }

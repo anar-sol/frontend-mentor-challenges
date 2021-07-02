@@ -30,7 +30,7 @@ p {
 }
 .features__title {
   font-size: 1.5rem;
-  line-height: 1.45;
+  line-height: 1.5;
   font-weight: 600;
   text-align: center;
   color: #4c4e61;
@@ -45,6 +45,71 @@ p {
   font-weight: 400;
   text-align: center;
   color: #a3a5ae;
+  margin-bottom: 4.75rem;
+}
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.features__card {
+  background: white;
+  padding: 1.75rem 1.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.875rem 1.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 1rem -0.2rem rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+.features__card::before {
+  content: "";
+  width: 100%;
+  height: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.features__card--supervisor::before {
+  background: #45d3d3;
+}
+.features__card--team-builder::before {
+  background: #ea5353;
+}
+.features__card--karma::before {
+  background: #fcaf4a;
+}
+.features__card--calculator::before {
+  background: #549ef2;
+}
+.features__card-title {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #4c4e61;
+  margin-bottom: 0.5rem;
+}
+.features__card-text {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #a3a5ae;
+  margin-bottom: 1.75rem;
+}
+.features__card-logo {
+  width: 3.625rem;
+  height: 3.625rem;
+  margin-left: auto;
+}
+.features__card-logo--supervisor {
+  background: url("images/icon-supervisor.svg") center/contain no-repeat;
+}
+.features__card-logo--team-builder {
+  background: url("images/icon-team-builder.svg") center/contain no-repeat;
+}
+.features__card-logo--karma {
+  background: url("images/icon-karma.svg") center/contain no-repeat;
+}
+.features__card-logo--calculator {
+  background: url("images/icon-calculator.svg") center/contain no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
