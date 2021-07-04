@@ -105,6 +105,9 @@ body {
     margin-bottom: 1.5rem;
   }
 }
+.card__title--highlighted {
+  color: #aa5cdb;
+}
 .card__text {
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
@@ -168,10 +171,6 @@ body {
   .stats__title {
     text-align: left;
   }
-}
-
-.highlighted {
-  color: #aa5cdb;
 }
 
 /*# sourceMappingURL=style.css.map */

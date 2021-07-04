@@ -106,6 +106,10 @@ body {
       font-size: 2.2rem;
       margin-bottom: 1.5rem;
     }
+
+    &--highlighted {
+      color: hsla(277, 64%, 61%);
+    }
   }
 
   &__text {
@@ -170,9 +174,4 @@ body {
       text-align: left;
     }
   }
-}
-
-
-.highlighted {
-  color: hsla(277, 64%, 61%);
 }
