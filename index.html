@@ -5,32 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Article preview component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!--
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  -->
 </head>
 <body>
+  <main>
+    <div class="container">
+      <article class="article-card">
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+        <div class="article-card__media">
+          <img src="images/drawers.jpg" alt="" class="article-card__image">
+        </div>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+        <div class="article-card__body">
 
-  Michelle Appleton
-  28 Jun 2020
+          <div class="article-card__content">
+            <h1 class="article-card__title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>  
+            <p class="article-card__excerpt">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+          </div>
 
-  Share
+          <footer class="article-card__footer">
+
+            <div class="article-card__meta">
+              <address class="article-card__author">
+                <img src="images/avatar-michelle.jpg" alt="Michelle Appleton picture" class="article-card__author-image">
+                <p class="article-card__author-name">Michelle Appleton</p>
+              </address>
+              <time class="article-card__date" datetime="2020-06-28">28 Jun 2020</time>
+            </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <button class="article-card__share-btn" type="button" aria-label="Share">
+              <img src="images/icon-share.svg" alt="Share" class="article-card__share-icon">
+              
+            </button>
+          </footer>
+
+        </div>
+
+      </article>
+    </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
