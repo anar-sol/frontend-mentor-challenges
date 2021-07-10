@@ -83,12 +83,45 @@ $article-card-date-font-weight: $font-weight-normal;
 
 $article-card-date-color: $grayish-blue;
 
+// Article card share options
+
+$article-card-share-options-color: $white;
+$article-card-share-options-bg: $very-dark-grayish-blue;
+
+// Article card share title
+
+$article-card-share-title-font-size: $font-size-normal;
+$article-card-share-title-line-height: 1;
+$article-card-share-title-font-weight: 400;
+$article-card-share-title-letter-spacing: .33rem;
+$article-card-share-title-color: $grayish-blue;
+$article-card-title-margin-right: 1.25rem;
+
+// Article card share link
+
+$article-card-share-link-width: 1.25rem;
+$article-card-share-link-height: 1.25rem;
+$article-card-share-link-margin-right: .75rem;
+
 // Article card share button
 
 $article-card-share-btn-width: 2rem;
 $article-card-share-btn-height: 2rem;
 
+$article-card-share-btn-color: $very-dark-grayish-blue;
 $article-card-share-btn-bg: $light-grayish-blue;
+
+$article-card-share-btn-active-color: $white;
+$article-card-share-btn-active-bg: $desaturated-dark-blue;
+
+$article-card-share-btn-z-index: 1;
+
+
+// Article card share icon
+
+$article-card-share-icon-width: 63%;
+$article-card-share-icon-height: 63%;
+
 
 /* Base style */
 
@@ -150,6 +183,7 @@ button {
         padding-bottom: $article-card-body-padding-bottom;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     &__content {
@@ -207,11 +241,58 @@ button {
         color: $article-card-date-color;
     }
 
+    &__share-options {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $article-card-share-options-color;
+        background: $article-card-share-options-bg;
+        padding: $article-card-body-padding-bottom $article-card-body-padding-x;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__share-title {
+        font-size: $article-card-share-title-font-size;
+        line-height: $article-card-share-title-line-height;
+        font-weight: $article-card-share-title-font-weight;
+        letter-spacing: $article-card-share-title-letter-spacing;
+        text-transform: uppercase;
+        color: $article-card-share-title-color;
+        margin-right: $article-card-title-margin-right;
+    }
+
+    &__share-link {
+        width: $article-card-share-link-width;
+        height: $article-card-share-link-height;
+        margin-right: $article-card-share-link-margin-right;
+        display: inline-block;
+    }
+
+    &__share-link-icon {
+        width: 100%;
+        height: 100%;
+    }
+
     &__share-btn {
         width: $article-card-share-btn-width;
         height: $article-card-share-btn-height;
+        color: $article-card-share-btn-color;
         background: $article-card-share-btn-bg;
         border: none;
         border-radius: 50%;
+        z-index: $article-card-share-btn-z-index;
+
+        &:hover,
+        &--active {
+            color: $article-card-share-btn-active-color;
+            background: $article-card-share-btn-active-bg;;
+        }
+    }
+
+    &__share-icon {
+        width: $article-card-share-icon-width;
+        height: $article-card-share-icon-height;
     }
 }
