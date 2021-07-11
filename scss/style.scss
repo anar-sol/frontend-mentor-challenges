@@ -104,6 +104,13 @@ $article-card-share-options-bg: $very-dark-grayish-blue;
 $article-card-share-options-padding-y: 1.375rem;
 $article-card-share-options-padding-x: $article-card-body-padding-x;
 
+$article-card-share-options-padding-y-lg: 1.08rem;
+$article-card-share-options-padding-x-lg: 2.25rem;
+
+$article-card-share-options-radius: .66rem;
+
+$article-card-share-options-shadow: 0 1rem 1rem -.66rem rgba(0, 0, 0, .25);
+
 
 // Article card share title
 
@@ -133,7 +140,7 @@ $article-card-share-btn-bg: $light-grayish-blue;
 $article-card-share-btn-active-color: $white;
 $article-card-share-btn-active-bg: $desaturated-dark-blue;
 
-$article-card-share-btn-z-index: 1;
+$article-card-share-btn-z-index: 10;
 
 
 // Article card share icon
@@ -180,7 +187,7 @@ button {
 .article-card {
     background: $white;
     border-radius: $article-card-radius;
-    overflow: hidden;
+    //overflow: hidden;
     display: flex;
     flex-direction: column;
     box-shadow: $article-card-box-shadow;
@@ -195,9 +202,11 @@ button {
         height: 0;
         padding-top: 61.1621%;
         position: relative;
+        border-top-left-radius: $article-card-radius;
+        border-bottom-left-radius: $article-card-radius;
+        overflow: hidden;
 
         @media (min-width: $breakpoint) {
-            background: red;
             width: 40%;
             height: auto;
             padding: 0;
@@ -295,6 +304,12 @@ button {
         color: $article-card-date-color;
     }
 
+    &__share-btn-container {
+        @media (min-width: $breakpoint) {
+            position: relative;
+        }
+    }
+
     &__share-options {
         position: absolute;
         bottom: 0;
@@ -305,6 +320,28 @@ button {
         width: 100%;
         align-items: center;
         display: none;
+
+        @media (min-width: $breakpoint) {
+            width: auto;
+            bottom: calc(100% + 1.75rem);
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: $article-card-share-options-padding-y-lg $article-card-share-options-padding-x-lg;
+            border-radius: $article-card-share-options-radius;
+            box-shadow: $article-card-share-options-shadow;
+
+            &::after {
+                content: '';
+                width: 1rem;
+                height: 1rem;
+                background: $article-card-share-options-bg;
+                transform: translate(-50%, 50%) rotate(45deg);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                box-shadow: $article-card-share-options-shadow;
+            }
+        }
 
         &--active {
             display: flex;
@@ -328,8 +365,11 @@ button {
     &__share-link {
         width: $article-card-share-link-width;
         height: $article-card-share-link-height;
-        margin-right: $article-card-share-link-margin-right;
         display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: $article-card-share-link-margin-right;
+        }
     }
 
     &__share-link-icon {
