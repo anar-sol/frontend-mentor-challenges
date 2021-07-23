@@ -44,6 +44,25 @@ $site-header-padding-bottom: 3.375rem;
 $section-body-padding-y: 4rem;
 $section-body-padding-x: 1.5rem;
 
+$section-number-width: 3.5rem;
+$section-number-height: 3.5rem;
+
+$section-number-font-size: $font-size-small;
+$section-number-line-height: $line-height-small;
+$section-number-color: $text-color-medium;
+$section-number-font-weight: $font-weight-bold;
+$sectoin-number-border: 1px solid change-color($text-color-medium, $alpha: .25);
+$section-number-vertical-line-height: 84px;
+$section-number-vertical-line-color: change-color($text-color-medium, $alpha: .25);
+
+$section-overline-font-size: $font-size-small;
+$section-overline-line-height: $line-height-small;
+$section-overline-font-weight: $font-weight-bold;
+$section-overline-letter-spacing: .25rem;
+$section-overline-text-transform: uppercase;
+$section-overline-color: $primary;
+$section-overline-margin-bottom: 1.5rem;
+
 $section-title-font-size: 2rem;
 $section-title-line-height: 1.125;
 $section-title-font-weight: $font-weight-bold;
@@ -55,6 +74,8 @@ $section-text-line-height: $line-height-small;
 $section-text-font-weight: $font-weight-medium;
 $section-text-color: $text-color-medium;
 $section-text-margin-bottom: 2rem;
+
+$section-gallery-margin-bottom: 4rem;
 
 
 /* Section hero */
@@ -68,11 +89,21 @@ $section-hero-title-font-size: 2.5rem;
 $section-hero-title-line-height: 1.1;
 $section-hero-title-margin-bottom: 1.5rem;
 
-/* Section cta */
+/* Section footer */
 
-$section-cta-button-download-bg: $secondary;
-$section-cta-button-download-bg-hover: $secondary-light;
-$section-cta-button-version-color: $secondary-lighter;
+$section-footer-body-paddin-top: 5.75rem;
+$section-footer-body-paddin-bottom: 4.5rem;
+
+$section-footer-title-color: $text-color-light;
+$section-footer-title-margin-bottom: 1.5rem;
+
+$section-footer-text-font-size: $font-size-medium;
+$section-footer-line-height: $line-height-medium;
+$section-footer-text-color: $text-color-light;
+
+$section-footer-button-download-bg: $secondary;
+$section-footer-button-download-bg-hover: $secondary-light;
+$section-footer-button-version-color: $secondary-lighter;
 
 /* Button group */
 
@@ -96,3 +127,8 @@ $button-info-bg: $secondary;
 $button-info-bg-hover: $secondary-light;
 $button-version-color: $primary-lighter;
 
+
+/* Gallery */
+
+$gallery-grid-gap: 1.5rem;
+$gallery-image-radius: .5rem;
