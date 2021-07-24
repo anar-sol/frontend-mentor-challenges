@@ -234,7 +234,7 @@ body {
     line-height: 1;
   }
 }
-@media (min-width: 48em) {
+@media (min-width: 80em) {
   .section--hero .section__title {
     font-size: 4rem;
     margin-bottom: 2.125rem;
