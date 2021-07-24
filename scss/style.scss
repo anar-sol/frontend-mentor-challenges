@@ -22,6 +22,7 @@ body {
     margin: 0 auto;
 }
 
+
 /* Site header */
 
 .site-header {
@@ -138,49 +139,25 @@ body {
     }
 
     &--hero {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-
-        
         /* section--hero header left and right */
-        &::before,
-        &::after {
+        &::before {
             content: "";
+            display: block;
             height: 0;
-            padding-top: $section-hero-header-image-ratio;
-            order: -1;
+            padding-top: $section-hero-header-ratio;
+            background-image: url("assets/tablet/image-hero.png");
+            background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
 
             @media (min-width: $breakpoint-md) {
-                padding-top: $section-hero-header-image-ratio-md;
-            }
-        }
-
-        /* section--hero header left */
-        &::before {
-            background-image: url("assets/desktop/image-hero-left.png");
-            background-position-x: right $section-hero-header-image-shift-x;
-
-            @media (min-width: $breakpoint-md) {
-                background-position-x: right $section-hero-header-image-shift-x-md;
-            }
-        }
-
-        /* section--hero header right */
-        &::after {
-            background-image: url("assets/desktop/image-hero-right.png");
-            background-position-x: left $section-hero-header-image-shift-x;
-
-            @media (min-width: $breakpoint-md) {
-                background-position-x: left $section-hero-header-image-shift-x-md;
+                padding-top: $section-hero-header-ratio-md;
             }
         }
 
         /* section--hero body */
         .section__body {
             padding-top: $section-hero-body-padding-top;
-            grid-column: 1 / 3;
 
             @media (min-width: $breakpoint-md) {
                 padding-top: $section-hero-body-padding-top-md;
