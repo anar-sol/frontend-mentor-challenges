@@ -38,6 +38,7 @@ $font-weight-bold: 900;
 /* Breakpoints */
 
 $breakpoint-md: 48em;
+$breakpoint-lg: 90em;
 
 /* Site header */
 
@@ -51,8 +52,11 @@ $site-header-padding-bottom: 3.375rem;
 $section-body-padding-y: 4rem;
 $section-body-padding-top-md: 4.25rem;
 $section-body-padding-bottom-md: 5rem;
+$section-body-padding-top-lg: 4rem;
+$section-body-padding-bottom-md: 5rem;
 $section-body-padding-x: 1.5rem;
 $section-body-padding-x-md: 2.5rem;
+$section-body-padding-x-lg: 10.3125rem;
 
 $section-content-max-width: 35.8125rem;
 
@@ -85,16 +89,21 @@ $section-title-color: $text-color-dark;
 $section-title-margin-bottom: 2rem;
 
 $section-text-font-size: $font-size-small;
+$section-text-font-size-md: $font-size-medium;
 $section-text-line-height: $line-height-small;
+$section-text-line-height-md: $line-height-medium;
 $section-text-font-weight: $font-weight-medium;
 $section-text-color: $text-color-medium;
 $section-text-margin-bottom: 2rem;
 
 $section-gallery-margin-bottom: 4rem;
 $section-gallery-margin-bottom-md: 3rem;
+$section-gallery-margin-bottom-lg: 5rem;
 
 
 /* Section hero */
+
+$section-padding-bottom-lg: 6.875rem;
 
 $section-hero-header-ratio: 40.8%;
 $section-hero-header-ratio-md: 39.45%;
@@ -102,13 +111,19 @@ $section-hero-header-ratio-md: 39.45%;
 $section-hero-body-padding-top: 3rem;
 $section-hero-body-padding-top-md: 4.5rem;
 
+$section-hero-body-padding-y-lg: 4.75rem;
+$section-hero-body-padding-x-lg: 5.5rem;
+
 $section-hero-content-max-width: 28.5625rem;
+$section-hero-content-max-width-lg: 33.75rem;
 
 $section-hero-title-font-size: 2.5rem;
 $section-hero-title-font-size-md: 3rem;
+$section-hero-title-font-size-lg: 4rem;
 $section-hero-title-line-height: 1.1;
 $section-hero-title-line-height-md: 1;
 $section-hero-title-margin-bottom: 1.5rem;
+$section-hero-title-margin-bottom-lg: 2.125rem;
 
 $section-hero-button-info-padding-y: 1.8125rem;
 
@@ -122,8 +137,10 @@ $section-features-title-max-width-md: 27.8125rem;
 /* Section footer */
 
 $section-footer-body-paddin-top: 5.75rem;
+$section-footer-body-paddin-top-lg: 7.25rem;
 $section-footer-body-paddin-bottom: 4.5rem;
 $section-footer-body-paddin-bottom-md: 4.125rem;
+$section-footer-body-paddin-bottom-lg: 6.5rem;
 
 $section-footer-title-color: $text-color-light;
 $section-footer-title-margin-bottom: 1.5rem;
@@ -133,6 +150,7 @@ $section-footer-text-font-size: $font-size-medium;
 $section-footer-line-height: $line-height-medium;
 $section-footer-text-color: $text-color-light;
 $section-footer-text-margin-bottom-md: 2.5rem;
+$section-footer-text-max-width-lg: 21.875rem;
 
 $section-footer-button-download-bg: $secondary;
 $section-footer-button-download-bg-hover: $secondary-light;
@@ -165,4 +183,5 @@ $button-version-color: $primary-lighter;
 
 $gallery-grid-gap: 1.5rem;
 $gallery-grid-gap-md: .75rem;
+$gallery-grid-gap-lg: 1.875rem;
 $gallery-image-radius: .5rem;
