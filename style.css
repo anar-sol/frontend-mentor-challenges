@@ -20,6 +20,7 @@
 body {
   margin: 0;
   font-family: "Red Hat Display", sans-serif;
+  background-color: #fafafa;
 }
 
 /* Container */
@@ -66,7 +67,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #fafafa;
 }
 .section__body {
   padding: 4rem 1.5rem;
