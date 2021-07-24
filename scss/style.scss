@@ -297,9 +297,11 @@ body {
         }
 
         .section__content {
-            max-width: 100%;
-            flex-direction: row;
-            justify-content: space-between;
+            @media (min-width: $breakpoint-lg) {
+                max-width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
 
         .section__title {
