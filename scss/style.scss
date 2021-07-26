@@ -139,8 +139,14 @@ body {
 
         @media (min-width: $breakpoint-md) {
             font-size: $hero-cta-font-size-lg;
-            padding: $hero-cta-padding-y-lg $hero-cta-padding-x-lg;
+            padding-left: $hero-cta-padding-x-lg;
+            padding-right: $hero-cta-padding-x-lg;
             border-radius: $hero-cta-radius-lg;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            padding-top: $hero-cta-padding-y-lg;
+            padding-bottom: $hero-cta-padding-y-lg;
         }
 
         &:hover {

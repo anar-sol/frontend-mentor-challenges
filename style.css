@@ -145,8 +145,15 @@ body {
 @media (min-width: 75em) {
   .hero__cta {
     font-size: 1.125rem;
-    padding: 0.9rem 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     border-radius: 1.75rem;
+  }
+}
+@media (min-width: 90em) {
+  .hero__cta {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
   }
 }
 .hero__cta:hover {
