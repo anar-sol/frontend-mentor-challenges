@@ -7,27 +7,41 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header class="header">
+    <img src="images/logo.svg" alt="Huddle" class="header__logo">
+  </header>
 
-  Build The Community Your Fans Will Love
+  <main class="main-content">
+    <article class="hero">
+      <div class="hero__image"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">Build The Community Your Fans Will Love</h1>
+        <p class="hero__text">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. </p>
+        <a href="#" class="hero__cta">Register</a>
+      </div>
+    </article>
+  </main>
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
-  Create connections with your users as you engage in genuine discussion. 
-
-  Register
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+  <footer class="footer">
+    <ul class="footer__social-links social-links">
+      <li class="social-links__item"><a href="#" class="social-links__link">
+        <svg class="icon icon-facebook">
+          <use href="images/icons.svg#icon-facebook"/>
+        </svg>
+      </a></li>
+      <li class="social-links__item"><a href="#" class="social-links__link">
+        <svg class="icon icon-twitter">
+          <use href="images/icons.svg#icon-twitter"/>
+        </svg>
+      </a></li>
+      <li class="social-links__item"><a href="#" class="social-links__link">
+        <svg class="icon icon-instagram">
+          <use href="images/icons.svg#icon-instagram"/>
+        </svg>
+      </a></li>
+    </ul>
   </footer>
 </body>
 </html>
