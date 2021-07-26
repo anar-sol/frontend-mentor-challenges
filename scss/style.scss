@@ -23,7 +23,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
         background-image: url("images/bg-desktop.svg");
         background-position: top left;
         background-size: cover;
@@ -36,14 +36,14 @@ body {
 .header {
     padding: $header-padding-y $padding-x;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
         padding: $header-padding-y-lg $padding-x-lg;
     }
 
     &__logo {
         width: $header-logo-width;
 
-        @media (min-width: $breakpoint-lg) {
+        @media (min-width: $breakpoint-md) {
             width: $header-logo-width-lg;
         }
     }
@@ -57,7 +57,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
         padding: $hero-padding-top-lg $padding-x-lg $hero-padding-bottom-lg $padding-x-lg;
         flex-direction: row;
         align-items: flex-start;
@@ -67,7 +67,7 @@ body {
         width: 100%;
         margin-bottom: $hero-image-margin-bottom;
 
-        @media (min-width: $breakpoint-lg) {
+        @media (min-width: $breakpoint-md) {
             max-width: $hero-image-max-width-lg;
             margin-bottom: 0;
             margin-right: $hero-image-margin-right-lg;
@@ -91,10 +91,13 @@ body {
         flex-direction: column;
         align-items: center;
 
-        @media (min-width: $breakpoint-lg) {
+        @media (min-width: $breakpoint-md) {
             max-width: $hero-text-max-width-lg;
-            margin-top: $hero-content-margin-top-lg;
             align-items: flex-start;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            margin-top: $hero-content-margin-top-lg;
         }
     }
 
@@ -106,7 +109,7 @@ body {
         text-align: center;
         margin: 0 0 $hero-title-margin-bottom 0;
 
-        @media (min-width: $breakpoint-lg) {
+        @media (min-width: $breakpoint-md) {
             font-size: $hero-title-font-size-lg;
             text-align: left;
             margin-bottom: $hero-title-margin-bottom-lg;
@@ -117,7 +120,7 @@ body {
         text-align: center;
         margin: 0 0 $hero-text-margin-bottom 0;
 
-        @media (min-width: $breakpoint-lg) {
+        @media (min-width: $breakpoint-md) {
             font-size: $hero-text-font-size-lg;
             text-align: left;
         }
@@ -134,7 +137,7 @@ body {
         border-radius: $hero-cta-radius;
         box-shadow: $hero-cta-shadow;
 
-        @media (min-width: $breakpoint-lg) {
+        @media (min-width: $breakpoint-md) {
             font-size: $hero-cta-font-size-lg;
             padding: $hero-cta-padding-y-lg $hero-cta-padding-x-lg;
             border-radius: $hero-cta-radius-lg;
@@ -156,7 +159,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
         padding: $footer-padding-top-lg $padding-x-lg
             $footer-padding-bottom-lg $padding-x-lg;
         justify-content: flex-end;
@@ -178,7 +181,7 @@ body {
         &:not(:last-child) {
             margin-right: $social-links-icon-margin;
 
-            @media (min-width: $breakpoint-lg) {
+            @media (min-width: $breakpoint-md) {
                 margin-right: $social-links-icon-margin-lg;
             }
         }
@@ -197,7 +200,7 @@ body {
         width: $social-links-icon-width;
         height: $social-links-icon-height;
 
-        @media (min-width: $breakpoint-lg) {
+        @media (min-width: $breakpoint-md) {
             width: $social-links-icon-width-lg;
             height: $social-links-icon-height-lg;
         }

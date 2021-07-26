@@ -29,7 +29,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   body {
     background-image: url("images/bg-desktop.svg");
     background-position: top left;
@@ -41,7 +41,7 @@ body {
 .header {
   padding: 2rem 2.5rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .header {
     padding: 3.4375rem 5rem;
   }
@@ -49,7 +49,7 @@ body {
 .header__logo {
   width: 7.5rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .header__logo {
     width: 12.5rem;
   }
@@ -61,7 +61,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .hero {
     padding: 1.8rem 5rem 0 5rem;
     flex-direction: row;
@@ -72,7 +72,7 @@ body {
   width: 100%;
   margin-bottom: 3.75rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .hero__image {
     max-width: 43.5rem;
     margin-bottom: 0;
@@ -95,11 +95,15 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .hero__content {
     max-width: 32.5rem;
-    margin-top: 2.33rem;
     align-items: flex-start;
+  }
+}
+@media (min-width: 90em) {
+  .hero__content {
+    margin-top: 2.33rem;
   }
 }
 .hero__title {
@@ -110,7 +114,7 @@ body {
   text-align: center;
   margin: 0 0 1rem 0;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .hero__title {
     font-size: 2.5rem;
     text-align: left;
@@ -121,7 +125,7 @@ body {
   text-align: center;
   margin: 0 0 1.5rem 0;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .hero__text {
     font-size: 1.125rem;
     text-align: left;
@@ -138,7 +142,7 @@ body {
   border-radius: 1.2rem;
   box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.27);
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .hero__cta {
     font-size: 1.125rem;
     padding: 0.9rem 4rem;
@@ -157,7 +161,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .footer {
     padding: 1.6875rem 5rem 2.5rem 5rem;
     justify-content: flex-end;
@@ -177,7 +181,7 @@ body {
 .social-links__item:not(:last-child) {
   margin-right: 0.65625rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .social-links__item:not(:last-child) {
     margin-right: 1rem;
   }
@@ -193,7 +197,7 @@ body {
   width: 1.75rem;
   height: 1.75rem;
 }
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .social-links__icon {
     width: 2.5rem;
     height: 2.5rem;
