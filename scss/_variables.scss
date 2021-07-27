@@ -1,0 +1,72 @@
+/** Colors */
+
+$color-primary: #ce9797;
+
+$color-dark: #413a3a;
+$background: #fff;
+
+$error: #f96262;
+
+$gradient: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+
+
+/** Typography */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+$font-stack: 'Josefin Sans', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 600;
+
+
+/* Coming soon */
+
+$coming-soon-badding-x: 2rem;
+
+$coming-soon-bg: linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%);
+
+
+/* Header */
+
+$coming-soon-header-padding-y: 2rem;
+$coming-soon-header-padding-x: $coming-soon-badding-x;
+
+
+/* Logo */
+
+$coming-soon-logo-width: 6.25rem;
+
+
+/* Image */
+
+$coming-soon-image-ratio: 66.66%;
+
+
+/* Content */
+
+$coming-soon-content-padding-y: 4rem;
+$coming-soon-content-padding-x: $coming-soon-badding-x;
+
+
+/* Title */
+
+$content-title-font-size: 2.5rem;
+$content-title-line-height: 1.05;
+$content-title-font-weight: $font-weight-bold;
+$content-title-letter-spacing: .68rem;
+$content-title-color: $color-dark;
+$content-title-margin-bottom: 1rem;
+
+$content-title-highlighted-font-weight: $font-weight-light;
+$content-title-highlighted-color: $color-primary;
+
+
+/* Content */
+
+$content-text-font-size: .875rem;
+$content-text-line-height: 1.57;
+$content-text-font-weight: $font-weight-medium;
+$content-text-color: $color-primary;
+$content-text-margin-bottom: 2rem;
+

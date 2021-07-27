@@ -1,3 +1,69 @@
+/** Colors */
+/** Typography */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* Coming soon */
+/* Header */
+/* Logo */
+/* Image */
+/* Content */
+/* Title */
+/* Content */
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Body */
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Coming soon */
+.coming-soon {
+  min-height: 100vh;
+  background: linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%);
+}
+.coming-soon__header {
+  padding: 2rem 2rem;
+}
+.coming-soon__logo {
+  width: 6.25rem;
+}
+.coming-soon__image {
+  width: 100%;
+  height: 0;
+  padding-top: 66.66%;
+  background: url("images/hero-mobile.jpg") center/cover no-repeat;
+}
+
+/* Content */
+.content {
+  padding: 4rem 2rem;
+}
+.content__title {
+  font-size: 2.5rem;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: 0.68rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #413a3a;
+  margin: 0 0 1rem;
+}
+.content__title--highlighted {
+  font-weight: 300;
+  color: #ce9797;
+}
+.content__text {
+  font-size: 0.875rem;
+  line-height: 1.57;
+  font-weight: 400;
+  text-align: center;
+  color: #ce9797;
+  margin: 0 0 2rem;
+}
 
 /*# sourceMappingURL=style.css.map */
