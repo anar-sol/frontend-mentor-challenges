@@ -7,27 +7,28 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="container">
+    <article class="coming-soon">
+      <header class="coming-soon__header">
+        <img class="coming-soon__logo logo" src="images/logo.svg" alt="Base Apparel">
+      </header>
 
-  We're coming soon
+      <div class="coming-soon__image"></div>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+      <div class="coming-soon__content content">
+        <h1 class="content__title">We're<br> coming<br> soon</h1>
 
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+        <p class="content__text">  Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+        <form action="#" method="POST" class="content_form form">
+          <label class="form__label" for="email">Email Address</label>
+          <input class="form__field" type="email" name="email" id="email">
+          <button class="form__button" type="submit" aria-label="submit"></button>
+        </form>
+      </div>
+    </article>
+  </main>
 </body>
 </html>
