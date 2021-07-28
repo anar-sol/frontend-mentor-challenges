@@ -23,12 +23,29 @@ body {
     min-height: 100vh;
     background: $coming-soon-bg;
 
+    @media (min-width: $breakpoint-lg) {
+        display: grid;
+        grid-template-columns: 57.6% 42.4%;
+        grid-template-rows: auto 1fr;
+    }
+
     &__header {
         padding: $coming-soon-header-padding-y $coming-soon-header-padding-x;
+
+        @media (min-width: $breakpoint-lg) {
+            height: auto;
+            padding: $coming-soon-header-padding-y-lg $coming-soon-header-padding-x-lg;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
     }
 
     &__logo {
         width: $coming-soon-logo-width;
+
+        @media (min-width: $breakpoint-lg) {
+            width: $coming-soon-logo-width-lg;
+        }
     }
 
     &__image {
@@ -36,6 +53,21 @@ body {
         height: 0;
         padding-top: $coming-soon-image-ratio;
         background: url("images/hero-mobile.jpg") center / cover no-repeat;
+
+        @media (min-width: $breakpoint-lg) {
+            height: revert;
+            padding-top: 0;
+            background: url("images/hero-desktop.jpg") center / cover no-repeat;
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+    }
+
+    &__content {
+        @media (min-width: $breakpoint-lg) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
     }
 }
 
@@ -44,6 +76,12 @@ body {
 
 .content {
     padding: $coming-soon-content-padding-y $coming-soon-content-padding-x;
+
+    @media (min-width: $breakpoint-lg) {
+        max-width: $coming-soon-content-max-width-lg;
+        padding-left: 0;
+        margin: 0 auto;
+    }
 
     &__title {
         font-size: $content-title-font-size;
@@ -54,6 +92,13 @@ body {
         text-align: center;
         color: $content-title-color;
         margin: 0 0 $content-title-margin-bottom;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: $content-title-font-size-lg;
+            line-height: $content-title-line-height-lg;
+            text-align: left;
+            margin: 0 0 $content-title-margin-bottom-lg;
+        }
 
         &--highlighted {
             font-weight: $content-title-highlighted-font-weight;
@@ -68,6 +113,55 @@ body {
         text-align: center;
         color: $content-text-color;
         margin: 0 0 $content-text-margin-bottom;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: $content-text-font-size;
+            line-height: $content-text-line-height;
+            text-align: left;
+            margin: 0 0 $content-text-margin-bottom;
+        }
+    }
+}
+
+
+/* Form */
+
+.form {
+    position: relative;
+
+    &__label {
+        font-size: $form-label-font-size;
+        line-height: $form-label-line-height;
+        font-weight: $form-label-font-weight;
+        color: $form-label-color;
+        position: absolute;
+        top: calc(#{$form-field-border-size} + #{$form-field-padding-y});
+        left: $form-field-padding-left;
+    }
+
+    &__field {
+        font-family: $form-field-font-family;
+        font-size: $form-label-font-size;
+        line-height: $form-label-line-height;
+        font-weight: $form-label-font-weight;
+        color: $form-field-color;
+        background: $form-field-bg;
+        border: $form-field-border;
+        border-radius: $form-field-radius;
+        display: inline-block;
+        padding: $form-field-padding-y $form-field-padding-right
+            $form-field-padding-y $form-field-padding-left;
+        width: 100%;
+        height: $form-field-height;
+    }
+
+    &__button {
+        background: url("images/icon-arrow.svg") center / contain no-repeat, $form-button-bg;
+        display: inline-block;
+        border: none;
+        border-radius: $form-field-radius;
+        width: $form-button-width;
+        height: $form-field-height;
     }
 }
 
