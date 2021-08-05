@@ -1,2 +1,31 @@
 @import "variables";
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+	margin: 0;
+	font-family: $font-stack;
+
+	background: url("images/bg-intro-mobile.png") left top / 100% repeat-y,
+		$red;
+}
+
+
+/* Intro */
+
+.intro {
+	text-align: $intro-title-text-align;
+	color: $intro-color;
+
+	padding: $intro-padding-y $intro-padding-x;
+
+	&__title {
+		margin: 0 0 $intro-title-margin-bottom 0;
+	}
+}
