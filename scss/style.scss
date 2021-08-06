@@ -20,12 +20,120 @@ body {
 /* Intro */
 
 .intro {
-	text-align: $intro-title-text-align;
 	color: $intro-color;
 
 	padding: $intro-padding-y $intro-padding-x;
 
 	&__title {
+		font-size: $intro-title-font-size;
+		line-height: $intro-title-line-height;
+		letter-spacing: $intro-title-letter-spacing;
+		font-weight: $intro-title-font-weight;
+		text-align: $intro-title-text-align;
 		margin: 0 0 $intro-title-margin-bottom 0;
+	}
+
+	&__text {
+		font-size: $intro-text-font-size;
+		line-height: $intro-text-line-height;
+		font-weight: $intro-text-font-weight;
+		text-align: $intro-text-text-align;
+		margin: 0;
+	}
+
+	&__price {
+		font-size: $intro-price-font-size;
+		line-height: $intro-price-line-height;
+		letter-spacing: $intro-price-letter-spacing;
+		font-weight: $intro-price-font-weight;
+		text-align: $intro-price-text-align;
+		background-color: $intro-price-background-color;
+		padding: $intro-price-padding-y $intro-price-padding-x;
+		margin: 0 0 $intro-price-margin-bottom;
+		border-radius: $intro-price-border-radius;
+		box-shadow: $intro-price-box-shadow;
+	}
+
+	&__price-highlighted {
+		font-weight: $intro-price-highlighted-font-weight;
+	}
+
+	&__form {
+		color: $intro-form-color;
+		background-color: $intro-form-background-color;
+		padding: $intro-form-padding-y $intro-form-padding-x;
+		border-radius: $intro-form-border-radius;
+		box-shadow: $intro-form-box-shadow;
+	}
+
+	&__form-field {
+		position: relative;
+
+		margin-bottom: $intro-form-field-margin-bottom;
+	}
+
+	&__form-label {
+		font-size: $intro-form-label-font-size;
+		line-height: $intro-form-label-line-height;
+		font-weight: $intro-form-label-font-weight;
+		letter-spacing: $intro-form-label-letter-spacing;
+		color: $intro-form-label-color;
+		position: absolute;
+		top: calc(#{$intro-form-control-padding-y} + 1px);
+		left: $intro-form-control-padding-x;
+	}
+
+	&__form-control {
+		display: block;
+
+		font-family: inherit;
+		font-size: $intro-form-control-font-size;
+		line-height: $intro-form-control-line-height;
+		font-weight: $intro-form-control-font-weight;
+		color: inherit;
+		padding: $intro-form-control-padding-y $intro-form-control-padding-x;
+		border: 1px solid $intro-form-control-border-color;
+		border-radius: $intro-form-control-border-radius;
+		width: 100%;
+	}
+
+	&__submit {
+		font-family: inherit;
+		font-size: $intro-submit-font-size;
+		line-height: $intro-submit-line-height;
+		letter-spacing: $intro-submit-letter-spacing;
+		font-weight: $intro-submit-font-weight;
+		text-align: $intro-submit-text-align;
+		text-transform: $intro-submit-text-transform;
+		color: $intro-submit-color;
+		background-color: $intro-submit-background-color;
+		padding: $intro-submit-padding-y $intro-submit-padding-x;
+		margin-bottom: $intro-submit-margin-bottom;
+		border: $intro-submit-border;
+		border-radius: $intro-submit-border-radius;
+		box-shadow: $intro-submit-box-shadow;
+		width: 100%;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $intro-submit-hover-bg-color;
+		}
+	}
+
+	&__terms {
+		font-size: $intro-terms-font-size;
+		line-height: $intro-terms-line-height;
+		font-weight: $intro-text-font-weight;
+		text-align: $intro-terms-text-align;
+		color: $intro-terms-color;
+		margin: 0;
+	}
+
+	&__link {
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: $intro-link-font-weight;
+		text-decoration: $intro-link-text-decoration;
+		color: $intro-link-color;
 	}
 }
