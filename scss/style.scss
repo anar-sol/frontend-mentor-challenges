@@ -24,6 +24,9 @@ body {
 
 	padding: $intro-padding-y $intro-padding-x;
 
+	display: grid;
+	gap: $intro-gap;
+
 	&__title {
 		font-size: $intro-title-font-size;
 		line-height: $intro-title-line-height;
