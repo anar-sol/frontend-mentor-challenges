@@ -81,6 +81,7 @@ body {
 		position: absolute;
 		top: calc(#{$intro-form-control-padding-y} + 1px);
 		left: $intro-form-control-padding-x;
+		display: none;
 	}
 
 	&__form-control {
@@ -95,6 +96,10 @@ body {
 		border: 1px solid $intro-form-control-border-color;
 		border-radius: $intro-form-control-border-radius;
 		width: 100%;
+
+		&:placeholder-shown + .intro__form-label {
+			display: revert;
+		}
 	}
 
 	&__submit {

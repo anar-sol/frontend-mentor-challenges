@@ -81,6 +81,7 @@ body {
   position: absolute;
   top: calc(1rem + 1px);
   left: 1.25rem;
+  display: none;
 }
 .intro__form-control {
   display: block;
@@ -93,6 +94,9 @@ body {
   border: 1px solid rgba(185, 182, 211, 0.5);
   border-radius: 0.3125rem;
   width: 100%;
+}
+.intro__form-control:placeholder-shown + .intro__form-label {
+  display: revert;
 }
 .intro__submit {
   font-family: inherit;
