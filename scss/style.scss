@@ -73,6 +73,19 @@ body {
 		position: relative;
 
 		margin-bottom: $intro-form-field-margin-bottom;
+
+		&--error {
+			&::after {
+				content: "";
+				display: block;
+				width: $intro-form-control-font-size * 1.5;
+				height: $intro-form-control-font-size * 1.5;
+				background: url("images/icon-error.svg") center / contain no-repeat;
+				position: absolute;
+				right: 1rem;
+				top: 1rem;
+			}
+		}
 	}
 
 	&__form-label {
@@ -100,9 +113,25 @@ body {
 		border-radius: $intro-form-control-border-radius;
 		width: 100%;
 
+		&--error {
+			color: $intro-form-control-error-color;
+			border-color: $intro-form-control-error-border-color;
+			border-width: $intro-form-control-error-border-width;
+		}
+
 		&:placeholder-shown + .intro__form-label {
 			display: revert;
 		}
+	}
+
+	&__form-error {
+		font-size: $intro-form-error-font-size;
+		line-height: $intro-form-error-line-height;
+		font-weight: $intro-form-error-font-weight;
+		font-style: $intro-form-error-font-style;
+		text-align: $intro-form-error-text-align;
+		color: $intro-form-error-color;
+		margin-top: $intro-form-error-margin-top;
 	}
 
 	&__submit {

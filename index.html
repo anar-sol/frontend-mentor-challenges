@@ -26,24 +26,28 @@
         </p>
 
         <form class="intro__form" action="" method="post">
-          <div class="intro__form-field">
-            <input type="text" placeholder=" " name="firstname" id="firstname" class="intro__form-control">
+          <div class="intro__form-field intro__form-field--error">
+            <input type="text" placeholder=" " name="firstname" id="firstname" class="intro__form-control intro__form-control--error">
             <label for="firstname" class="intro__form-label">First Name</label>
+            <div class="intro__form-error">First Name cannot be empty</div>
           </div>
 
           <div class="intro__form-field">
             <input type="text" placeholder=" " name="lastname" id="lastname" class="intro__form-control">
             <label for="lastname" class="intro__form-label">Last Name</label>
+            <div class="intro__form-error">Last Name cannot be empty</div>
           </div>
 
           <div class="intro__form-field">
             <input type="email" placeholder=" " name="email" id="email" class="intro__form-control">
             <label for="email" class="intro__form-label">Email Address</label>
+            <div class="intro__form-error">Looks like this is not an email</div>
           </div>
 
           <div class="intro__form-field">
             <input type="password" placeholder=" " name="password" id="password" class="intro__form-control">
             <label for="password" class="intro__form-label">Password</label>
+            <div class="intro__form-error">Password cannot be empty</div>
           </div>
 
           <button type="submit" class="intro__submit">Claim your free trial </button>
