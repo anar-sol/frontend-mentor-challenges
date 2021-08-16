@@ -10,6 +10,10 @@ body {
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Hero */
 
 .hero {
@@ -54,4 +58,142 @@ body {
     margin: 0;
     border: none;
     cursor: pointer;
+}
+
+/* Service section */
+
+.service {
+    &__image {
+        background-position: $service-image-position;
+        background-size: $service-image-size;
+        background-repeat: no-repeat;
+        height: 0;
+        padding-top: $service-image-ratio;
+    }
+
+    &__body {
+        padding: $service-body-padding-y $service-body-padding-x;
+
+        &--bg {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: $service-body-bg-padding-top;
+
+            .service__title {
+                font-size: $service-body-bg-title-font-size;
+                letter-spacing: $service-body-bg-title-letter-spacing;
+                margin-bottom: $service-body-bg-title-margin-bottom;
+            }
+
+            .service__text {
+                font-size: $service-body-bg-text-font-size;
+                letter-spacing: $service-body-bg-text-letter-spacing;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $service-title-font-family;
+        font-size: $service-title-font-size;
+        font-weight: $service-title-font-weight;
+        line-height: $service-title-line-height;
+        letter-spacing: $service-title-letter-spacing;
+        text-align: $service-title-text-align;
+        color: $service-title-color;
+        margin: 0 0 $service-title-margin-bottom;
+    }
+
+    &__text {
+        font-family: $service-text-font-family;
+        font-size: $service-text-font-size;
+        font-weight: $service-text-font-weight;
+        line-height: $service-text-line-height;
+        letter-spacing: $service-text-letter-spacing;
+        text-align: $service-text-text-align;
+        color: $service-text-color;
+        margin: 0;
+
+        &:not(:last-child) {
+            margin: 0 0 $service-text-margin-bottom;
+        }
+    }
+
+    &__more {
+        text-align: center;
+    }
+
+    &__link {
+        font-family: $service-link-font-family;
+        font-size: $service-link-font-size;
+        font-weight: $service-link-font-weight;
+        line-height: $service-link-line-height;
+        letter-spacing: $service-link-letter-spacing;
+        text-align: $service-link-text-align;
+        text-decoration: $service-link-text-decoration;
+        text-transform: $service-link-text-transform;
+        color: $service-link-color;
+        padding: 0 $service-link-padding-x;
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: $service-link-underline-height;
+            border-radius: $service-link-underline-radius;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &--1 {
+        .service__image {
+            background-image: url($service-1-image-url);
+        }
+
+        .service__link::before {
+            background-color: $service-1-link-underline-color;
+        }
+    }
+
+    &--2 {
+        .service__image {
+            background-image: url($service-2-image-url);
+        }
+
+        .service__link::before {
+            background-color: $service-2-link-underline-color;
+        }
+    }
+
+    &--3 {
+        .service__body {
+            background-image: url($service-3-image-url);
+        }
+
+        .service__title {
+            color: $service-3-title-color
+        }
+
+        .service__text {
+            color: $service-3-text-color
+        }
+    }
+
+    &--4 {
+        .service__body {
+            background-image: url($service-4-image-url);
+        }
+
+        .service__title {
+            color: $service-4-title-color
+        }
+
+        .service__text {
+            color: $service-4-text-color
+        }
+    }
 }

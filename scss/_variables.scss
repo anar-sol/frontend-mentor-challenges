@@ -1,7 +1,13 @@
 /* Colors */
 
-$white: #fff;
+$yellow: #fad400;
+$soft-red: #fe7867;
+$dark-desaturated-cyan: #25564b;
+$dark-blue: #19536b;
 
+$white: #fff;
+$dark-grayish-blue: #808397;
+$very-dark-desaturated-blue: #24303e;
 
 /* Typography */
 
@@ -9,7 +15,8 @@ $white: #fff;
 
 $font-family-base: "Barlow", sans-serif;
 $font-size-base: 1.125rem;
-$line-height-base: 1.7;
+$font-weight-base: 500;
+$line-height-base: 1.66;
 $letter-spacing-base: -0.13px;
 
 $font-family-headers: "Fraunces", serif;
@@ -39,3 +46,70 @@ $hero-scroll-down-text-align: center;
 
 $header-padding-y: 2rem;
 $header-padding-x: 1.5rem;
+
+/* Service section */
+
+$service-image-ratio: 83.2%;
+
+$service-image-position: center;
+$service-image-size: contain;
+
+$service-1-image-url: "images/mobile/image-transform.jpg";
+$service-2-image-url: "images/mobile/image-stand-out.jpg";
+
+$service-3-image-url: "images/mobile/image-graphic-design.jpg";
+$service-4-image-url: "images/mobile/image-photography.jpg";
+
+$service-body-padding-y: 4rem;
+$service-body-padding-x: 1.5rem;
+$service-body-bg-padding-top: 24.5rem;
+
+$service-title-font-family: $font-family-headers;
+$service-title-font-size: 2rem;
+$service-title-font-weight: 900;
+$service-title-line-height: 1.2;
+$service-title-letter-spacing: -0.23px;
+$service-title-text-align: center;
+$service-title-margin-bottom: 1.5rem;
+$service-title-color: $very-dark-desaturated-blue;
+
+$service-body-bg-title-font-size: 1.75rem;
+$service-body-bg-title-letter-spacing: -0.2px;
+$service-body-bg-title-margin-bottom: 1.75rem;
+
+$service-3-title-color: $dark-desaturated-cyan;
+$service-4-title-color: $dark-blue;
+
+$service-text-font-family: $font-family-base;
+$service-text-font-size: $font-size-base;
+$service-text-font-weight: $font-weight-base;
+$service-text-line-height: $line-height-base;
+$service-text-letter-spacing: $letter-spacing-base;
+$service-text-text-align: center;
+$service-text-margin-bottom: 2rem;
+$service-text-color: $dark-grayish-blue;
+
+$service-body-bg-text-font-size: 1rem;
+$service-body-bg-text-letter-spacing: -0.11px;
+
+$service-3-text-color: $dark-desaturated-cyan;
+$service-4-text-color: $dark-blue;
+
+$service-link-font-family: $font-family-headers;
+$service-link-font-size: 0.9375rem;
+$service-link-font-weight: 900;
+$service-link-line-height: $line-height-base;
+$service-link-letter-spacing: 0.0625rem;
+$service-link-text-align: center;
+$service-link-text-decoration: none;
+$service-link-text-transform: uppercase;
+$service-link-color: $very-dark-desaturated-blue;
+$service-link-padding-x: 0.5rem;
+
+$service-link-underline-height: 0.625rem;
+$service-link-underline-radius: 1.75rem;
+$service-link-underline-position-bottom: 0;
+$service-link-underline-position-left: 0;
+
+$service-1-link-underline-color: change-color($yellow, $alpha: 0.25);
+$service-2-link-underline-color: change-color($soft-red, $alpha: 0.25);
