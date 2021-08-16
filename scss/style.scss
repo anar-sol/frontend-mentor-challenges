@@ -1,1 +1,57 @@
 @import "variables";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Hero */
+
+.hero {
+    background: url($hero-background-image-url) $hero-background-image-position /
+        $hero-background-image-size no-repeat;
+
+    &__content {
+        padding: $hero-content-padding-top 0 $hero-content-padding-bottom;
+    }
+
+    &__title {
+        font-family: $hero-title-font-family;
+        font-size: $hero-title-font-size;
+        font-weight: $hero-title-font-weight;
+        line-height: $hero-title-line-height;
+        letter-spacing: $hero-title-letter-spacing;
+        text-transform: $hero-title-text-transform;
+        text-align: $hero-title-text-align;
+        color: $hero-title-color;
+        margin: 0 0 $hero-title-margin-bottom;
+    }
+
+    &__scroll-down {
+        text-align: $hero-scroll-down-text-align;
+    }
+}
+
+.header {
+    padding: $header-padding-y $header-padding-x;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__nav {
+        display: none;
+    }
+}
+
+.menu-btn {
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}

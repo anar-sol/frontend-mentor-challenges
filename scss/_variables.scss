@@ -1,0 +1,41 @@
+/* Colors */
+
+$white: #fff;
+
+
+/* Typography */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+$font-family-base: "Barlow", sans-serif;
+$font-size-base: 1.125rem;
+$line-height-base: 1.7;
+$letter-spacing-base: -0.13px;
+
+$font-family-headers: "Fraunces", serif;
+
+/* Hero */
+
+$hero-background-image-url: "images/mobile/image-header.jpg";
+$hero-background-image-position: center bottom;
+$hero-background-image-size: cover;
+
+$hero-content-padding-top: 3.5rem;
+$hero-content-padding-bottom: 8.5rem;
+
+$hero-title-font-family: $font-family-headers;
+$hero-title-font-size: 2.5rem;
+$hero-title-font-weight: 900;
+$hero-title-line-height: 1.2;
+$hero-title-letter-spacing: 0.4rem;
+$hero-title-text-transform: uppercase;
+$hero-title-text-align: center;
+$hero-title-color: $white;
+$hero-title-margin-bottom: 3.5rem;
+
+$hero-scroll-down-text-align: center;
+
+/* Header */
+
+$header-padding-y: 2rem;
+$header-padding-x: 1.5rem;
