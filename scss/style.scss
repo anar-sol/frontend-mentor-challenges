@@ -197,3 +197,72 @@ img {
         }
     }
 }
+
+/* Testimonials */
+
+.testimonials {
+    padding: $testimonials-padding-y $testimonials-padding-x;
+
+    &__title {
+        font-family: $testimonials-title-font-family;
+        font-size: $testimonials-title-font-size;
+        font-weight: $testimonials-title-font-weight;
+        line-height: $testimonials-title-line-height;
+        letter-spacing: $testimonials-title-letter-spacing;
+        text-align: $testimonials-title-text-align;
+        text-transform: $testimonials-title-text-transform;
+        color: $testimonials-title-color;
+        margin: 0 0 $testimonials-title-margin-bottom;
+    }
+
+    &__grid {
+        display: grid;
+        gap: $testimonials-grid-gap;
+    }
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+        width: $testimonials-image-width;
+        height: $testimonials-image-height;
+        border-radius: $testimonials-image-radius;
+        margin-bottom: $testimonials-image-margin-bottom;
+    }
+
+    &__text {
+        font-family: $testimonial-text-font-family;
+        font-size: $testimonial-text-font-size;
+        font-weight: $testimonial-text-font-weight;
+        line-height: $testimonial-text-line-height;
+        letter-spacing: $testimonial-text-letter-spacing;
+        text-align: $testimonial-text-text-align;
+        color: $testimonial-text-color;
+        margin: 0 0 $testimonial-text-margin-bottom;
+    }
+
+    &__title {
+        font-family: $testimonial-title-font-family;
+        font-size: $testimonial-title-font-size;
+        font-weight: $testimonial-title-font-weight;
+        line-height: $testimonial-title-line-height;
+        letter-spacing: $testimonial-title-letter-spacing;
+        text-align: $testimonial-title-text-align;
+        color: $testimonial-title-color;
+        margin: 0 0 $testimonial-title-margin-bottom;
+    }
+
+    &__subtitle {
+        font-family: $testimonial-subtitle-font-family;
+        font-size: $testimonial-subtitle-font-size;
+        font-weight: $testimonial-subtitle-font-weight;
+        line-height: $testimonial-subtitle-line-height;
+        letter-spacing: $testimonial-subtitle-letter-spacing;
+        text-align: $testimonial-subtitle-text-align;
+        color: $testimonial-subtitle-color;
+        margin: 0;
+    }
+}

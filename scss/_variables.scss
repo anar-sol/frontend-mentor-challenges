@@ -7,6 +7,8 @@ $dark-blue: #19536b;
 
 $white: #fff;
 $dark-grayish-blue: #808397;
+$grayish-blue: #a7aaad;
+$very-dark-grayish-blue: #5a636c;
 $very-dark-desaturated-blue: #24303e;
 
 /* Typography */
@@ -113,3 +115,53 @@ $service-link-underline-position-left: 0;
 
 $service-1-link-underline-color: change-color($yellow, $alpha: 0.25);
 $service-2-link-underline-color: change-color($soft-red, $alpha: 0.25);
+
+/* Testimonials */
+
+$testimonials-padding-y: 4rem;
+$testimonials-padding-x: 1.5rem;
+
+$testimonials-title-font-family: $font-family-headers;
+$testimonials-title-font-size: 1rem;
+$testimonials-title-font-weight: 900;
+$testimonials-title-line-height: 1.2;
+$testimonials-title-text-transform: uppercase;
+$testimonials-title-letter-spacing: 0.25rem;
+$testimonials-title-text-align: center;
+$testimonials-title-margin-bottom: 4rem;
+$testimonials-title-color: $grayish-blue;
+
+$testimonials-grid-gap: 4rem;
+
+/* Testimonial */
+
+$testimonials-image-width: 4.5rem;
+$testimonials-image-height: 4.5rem;
+$testimonials-image-radius: 50%;
+$testimonials-image-margin-bottom: 2rem;
+
+$testimonial-text-font-family: $font-family-base;
+$testimonial-text-font-size: $font-size-base;
+$testimonial-text-font-weight: $font-weight-base;
+$testimonial-text-line-height: $line-height-base;
+$testimonial-text-letter-spacing: $letter-spacing-base;
+$testimonial-text-text-align: center;
+$testimonial-text-margin-bottom: 2rem;
+$testimonial-text-color: $very-dark-grayish-blue;
+
+$testimonial-title-font-family: $font-family-headers;
+$testimonial-title-font-size: $font-size-base;
+$testimonial-title-font-weight: 900;
+$testimonial-title-line-height: 1.2;
+$testimonial-title-letter-spacing: $letter-spacing-base;
+$testimonial-title-text-align: center;
+$testimonial-title-margin-bottom: .5rem;
+$testimonial-title-color: $very-dark-desaturated-blue;
+
+$testimonial-subtitle-font-family: $font-family-base;
+$testimonial-subtitle-font-size: .875rem;
+$testimonial-subtitle-font-weight: 700;
+$testimonial-subtitle-line-height: $line-height-base;
+$testimonial-subtitle-letter-spacing: -0.1px;
+$testimonial-subtitle-text-align: center;
+$testimonial-subtitle-color: $grayish-blue;
