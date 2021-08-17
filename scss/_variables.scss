@@ -4,6 +4,8 @@ $yellow: #fad400;
 $soft-red: #fe7867;
 $dark-desaturated-cyan: #25564b;
 $dark-blue: #19536b;
+$dark-moderate-cyan: #458c7e;
+$moderate-cyan: #90d4c6;
 
 $white: #fff;
 $dark-grayish-blue: #808397;
@@ -172,3 +174,32 @@ $gallery-image-1-url: "images/mobile/image-gallery-milkbottles.jpg";
 $gallery-image-2-url: "images/mobile/image-gallery-orange.jpg";
 $gallery-image-3-url: "images/mobile/image-gallery-cone.jpg";
 $gallery-image-4-url: "images/mobile/image-gallery-sugar-cubes.jpg";
+
+/* Footer */
+
+$footer-bg-color: $moderate-cyan;
+$footer-padding-top: 4rem;
+$footer-padding-bottom: 5rem;
+$footer-padding-x: 2.5rem;
+
+$footer-logo-width: 11rem;
+$footer-logo-margin-bottom: 2.5rem;
+$footer-logo-text-align: center;
+
+$footer-nav-width: 18.5rem;
+$footer-nav-margin-bottom: 5.5rem;
+$footer-nav-link-color: $dark-moderate-cyan;
+
+/* Nav */
+
+$nav-link-font-family: $font-family-base;
+$nav-link-font-size: $font-size-base;
+$nav-link-font-weight: 700;
+$nav-link-line-height: $line-height-base;
+$nav-link-letter-spacing: $letter-spacing-base;
+$nav-link-text-decoration: none;
+
+/* Social media */
+
+$social-media-width: 10.5rem;
+
