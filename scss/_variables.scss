@@ -25,14 +25,29 @@ $letter-spacing-base: -0.13px;
 
 $font-family-headers: "Fraunces", serif;
 
+/* Breakpoints */
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 940px;
+
+$hero-bg-breakpoint: 480px;
+
 /* Hero */
 
 $hero-background-image-url: "images/mobile/image-header.jpg";
 $hero-background-image-position: center bottom;
 $hero-background-image-size: cover;
 
+$hero-background-image-url-md: "images/desktop/image-header.jpg";
+
+$hero-content-max-width: 20.5rem;
 $hero-content-padding-top: 3.5rem;
 $hero-content-padding-bottom: 8.5rem;
+$hero-content-padding-x: 0.5rem;
+
+$hero-content-max-width-lg: 47rem;
+$hero-content-padding-top-lg: 4.5rem;
+$hero-content-padding-bottom-lg: 20.75rem;
 
 $hero-title-font-family: $font-family-headers;
 $hero-title-font-size: 2.5rem;
@@ -44,12 +59,26 @@ $hero-title-text-align: center;
 $hero-title-color: $white;
 $hero-title-margin-bottom: 3.5rem;
 
+$hero-title-font-size-lg: 3.5rem;
+$hero-title-line-height-lg: 1.2;
+$hero-title-letter-spacing-lg: 0.54rem;
+$hero-title-margin-bottom-lg: 6rem;
+
 $hero-scroll-down-text-align: center;
 
 /* Header */
 
 $header-padding-y: 2rem;
 $header-padding-x: 1.5rem;
+
+$header-padding-y-md: 2.125rem;
+$header-padding-x-md: 3rem;
+
+$header-logo-width: 124px;
+
+$header-logo-width-lg: 170px;
+
+$header-menu-btn-width: 24px;
 
 /* Service section */
 
@@ -157,11 +186,11 @@ $testimonial-title-font-weight: 900;
 $testimonial-title-line-height: 1.2;
 $testimonial-title-letter-spacing: $letter-spacing-base;
 $testimonial-title-text-align: center;
-$testimonial-title-margin-bottom: .5rem;
+$testimonial-title-margin-bottom: 0.5rem;
 $testimonial-title-color: $very-dark-desaturated-blue;
 
 $testimonial-subtitle-font-family: $font-family-base;
-$testimonial-subtitle-font-size: .875rem;
+$testimonial-subtitle-font-size: 0.875rem;
 $testimonial-subtitle-font-weight: 700;
 $testimonial-subtitle-line-height: $line-height-base;
 $testimonial-subtitle-letter-spacing: -0.1px;
@@ -192,14 +221,29 @@ $footer-nav-link-color: $dark-moderate-cyan;
 
 /* Nav */
 
+$nav-item-spacer: 1.5rem;
+$nav-item-spacer-lg: 3rem;
+
 $nav-link-font-family: $font-family-base;
 $nav-link-font-size: $font-size-base;
-$nav-link-font-weight: 700;
+$nav-link-font-weight: 600;
 $nav-link-line-height: $line-height-base;
 $nav-link-letter-spacing: $letter-spacing-base;
 $nav-link-text-decoration: none;
+$nav-link-color: $white;
+
+$nav-link-highlighted-font-family: $font-family-headers;
+$nav-link-highlighted-font-size: 0.9375rem;
+$nav-link-highlighted-font-weight: 700;
+$nav-link-highlighted-text-transform: uppercase;
+$nav-link-highlighted-padding-y: 0.5rem;
+$nav-link-highlighted-padding-x: 1.25rem;
+$nav-link-highlighted-bg-color: change-color($white, $alpha: 0.25);
+$nav-link-highlighted-radius: 1.75rem;
+
+$nav-link-highlighted-padding-y-lg: 1rem;
+$nav-link-highlighted-padding-x-lg: 2rem;
 
 /* Social media */
 
 $social-media-width: 10.5rem;
-

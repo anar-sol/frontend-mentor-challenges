@@ -1,5 +1,7 @@
 @import "variables";
 
+/** TODO correct footer nav */
+
 *,
 *::before,
 *::after {
@@ -20,8 +22,21 @@ img {
     background: url($hero-background-image-url) $hero-background-image-position /
         $hero-background-image-size no-repeat;
 
+    @media (min-width: $hero-bg-breakpoint) {
+        background-image: url($hero-background-image-url-md);
+    }
+
     &__content {
-        padding: $hero-content-padding-top 0 $hero-content-padding-bottom;
+        max-width: $hero-content-max-width;
+        padding: $hero-content-padding-top $hero-content-padding-x
+            $hero-content-padding-bottom $hero-content-padding-x;
+        margin: 0 auto;
+
+        @media (min-width: $breakpoint-lg) {
+            max-width: $hero-content-max-width-lg;
+            padding: $hero-content-padding-top-lg 0
+                $hero-content-padding-bottom-lg;
+        }
     }
 
     &__title {
@@ -34,6 +49,13 @@ img {
         text-align: $hero-title-text-align;
         color: $hero-title-color;
         margin: 0 0 $hero-title-margin-bottom;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: $hero-title-font-size-lg;
+            line-height: $hero-title-line-height-lg;
+            letter-spacing: $hero-title-letter-spacing-lg;
+            margin: 0 0 $hero-title-margin-bottom-lg;
+        }
     }
 
     &__scroll-down {
@@ -47,8 +69,32 @@ img {
     justify-content: space-between;
     align-items: center;
 
-    .nav {
-        display: none;
+    @media (min-width: $breakpoint-md) {
+        padding: $header-padding-y-md $header-padding-x-md;
+    }
+
+    &__logo {
+        width: $header-logo-width;
+        flex-shrink: 0;
+
+        @media (min-width: $breakpoint-lg) {
+            width: $header-logo-width-lg;
+        }
+    }
+
+    &__menu-btn {
+        width: $header-menu-btn-width;
+        flex-shrink: 0;
+    }
+}
+
+/* Logo */
+
+.logo {
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -58,6 +104,54 @@ img {
     margin: 0;
     border: none;
     cursor: pointer;
+
+    @media (min-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.nav {
+    display: none;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: $nav-item-spacer;
+
+            @media (min-width: $breakpoint-lg) {
+                margin-right: $nav-item-spacer-lg;
+            }
+        }
+    }
+
+    &__link {
+        font-family: $nav-link-font-family;
+        font-size: $nav-link-font-size;
+        font-weight: $nav-link-font-weight;
+        line-height: $nav-link-line-height;
+        letter-spacing: $nav-link-letter-spacing;
+        text-decoration: $nav-link-text-decoration;
+        color: $nav-link-color;
+
+        &--highlighted {
+            font-family: $nav-link-highlighted-font-family;
+            font-size: $nav-link-highlighted-font-size;
+            font-weight: $nav-link-highlighted-font-weight;
+            text-transform: $nav-link-highlighted-text-transform;
+            background-color: $nav-link-highlighted-bg-color;
+            padding: $nav-link-highlighted-padding-y
+                $nav-link-highlighted-padding-x;
+            border-radius: $nav-link-highlighted-radius;
+
+            @media (min-width: $breakpoint-lg) {
+                padding: $nav-link-highlighted-padding-y-lg
+                    $nav-link-highlighted-padding-x-lg;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-md) {
+        display: flex;
+    }
 }
 
 /* Service section */
@@ -325,31 +419,6 @@ img {
 
     &__social-media {
         width: $social-media-width;
-    }
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    &__link {
-        font-family: $nav-link-font-family;
-        font-size: $nav-link-font-size;
-        font-weight: $nav-link-font-weight;
-        line-height: $nav-link-line-height;
-        letter-spacing: $nav-link-letter-spacing;
-        text-decoration: $nav-link-text-decoration;
-    }
-
-}
-
-/* Logo */
-
-.logo {
-    &__image {
-        width: 100%;
-        height: auto;
     }
 }
 
