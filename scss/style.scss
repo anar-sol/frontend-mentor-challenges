@@ -16,11 +16,27 @@ img {
     max-width: 100%;
 }
 
+/* Container */
+
+.container {
+    display: grid;
+
+    @media (min-width: $breakpoint-md) {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: auto;
+    }
+}
+
 /* Hero */
 
 .hero {
     background: url($hero-background-image-url) $hero-background-image-position /
         $hero-background-image-size no-repeat;
+
+    @media (min-width: $breakpoint-md) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 
     @media (min-width: $hero-bg-breakpoint) {
         background-image: url($hero-background-image-url-md);
@@ -163,6 +179,12 @@ img {
         background-repeat: no-repeat;
         height: 0;
         padding-top: $service-image-ratio;
+
+        @media (min-width: $breakpoint-md) {
+            height: auto;
+            padding: 0;
+            order: 2;
+        }
     }
 
     &__body {
@@ -244,8 +266,20 @@ img {
     }
 
     &--1 {
+        @media (min-width: $breakpoint-md) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+        }
+
         .service__image {
             background-image: url($service-1-image-url);
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($service-1-image-url-md);
+            }
         }
 
         .service__link::before {
@@ -254,8 +288,21 @@ img {
     }
 
     &--2 {
+        @media (min-width: $breakpoint-md) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+        }
+
         .service__image {
             background-image: url($service-2-image-url);
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($service-2-image-url-md);
+                order: 0;
+            }
         }
 
         .service__link::before {
@@ -264,8 +311,18 @@ img {
     }
 
     &--3 {
+        @media (min-width: $breakpoint-md) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
         .service__body {
             background-image: url($service-3-image-url);
+            min-height: 100%;
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($service-3-image-url-md);
+            }
         }
 
         .service__title {
@@ -278,8 +335,18 @@ img {
     }
 
     &--4 {
+        @media (min-width: $breakpoint-md) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
         .service__body {
             background-image: url($service-4-image-url);
+            min-height: 100%;
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($service-4-image-url-md);
+            }
         }
 
         .service__title {
@@ -296,6 +363,11 @@ img {
 
 .testimonials {
     padding: $testimonials-padding-y $testimonials-padding-x;
+
+    @media (min-width: $breakpoint-md) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 
     &__title {
         font-family: $testimonials-title-font-family;
@@ -367,6 +439,12 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 50%);
 
+    @media (min-width: $breakpoint-md) {
+        grid-template-columns: repeat(4, 25%);
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
     &__image {
         height: 0;
         padding-top: 100%;
@@ -376,18 +454,34 @@ img {
 
         &--1 {
             background-image: url($gallery-image-1-url);
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($gallery-image-1-url-md);
+            }
         }
 
         &--2 {
             background-image: url($gallery-image-2-url);
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($gallery-image-2-url-md);
+            }
         }
 
         &--3 {
             background-image: url($gallery-image-3-url);
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($gallery-image-3-url-md);
+            }
         }
 
         &--4 {
             background-image: url($gallery-image-4-url);
+
+            @media (min-width: $breakpoint-md) {
+                background-image: url($gallery-image-4-url-md);
+            }
         }
     }
 }
@@ -401,6 +495,11 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: $breakpoint-md) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 
     &__logo {
         width: $footer-logo-width;

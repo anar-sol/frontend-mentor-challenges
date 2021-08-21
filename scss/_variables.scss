@@ -85,13 +85,19 @@ $header-menu-btn-width: 24px;
 $service-image-ratio: 83.2%;
 
 $service-image-position: center;
-$service-image-size: contain;
+$service-image-size: cover;
 
 $service-1-image-url: "images/mobile/image-transform.jpg";
 $service-2-image-url: "images/mobile/image-stand-out.jpg";
 
 $service-3-image-url: "images/mobile/image-graphic-design.jpg";
 $service-4-image-url: "images/mobile/image-photography.jpg";
+
+$service-1-image-url-md: "images/desktop/image-transform.jpg";
+$service-2-image-url-md: "images/desktop/image-stand-out.jpg";
+
+$service-3-image-url-md: "images/desktop/image-graphic-design.jpg";
+$service-4-image-url-md: "images/desktop/image-photography.jpg";
 
 $service-body-padding-y: 4rem;
 $service-body-padding-x: 1.5rem;
@@ -203,6 +209,11 @@ $gallery-image-1-url: "images/mobile/image-gallery-milkbottles.jpg";
 $gallery-image-2-url: "images/mobile/image-gallery-orange.jpg";
 $gallery-image-3-url: "images/mobile/image-gallery-cone.jpg";
 $gallery-image-4-url: "images/mobile/image-gallery-sugar-cubes.jpg";
+
+$gallery-image-1-url-md: "images/desktop/image-gallery-milkbottles.jpg";
+$gallery-image-2-url-md: "images/desktop/image-gallery-orange.jpg";
+$gallery-image-3-url-md: "images/desktop/image-gallery-cone.jpg";
+$gallery-image-4-url-md: "images/desktop/image-gallery-sugar-cubes.jpg";
 
 /* Footer */
 
