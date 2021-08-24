@@ -1,1 +1,135 @@
 @import "variables";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-base;
+    background: url($body-bg-image) $body-bg-position / $body-bg-size no-repeat
+        $pale-blue;
+    margin: 0;
+
+    @media (min-width: $breakpoint-lg) {
+        background-image: url($body-bg-image-lg);
+    }
+}
+
+.wrapper {
+    min-height: 100vh;
+    max-width: $wrapper-max-width;
+    padding: 0 $wrapper-padding-x;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-summary {
+    background: $order-summary-bg;
+    border-radius: $order-summary-border-radius;
+    overflow: hidden;
+
+    /* Order summary image */
+    &::before {
+        content: "";
+        display: block;
+        height: 0;
+        padding-top: $order-summary-image-ratio;
+        background: url($order-summary-bg-image) $order-summary-bg-position /
+            $order-summary-bg-size no-repeat;
+    }
+
+    &__body {
+        padding-top: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+        padding-bottom: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+        padding-left: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+        padding-right: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+    }
+
+    &__title {
+        font-size: clamp(1.375rem, 1.2430rem + 0.5634vw, 1.75rem);
+        line-height: $order-summary-title-line-height;
+        font-weight: $order-summary-title-font-weight;
+        text-align: $order-summary-title-text-align;
+        color: $order-summary-title-color;
+        margin: 0 0 $order-summary-title-margin-bottom;
+    }
+
+    &__text {
+        font-size: $order-summary-text-font-size;
+        line-height: $order-summary-text-line-height;
+        font-weight: $order-summary-text-font-weight;
+        text-align: $order-summary-text-text-align;
+        color: $order-summary-text-color;
+        margin: 0 0 $order-summary-text-margin-bottom;
+    }
+
+    &__item {
+        background: $order-summary-item-bg-color;
+        padding: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+        border-radius: $order-summary-item-radius;
+        margin-bottom: $order-summary-item-margin-bottom;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        /* Icon */
+        &::before {
+            content: "";
+            width: $order-summary-item-icon-width;
+            height: $order-summary-item-icon-height;
+            background: url($order-summary-item-icon-image);
+            margin-right: $order-summary-item-icon-margin-right;
+        }
+    }
+
+    &__item-title {
+        font-size: clamp(0.875rem, 0.8310rem + 0.1878vw, 1rem);
+        line-height: $order-summary-item-title-line-height;
+        font-weight: $order-summary-item-title-font-weight;
+        color: $order-summary-item-title-color;
+        margin: 0 0 $order-summary-item-title-margin-bottom;
+    }
+
+    &__item-price {
+        font-size: clamp(0.875rem, 0.8310rem + 0.1878vw, 1rem);
+        line-height: $order-summary-item-price-line-height;
+        font-weight: $order-summary-item-price-font-weight;
+        color: $order-summary-item-price-color;
+        margin: 0;
+    }
+
+    &__item-link {
+        font-size: $order-summary-item-link-font-size;
+        line-height: $order-summary-item-link-line-height;
+        font-weight: $order-summary-item-link-font-weight;
+        color: $order-summary-item-link-color;
+        margin-left: auto;
+    }
+
+    &__btn {
+        font-size: $order-summary-btn-font-size;
+        line-height: $order-summary-btn-line-height;
+        font-weight: $order-summary-btn-font-weight;
+        text-align: $order-summary-btn-text-align;
+        text-decoration: $order-summary-btn-text-decoration;
+        padding: $order-summary-btn-padding;
+        border-radius: $order-summary-btn-radius;
+        display: block;
+
+        &--primary {
+            color: $order-summary-btn-primary-color;
+            background: $order-summary-btn-primary-bg-color;
+            box-shadow: $order-summary-btn-primary-shadow;
+            margin-bottom: $order-summary-btn-margin;
+        }
+
+        &--secondary {
+            color: $order-summary-btn-secondary-color;
+        }
+    }
+}
