@@ -5,6 +5,7 @@ $breakpoint-lg: 45em;
 /* Colors */
 
 $bright-blue: #3829e0;
+$bright-blue-bis: #766cf1;
 $dark-blue: #1f2e55;
 $desaturated-blue: #717fa6;
 $pale-blue: #e0e8ff;
@@ -112,6 +113,9 @@ $order-summary-item-link-line-height: 1.3;
 $order-summary-item-link-font-weight: $font-weight-bold;
 $order-summary-item-link-color: $bright-blue;
 
+$order-summary-item-link-text-decoration-hover: none;
+$order-summary-item-link-color-hover: $bright-blue-bis;
+
 /* Order summary btn */
 
 $order-summary-btn-font-size: 0.9375rem;
@@ -127,4 +131,7 @@ $order-summary-btn-primary-color: $white;
 $order-summary-btn-primary-bg-color: $bright-blue;
 $order-summary-btn-primary-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
 
+$order-summary-btn-primary-bg-color-hover: $bright-blue-bis;
+
 $order-summary-btn-secondary-color: $desaturated-blue;
+$order-summary-btn-secondary-color-hover: $dark-blue;

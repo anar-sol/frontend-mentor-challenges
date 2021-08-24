@@ -109,6 +109,11 @@ body {
         font-weight: $order-summary-item-link-font-weight;
         color: $order-summary-item-link-color;
         margin-left: auto;
+
+        &:hover {
+            text-decoration: $order-summary-item-link-text-decoration-hover;
+            color: $order-summary-item-link-color-hover;
+        }
     }
 
     &__btn {
@@ -126,10 +131,18 @@ body {
             background: $order-summary-btn-primary-bg-color;
             box-shadow: $order-summary-btn-primary-shadow;
             margin-bottom: $order-summary-btn-margin;
+
+            &:hover {
+                background: $order-summary-btn-primary-bg-color-hover;
+            }
         }
 
         &--secondary {
             color: $order-summary-btn-secondary-color;
+
+            &:hover {
+                color: $order-summary-btn-secondary-color-hover;
+            }
         }
     }
 }
