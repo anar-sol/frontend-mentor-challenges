@@ -1,0 +1,30 @@
+/* Linearly scaled values */
+
+$scaled-values-min-viewport: 375px;
+$scaled-values-max-viewport: 1024px;
+
+@function linearly-scale($min-value, $max-value, $min-viewport, $max-viewport) {
+    /*  value scale according to a linear function (y = m * x + b)
+        m: slope
+        y: y-intercept
+    */
+
+    $m: ($max-value - $min-value) / ($max-viewport - $min-viewport);
+    $b: $min-value - ($m * $min-viewport);
+
+    @return "#{$m * 100}vw + (#{$b})";
+}
+
+@mixin scaled-value(
+    $property,
+    $min-value,
+    $max-value,
+    $min-viewport: $scaled-values-min-viewport,
+    $max-viewport: $scaled-values-max-viewport
+) {
+    #{$property}: clamp(
+        #{$min-value},
+        #{linearly-scale($min-value, $max-value, $min-viewport, $max-viewport)},
+        #{$max-value}
+    );
+}

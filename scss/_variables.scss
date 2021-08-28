@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* Breakpoints */
+
+$viewport-mobile-min: 23.4375rem;
+$viewport-mobile-max: 30rem;
+$viewport-desktop-min: 64rem;
+$viewport-desktop-max: 90rem;
+
+/* Base */
+
+$font-family-base: "Inter", sans-serif;
+$font-size-base: 0.9375rem;
+$line-height-base: 1.6;
+$font-weight-base: 400;
+$color-base: hsl(0, 0%, 100%);
+
+$body-bg: hsl(233, 47%, 7%);
+
+/* Container */
+
+$container-max-width: 30rem;
+$container-max-width-desktop-max: 90rem;
+$container-padding: 1.5rem;
+$container-padding-desktop: 3rem;
+
+/* Card */
+
+$card-bg-color: hsl(244, 38%, 16%);
+$card-border-radius: 0.66rem;
+
+$card-image-ratio: 73%;
+$card-image-bg-color: hsl(277, 64%, 61%);
+$card-image-url: url("images/image-header-mobile.jpg");
+$card-image-url-desktop: url("images/image-header-desktop.jpg");
+$card-image-position: center;
+$card-image-size: cover;
+$card-image-bg: $card-image-bg-color $card-image-url $card-image-position /
+    $card-image-size no-repeat;
+$card-image-bg-blend-mode: multiply;
+
+$card-body-padding-top-min: 2.5rem;
+$card-body-padding-top-max: 3.5rem;
+
+$card-body-padding-min: 2rem;
+$card-body-padding-max: 2.5rem;
+
+$card-body-padding-desktop-min: 2.5rem;
+$card-body-padding-desktop-max: 4.5rem;
+
+$card-body-padding-bottom-desktop-min: 2rem;
+$card-body-padding-bottom-desktop-max: 3.5rem;
+
+$card-body-grid-gap-min: 2.5rem;
+$card-body-grid-gap-max: 3.5rem;
+
+$card-body-grid-gap-desktop-min: 2.5rem;
+$card-body-grid-gap-desktop-max: 3.5rem;
+
+$card-title-font-size: 1.7rem;
+$card-title-font-size-desktop-max: 2.25rem;
+$card-title-line-height: 1.2;
+$card-title-font-weight: 700;
+$card-title-text-align: center;
+$card-title-text-align-desktop: left;
+
+$card-title-highlighted-color: hsla(277, 64%, 61%);
+
+$card-title-margin-bottom-min: 1rem;
+$card-title-margin-bottom-max: 1.5rem;
+
+$card-text-text-align: center;
+$card-text-text-align-desktop: left;
+$card-text-color: change-color($color-base, $alpha: 0.75);
+
+/* Stats */
+
+$stats-item-text-align: center;
+$stats-item-text-align-desktop: left;
+$stats-item-spacer: 1.5rem;
+$stats-item-spacer-desktop-min: 3rem;
+$stats-item-spacer-desktop-max: 4rem;
+
+$stats-value-font-size: 1.5rem;
+$stats-value-font-weight: 700;
+
+$stats-title-font-size: 0.75rem;
+$stats-title-font-weight: 400;
+$stats-title-letter-spacing: 0.05rem;
+$stats-title-text-transform: uppercase;
+$stats-title-color: change-color($color-base, $alpha: 0.6);
