@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Typemaster pre-launch landing page</title>
 </head>
+
 <body>
-  Pre-order now
-
-  Typemaster keyboard
-
-  Improve your productivity and gaming without breaking the bank. Upgrade to a high quality 
-  mechanical typing experience.
-
-  Pre-order now
-  Release on 5/27
-
-  Mechanical wireless keyboard
-  The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety 
-  of switches and keycaps, along with reliable wireless connectivity.
-
-  Highly compatible
-  Easy to use and works well with all major computer brands, gaming consoles and mobile devices. 
-  Plug & play, no installation or driver needed.
-
-  Wireless with bluetooth
-  Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away. 
-  Simply plug the unifying receiver into your computer.
-
-  High capacity battery
-  Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on replaceable ones. 
-  Enjoy 40 hours of usage time between charges.
-
-  RGB backlit modes
-  Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows intensely in the dark and helps
-  you type in low light conditions.
-
-  Typemaster 2021 | All Rights Reserved
+  <header class="header">
+    <img src="assets/shared/logo.svg" alt="TM" class="header__logo logo">
+    <a href="#" class="header__btn btn btn--secondary">Pre-order now</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Typemaster keyboard</h1>
+        <p class="hero__text">Improve your productivity and gaming without breaking the bank. Upgrade to a high quality
+          mechanical typing experience.</p>
+        <div class="hero__buttons">
+          <a href="#" class="hero__btn btn btn--primary">Pre-order now</a>
+          <a href="#" class="hero__btn btn btn--secondary">Release on 5/27</a>
+        </div>
+      </div>
+      <div class="hero__illustration">
+        <img src="assets/mobile/image-keyboard.jpg" alt="Typemaster keyboard" class="hero__img">
+      </div>
+    </section>
+    <section class="presentation">
+      <div class="presentation__illustration">
+        <img src="assets/mobile/image-phone-and-keyboard.jpg" alt="Typemaster keyboard and phone"
+          class="presentation__img presentation__img--filter">
+        <img src="assets/mobile/image-glass-and-keyboard.jpg" alt="Typemaster keyboard and glass"
+          class="presentation__img">
+      </div>
+      <div class="presentation__content">
+        <h2 class="presentation__title">Mechanical wireless keyboard</h2>
+        <p class="presentation__text">The Typemaster keyboard boasts top-notch build and practical design. It offers a
+          wide variety of switches and keycaps, along with reliable wireless connectivity.</p>
+      </div>
+    </section>
+    <section class="features">
+      <div class="feature feature--compatible">
+        <div class="feature__icon-container">
+          <img src="assets/shared/icon-compatible.svg" alt="" class="feature__icon">
+        </div>
+        <h3 class="feature__title">Highly compatible</h3>
+        <p class="feature__text">Easy to use and works well with all major computer brands, gaming consoles and mobile
+          devices. Plug & play, no installation or driver needed.</p>
+      </div>
+      <div class="feature feature--bluetooth">
+        <div class="feature__icon-container">
+          <img src="assets/shared/icon-bluetooth.svg" alt="" class="feature__icon">
+        </div>
+        <h3 class="feature__title">Wireless with bluetooth</h3>
+        <p class="feature__text">Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft
+          away. Simply plug the unifying receiver into your computer.</p>
+      </div>
+      <div class="feature feature--battery">
+        <div class="feature__icon-container">
+          <img src="assets/shared/icon-battery.svg" alt="" class="feature__icon">
+        </div>
+        <h3 class="feature__title">High capacity battery</h3>
+        <p class="feature__text">Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on
+          replaceable ones. Enjoy 40 hours of usage time between charges.</p>
+      </div>
+      <div class="feature feature--rgb">
+        <div class="feature__icon-container">
+          <img src="assets/shared/icon-light.svg" alt="" class="feature__icon">
+        </div>
+        <h3 class="feature__title">RGB backlit modes</h3>
+        <p class="feature__text">Choose from 4 backlight brightness levels and adjustable breathing speed. Each key
+          glows intensely in the dark and helps you type in low light conditions.</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="copyright">Typemaster 2021 | All Rights Reserved</p>
+    </footer>
+  </main>
 </body>
+
 </html>
