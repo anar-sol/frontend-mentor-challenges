@@ -1,0 +1,10 @@
+.hamburger {
+    background-color: transparent;
+    padding: $hamburger-padding-y $hamburger-padding-x;
+    border: none;
+
+    &:hover,
+    &:active {
+        opacity: $hamburger-hover-opacity;
+    }
+}

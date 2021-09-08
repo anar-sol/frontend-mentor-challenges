@@ -1,0 +1,16 @@
+.header {
+    color: $header-color;
+
+    &__container {
+        padding: $header-padding-y $header-padding-x;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__hamburger {
+        @media (min-width: $breakpoint-lg) {
+            display: none;
+        }
+    }
+}

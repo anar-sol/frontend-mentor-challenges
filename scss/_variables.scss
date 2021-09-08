@@ -1,0 +1,46 @@
+/* Colors */
+
+$color-background: #fff;
+$color-on-background: #24303e;
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700&display=swap');
+
+$font-stack-base: "Barlow", sans-serif;
+$font-stack-heading: 'Fraunces', serif;
+
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/* Breakpoints */
+
+$breakpoint-lg: 1024px;
+
+/* Header */
+
+$header-color: #fff;
+
+$header-padding-y: 2rem;
+$header-padding-x: 1.5rem;
+
+/* Hamburger */
+
+$hamburger-padding-y: 0;
+$hamburger-padding-x: 0;
+$hamburger-hover-opacity: 0.5;
+
+/* Nav */
+
+$nav-item-spacer: 3rem;
+
+$nav-link-font-size: 1.125rem;
+$nav-link-font-weight: $font-weight-semibold;
+$nav-link-text-decoration: none;
+$nav-link-highlighted-font-size: 0.9375rem;
+$nav-link-highlighted-font-family: $font-stack-heading;
+$nav-link-highlighted-text-transformation: uppercase;
+$nav-link-highlighted-padding-y: 1rem;
+$nav-link-highlighted-padding-x: 2rem;
+$nav-link-highlighted-border-radius: 1.75rem;
+$nav-link-highlighted-hover-opacity: 0.25;
