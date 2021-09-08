@@ -1,5 +1,4 @@
 .nav {
-    position: relative;
     display: none;
 
     @media (min-width: $breakpoint-lg) {
@@ -8,11 +7,42 @@
     }
 
     &--expanded {
+        font-size: $nav-expanded-font-size;
+        color: $nav-expanded-color;
+        background-color: $color-background;
+        padding: $nav-expanded-padding-y 0;
+        margin: 0 $header-padding-x;
+        width: calc(100% - #{$header-padding-x} * 2);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
         position: absolute;
         right: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        top: calc(100% + 25px);
+
+        .nav__item {
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: $nav-expanded-spacer;
+            }
+        }
+
+        .nav__link--highlighted {
+            background-color: #FBD600;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            height: 0;
+            width: 0;
+            border-bottom: 25px solid $color-background;
+            border-left: 25px solid transparent;
+            position: absolute;
+            top: -25px;
+            right: 0;
+        }
     }
 
     &__item {
@@ -40,7 +70,7 @@
 
             &:hover {
                 color: $color-background;
-                background-color: change-color($color-background, $alpha: .25);
+                background-color: change-color($color-background, $alpha: 0.25);
             }
         }
     }
