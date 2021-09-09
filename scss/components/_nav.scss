@@ -7,8 +7,6 @@
     }
 
     &--expanded {
-        font-size: $nav-expanded-font-size;
-        color: $nav-expanded-color;
         background-color: $color-background;
         padding: $nav-expanded-padding-y 0;
         margin: 0 $header-padding-x;
@@ -28,8 +26,15 @@
             }
         }
 
-        .nav__link--highlighted {
-            background-color: #FBD600;
+        .nav__link {
+            font-size: $nav-expanded-font-size;
+            color: $nav-expanded-color;
+
+            &--highlighted {
+                font-size: 15px;
+                color: $nav-link-highlighted-color;
+                background-color: #FBD600;
+            }
         }
 
         &::before {
@@ -62,15 +67,15 @@
             font-family: $nav-link-highlighted-font-family;
             font-size: $nav-link-highlighted-font-size;
             text-transform: $nav-link-highlighted-text-transformation;
-            color: $color-on-background;
-            background-color: $color-background;
+            color: $nav-link-highlighted-color;
+            background-color: $nav-link-highlighted-bg-color;
             padding: $nav-link-highlighted-padding-y
                 $nav-link-highlighted-padding-x;
             border-radius: $nav-link-highlighted-border-radius;
 
             &:hover {
-                color: $color-background;
-                background-color: change-color($color-background, $alpha: 0.25);
+                color: $nav-link-highlighted-hover-color;
+                background-color: $nav-link-highlighted-hover-bg-color;
             }
         }
     }

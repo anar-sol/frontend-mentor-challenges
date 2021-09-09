@@ -1,10 +1,11 @@
 /* Colors */
 /* Typography */
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 /* Breakpoints */
 /* Header */
 /* Hamburger */
 /* Nav */
+/* Hero */
 *,
 *::before,
 *::after {
@@ -48,7 +49,6 @@ select {
 
 body {
   font-family: "Barlow", sans-serif;
-  background-color: #3EBFFF;
 }
 
 .header {
@@ -77,8 +77,6 @@ body {
   }
 }
 .nav--expanded {
-  font-size: 1.25rem;
-  color: #808397;
   background-color: #fff;
   padding: 2.5rem 0;
   margin: 0 1.5rem;
@@ -94,7 +92,13 @@ body {
   margin-right: 0;
   margin-bottom: 2rem;
 }
+.nav--expanded .nav__link {
+  font-size: 1.25rem;
+  color: #808397;
+}
 .nav--expanded .nav__link--highlighted {
+  font-size: 15px;
+  color: #24303e;
   background-color: #FBD600;
 }
 .nav--expanded::before {
@@ -139,6 +143,28 @@ body {
 }
 .hamburger:hover, .hamburger:active {
   opacity: 0.5;
+}
+
+.hero {
+  background: url("images/mobile/image-header.jpg") center bottom/cover no-repeat;
+}
+.hero__content {
+  padding-top: 3.5rem;
+  padding-bottom: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__title {
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 3.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

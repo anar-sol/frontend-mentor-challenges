@@ -5,7 +5,7 @@ $color-on-background: #24303e;
 
 /* Typography */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
 
 $font-stack-base: "Barlow", sans-serif;
 $font-stack-heading: 'Fraunces', serif;
@@ -30,6 +30,7 @@ $hamburger-padding-y: 0;
 $hamburger-padding-x: 0;
 $hamburger-hover-opacity: 0.5;
 
+
 /* Nav */
 
 $nav-expanded-position-top: 88px;
@@ -46,8 +47,16 @@ $nav-link-highlighted-padding-y: 1rem;
 $nav-link-highlighted-padding-x: 2rem;
 $nav-link-highlighted-border-radius: 1.75rem;
 $nav-link-highlighted-hover-opacity: 0.25;
+$nav-link-highlighted-color: $color-on-background;
+$nav-link-highlighted-bg-color: $color-background;
+$nav-link-highlighted-hover-color: $color-background;
+$nav-link-highlighted-hover-bg-color: change-color($color-background, $alpha: 0.25);
 
 $nav-expanded-font-size: 1.25rem;
 $nav-expanded-color: #808397;
 $nav-expanded-padding-y: 2.5rem;
 $nav-expanded-spacer: 2rem;
+
+/* Hero */
+
+
