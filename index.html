@@ -8,11 +8,6 @@
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="wrapper">
@@ -28,23 +23,14 @@
           </div>
         </div>
         <div class="dashboard__controls">
-          <button type="button" class="dashboard__control-btn">Daily</button>
-          <button type="button" class="dashboard__control-btn">Weekly</button>
-          <button type="button" class="dashboard__control-btn">Monthly</button>
+          <button type="button" class="dashboard__btn dashboard__btn--daily">Daily</button>
+          <button type="button" class="dashboard__btn dashboard__btn--weekly">Weekly</button>
+          <button type="button" class="dashboard__btn dashboard__btn--monthly">Monthly</button>
         </div>
       </header>
-
-      <div class="dashboard__card">
-        <div class="dashboard__card-header">
-          <h2 class="dashboard__card-title"></h2>
-          <button class="dashboard__card-options-btn"></button>
-        </div>
-        <div class="dashboard__card-body">
-          <div class="dashboard__card-value"></div>
-          <div class="dashboard__card-last-value"></div>
-        </div>
-      </div>
     </article>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
