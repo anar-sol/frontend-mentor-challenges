@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
+
   <title>Frontend Mentor | Time tracking dashboard</title>
 
 </head>
+
 <body>
   <div class="wrapper">
     <article class="dashboard">
@@ -17,15 +20,15 @@
         <div class="dashboard__user">
           <div class="dashboard__user-picture">
             <img src="images/image-jeremy.png" alt="Jeremy's picture">
-            <h1 class="dashboard__title">
-              <div class="dashboard__title-sup">Report for</div>
-              <div class="dahsboard__title-name">Jeremy Robson</div>
-            </h1>
           </div>
+          <h1 class="dashboard__title">
+            <div class="dashboard__title-sup">Report for</div>
+            Jeremy Robson
+          </h1>
         </div>
         <div class="dashboard__controls">
           <button type="button" class="dashboard__btn dashboard__btn--daily">Daily</button>
-          <button type="button" class="dashboard__btn dashboard__btn--weekly">Weekly</button>
+          <button type="button" class="dashboard__btn dashboard__btn--weekly dashboard__btn--active">Weekly</button>
           <button type="button" class="dashboard__btn dashboard__btn--monthly">Monthly</button>
         </div>
       </header>
@@ -34,4 +37,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

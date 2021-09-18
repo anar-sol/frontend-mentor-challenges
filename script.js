@@ -118,8 +118,8 @@ function renderCard(item, time) {
     }
     return `
     <div class="card card--${ item.title.toLowerCase().replace(" ", "-") }">
-        <div class="card-header">
-            <h2 class="card-title">${ item.title }</h2>
+        <div class="card__header">
+            <h2 class="card__title">${ item.title }</h2>
             <button class="card__options-btn"><img src="images/icon-ellipsis.svg" alt=""></button>
         </div>
         <div class="card__body">
@@ -139,7 +139,7 @@ const btnDaily = document.querySelector(".dashboard__btn--daily");
 const btnWeekly = document.querySelector(".dashboard__btn--weekly");
 const btnMonthly = document.querySelector(".dashboard__btn--monthly");
 
-let time = "daily";
+let time = "weekly";
 
 if (dashboard != null) {
     for (const item of data) {
