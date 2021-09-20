@@ -118,14 +118,16 @@ function renderCard(item, time) {
     }
     return `
     <div class="card card--${ item.title.toLowerCase().replace(" ", "-") }">
-        <div class="card__header">
+        <div class="card__container">
+            <div class="card__header">
             <h2 class="card__title">${ item.title }</h2>
             <button class="card__options-btn"><img src="images/icon-ellipsis.svg" alt=""></button>
-        </div>
-        <div class="card__body">
-            <div class="card__value">${ item.timeframes[time].current }hrs</div>
-            <div class="card__last-value">
-            ${tmp} - ${ item.timeframes[time].previous }hrs</div>
+            </div>
+            <div class="card__body">
+                <div class="card__value">${ item.timeframes[time].current }hrs</div>
+                <div class="card__last-value">
+                ${tmp} - ${ item.timeframes[time].previous }hrs</div>
+            </div>
         </div>
     </div>
     `;

@@ -2,10 +2,19 @@
     display: grid;
     gap: 1.5rem;
 
+    @media (min-width: 36.75em) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.875rem;
+    }
+
     &__header {
         background-color: var(--color-surface);
         color: var(--color-on-surface);
         border-radius: var(--border-radius);
+
+        @media (min-width: 36.75em) {
+            grid-column: 1 / 3;
+        }
     }
 
     &__user {
