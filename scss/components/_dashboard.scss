@@ -41,6 +41,12 @@
         border-radius: var(--border-radius);
         display: flex;
         align-items: center;
+
+        @media (min-width: 72.375em) {
+            padding: 2.3125rem 2rem 5rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__user-picture {
@@ -48,11 +54,22 @@
         height: 4rem;
         border-radius: 50%;
         margin-right: 1.25rem;
+
+        @media (min-width: 72.375em) {
+            width: 4.875rem;
+            height: 4.875rem;
+            margin-right: 0;
+            margin-bottom: 2.6875rem;
+        }
     }
 
     &__title {
         font-size: 1.5rem;
         font-weight: var(--font-weight-light);
+
+        @media (min-width: 72.375em) {
+            font-size: 2.5rem;
+        }
     }
 
     &__title-sup {
@@ -67,6 +84,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (min-width: 72.375em) {
+            padding: 2rem;
+            padding-top: 1.625rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__btn {
@@ -78,6 +102,12 @@
 
         &--active {
             color: var(--color-on-surface);
+        }
+
+        @media (min-width: 72.375em) {
+            &:not(:last-child) {
+                margin-bottom: 1.25rem;
+            }
         }
     }
 }
