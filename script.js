@@ -133,7 +133,27 @@ function renderCard(item, time) {
     `;
 }
 
+function renderData(dashboard, data, time) {
+    if (dashboard != null) {
+        const cards = dashboard.querySelectorAll('.card');
+        for (const card of cards) {
+            card.remove();
+        }
+
+        for (const item of data) {
+            dashboard.insertAdjacentHTML("beforeend", renderCard(item, time));
+        }
+    }
+}
+
+function updateActiveBtn(newActive) {
+    currentActive = document.querySelector('.dashboard__btn--active');
+    currentActive.classList.remove('dashboard__btn--active');
+    newActive.classList.add('dashboard__btn--active');
+}
+
 const data = JSON.parse(jsonString);
+let time = "daily";
 
 
 const dashboard = document.querySelector(".dashboard");
@@ -141,10 +161,22 @@ const btnDaily = document.querySelector(".dashboard__btn--daily");
 const btnWeekly = document.querySelector(".dashboard__btn--weekly");
 const btnMonthly = document.querySelector(".dashboard__btn--monthly");
 
-let time = "weekly";
+btnDaily.addEventListener("click", (e) => {
+    time = "daily";
+    updateActiveBtn(e.target);
+    renderData(dashboard, data, time);
+});
 
-if (dashboard != null) {
-    for (const item of data) {
-        dashboard.insertAdjacentHTML("beforeend", renderCard(item, time));
-    }
-}
+btnWeekly.addEventListener("click", (e) => {
+    time = "weekly";
+    updateActiveBtn(e.target);
+    renderData(dashboard, data, time);
+});
+
+btnMonthly.addEventListener("click", (e) => {
+    time = "monthly";
+    updateActiveBtn(e.target);
+    renderData(dashboard, data, time);
+});
+
+renderData(dashboard, data, time);
