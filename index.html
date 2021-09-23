@@ -33,15 +33,27 @@
             <li class="services__item services__item--google"><img src="assets/desktop/google-podcasts.svg" alt="Google Podcasts"></li>
             <li class="services__item services__item--pocket"><img src="assets/desktop/pocket-casts.svg" alt="Pocket Casts"></li>
           </ul>
-          <form action="" class="request-access__form form">
-            <input class="form__input" type="email" name="email" id="email">
-            <label class="form__label" for="email">Email address</label>
+          <form action="" class="request-access__form form" novalidate>
+            <div class="text-field">
+              <input class="text-field__input" type="email" name="email" id="email" required>
+              <label class="text-field__label" for="email">Email address</label>
+              <p class="text-field__error"></p>
+            </div>
             <button class="form__submit" type="submit">Request access</button>
           </form>
         </div>
       </div>
     </article>
   </main>
+
+  <script src="script.js"></script>
+  <script>
+    const errors = {}
+    errors[TextField.VALUE_MISSING] = 'Oops! Please add your email';
+    errors[TextField.TYPE_MISMATCH] = 'Oops! Please check your email';
+    const textField = new TextField(document.querySelector('.text-field'), errors);
+    TextField.activateFormValidation(document.querySelector('.form'));
+  </script>
 </body>
 
 </html>
