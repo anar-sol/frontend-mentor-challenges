@@ -1,0 +1,41 @@
+.request-access {
+    background-color: $color-background;
+    background-image: url("assets/mobile/image-host.jpg");
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-size: 1.625rem;
+        font-weight: $font-weight-light;
+        line-height: 1.46;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__title-highlighted {
+        color: $color-primary;
+    }
+
+    &__text {
+        color: $color-on-background-high-emphasis;
+        font-size: 0.9375rem;
+        font-weight: $font-weight-light;
+        text-align: center;
+    }
+
+    &__services {
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,25 @@
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+        flex: 0 1 auto;
+
+        &--spotify {
+            width: 56px;
+        }
+
+        &--apple {
+            width: 56px;
+        }
+
+        &--google {
+            width: 100px;
+        }
+
+        &--pocket {
+            width: 77px;
+        }
+    }
+}
