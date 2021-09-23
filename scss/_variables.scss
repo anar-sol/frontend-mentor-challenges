@@ -1,0 +1,20 @@
+/* Colors */
+
+$color-primary: #54e6af;
+$color-background: #121725;
+$color-surface: #2c344b;
+$color-error: #fb3e3e;
+
+$color-on-primary: $color-background;
+
+$color-on-background: #fff;
+$color-on-background-high-emphasis: change-color($color-on-background, $alpha: .87);
+$color-on-background-medium-emphasis: change-color($color-on-background, $alpha: .6);
+
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
+
+$font-stack: 'Chivo', sans-serif;
+$line-height-base: 1.6;
