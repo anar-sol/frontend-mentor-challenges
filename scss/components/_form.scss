@@ -1,0 +1,22 @@
+.form {
+    &__submit {
+        font-size: 0.875rem;
+        line-height: 2;
+        font-weight: $font-weight-bold;
+        text-transform: capitalize;
+        color: $color-on-primary;
+        background-color: $color-primary;
+        padding: .5rem;
+        border: none;
+        border-radius: 1.75rem;
+        display: block;
+        width: 100%;
+
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: $color-primary-bis;
+            outline: none;
+        }
+    }
+}
