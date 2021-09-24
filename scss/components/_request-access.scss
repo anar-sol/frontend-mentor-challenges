@@ -1,19 +1,38 @@
 .request-access {
     min-height: 100vh;
-    background-color: $color-background;
-    background-image: url("assets/mobile/image-host.jpg");
-    background-position: top right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
+
+    @media (min-width: $breakpoint-sm) {
+        background-image: url("assets/desktop/bg-pattern-dots.svg");
+        background-position: bottom left 2.5rem;
+        background-repeat: no-repeat;
+    }
 
     &__header {
         display: flex;
         justify-content: center;
+
+        @media (min-width: $breakpoint-sm) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $breakpoint-sm) {
+            background-color: $color-background;
+            padding-top: 5.8125rem;
+            max-width: 40rem;
+        }
     }
 
     &__content {
         margin-bottom: 2rem;
+
+        @media (min-width: $breakpoint-sm) {
+            margin-bottom: 2.5rem;
+        }
     }
 
     &__title {
@@ -23,6 +42,13 @@
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 1rem;
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: 3rem;
+            line-height: 1.2;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
     }
 
     &__title-highlighted {
@@ -34,9 +60,28 @@
         font-size: 0.9375rem;
         font-weight: $font-weight-light;
         text-align: center;
+
+        @media (min-width: $breakpoint-sm) {
+            font-size: 1.125rem;
+            text-align: left;
+            max-width: 27.8125rem;
+        }
     }
 
     &__services {
         margin-bottom: 3rem;
+
+        @media (min-width: $breakpoint-sm) {
+            margin-bottom: 0;
+            order: 1;
+            max-width: 33.5rem;
+        }
+    }
+
+    &__form {
+        @media (min-width: $breakpoint-sm) {
+            margin-bottom: 4rem;
+            max-width: 26.6875rem;
+        }
     }
 }

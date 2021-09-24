@@ -5,4 +5,23 @@
     margin: 0 auto;
     display: grid;
     gap: 3.625rem;
+
+    background-color: $color-background;
+    background-image: url("assets/mobile/image-host.jpg");
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+
+    @media (min-width: $breakpoint-sm) {
+        background-image: url("assets/tablet/image-host.jpg");
+        background-size: auto 100%;
+        background-blend-mode: normal;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        max-width: 100%;
+        padding: 3.125rem 2.5rem 0;
+        gap: 9.5rem;
+    }
 }
