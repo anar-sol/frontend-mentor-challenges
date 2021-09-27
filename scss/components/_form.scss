@@ -1,4 +1,16 @@
 .form {
+
+    @media (min-width: $breakpoint-sm) {
+        position: relative;
+        background-color: $color-surface;
+        border-radius: 1.75rem;
+        padding-right: .25rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__submit {
         font-size: 0.875rem;
         line-height: 2;
@@ -17,6 +29,12 @@
         &:active {
             background-color: $color-primary-bis;
             outline: none;
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            padding: .5rem 1.75rem;
+            width: auto;
+            flex: 0 0 auto;
         }
     }
 }
