@@ -27,35 +27,51 @@
               thereafter</p>
           </div>
 
-          <form action="" class="form">
+          <form action="" class="form" novalidate>
             <div class="text-field">
-              <input type="text" required placeholder="First Name" name="first-name" id="first-name" class="text-field__input">
-              <p class="text-field__error"></p>
-            </div>
-
-            <div class="text-field text-field--error">
-              <input type="text" required placeholder="Last Name" name="last-name" id="last-name" class="text-field__input">
-              <p class="text-field__error">Last Name cannot be empty</p>
-            </div>
-
-            <div class="text-field">
-              <input type="email" required placeholder="Email Address" name="email" id="email" class="text-field__input">
+              <input type="text" required placeholder="First Name" name="first-name" id="first-name"
+                class="text-field__input">
               <p class="text-field__error"></p>
             </div>
 
             <div class="text-field">
-              <input type="text" required placeholder="Password" name="password" id="password" class="text-field__input">
+              <input type="text" required placeholder="Last Name" name="last-name" id="last-name"
+                class="text-field__input">
+              <p class="text-field__error"></p>
+            </div>
+
+            <div class="text-field">
+              <input type="email" required placeholder="Email Address" name="email" id="email"
+                class="text-field__input">
+              <p class="text-field__error"></p>
+            </div>
+
+            <div class="text-field">
+              <input type="text" required placeholder="Password" name="password" id="password"
+                class="text-field__input">
               <p class="text-field__error"></p>
             </div>
 
             <button type="submit" class="button">Claim your free trial</button>
 
-            <p class="help">By clicking the button, you are agreeing to our <a class="help__link" href="#">Terms and Services</a></p>
+            <p class="help">By clicking the button, you are agreeing to our <a class="help__link" href="#">Terms and
+                Services</a></p>
           </form>
         </div>
       </div>
     </div>
   </main>
+
+  <script src="script.js"></script>
+  <script>
+    const textFields = document.querySelectorAll('.text-field');
+
+    new TextField(textFields.item(0), { [TextField.VALUE_MISSING]: "First Name cannot be empty" });
+    new TextField(textFields.item(1), { [TextField.VALUE_MISSING]: "Last Name cannot be empty" });
+    new TextField(textFields.item(2), { [TextField.VALUE_MISSING]: "Email cannot be empty", [TextField.TYPE_MISMATCH]: "Looks like this is not an email" });
+    new TextField(textFields.item(3), { [TextField.VALUE_MISSING]: "Password cannot be empty" });
+    TextField.activateFormValidation(document.querySelector('.form'))
+  </script>
 </body>
 
 </html>
