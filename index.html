@@ -2,60 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
 </head>
 <body>
-  <main class="main-content">
-    <section class="intro">
-      <div class="intro__content">
-        <h1 class="intro__title">Learn to code by watching others</h1>
-        <p class="intro__text">
-          See how experienced developers solve problems in real-time. Watching
-          scripted tutorials is great, but understanding how developers think 
-          is invaluable.</p>
-      </div>
 
-      <div class="intro__form-container">
-        <p class="intro__price">
-          <span class="intro__price-highlighted">Try it free 7 days</span> then $20/mo. thereafter
-        </p>
+  Learn to code by watching others
 
-        <form class="intro__form" action="" method="post">
-          <div class="intro__form-field intro__form-field--error">
-            <input type="text" placeholder=" " name="firstname" id="firstname" class="intro__form-control intro__form-control--error">
-            <label for="firstname" class="intro__form-label">First Name</label>
-            <div class="intro__form-error">First Name cannot be empty</div>
-          </div>
+  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable. 
 
-          <div class="intro__form-field">
-            <input type="text" placeholder=" " name="lastname" id="lastname" class="intro__form-control">
-            <label for="lastname" class="intro__form-label">Last Name</label>
-            <div class="intro__form-error">Last Name cannot be empty</div>
-          </div>
+  Try it free 7 days then $20/mo. thereafter
 
-          <div class="intro__form-field">
-            <input type="email" placeholder=" " name="email" id="email" class="intro__form-control">
-            <label for="email" class="intro__form-label">Email Address</label>
-            <div class="intro__form-error">Looks like this is not an email</div>
-          </div>
+  First Name 
+  Last Name 
+  Email Address
+  Password
 
-          <div class="intro__form-field">
-            <input type="password" placeholder=" " name="password" id="password" class="intro__form-control">
-            <label for="password" class="intro__form-label">Password</label>
-            <div class="intro__form-error">Password cannot be empty</div>
-          </div>
+  Claim your free trial 
 
-          <button type="submit" class="intro__submit">Claim your free trial </button>
-
-          <p class="intro__terms">By clicking the button, you are agreeing to our <a href="#" class="intro__link">Terms and Services</a></p>
-        </form>
-      </div>
-    </section>
-  </main>
+  By clicking the button, you are agreeing to our Terms and Services
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
 </body>
 </html>
