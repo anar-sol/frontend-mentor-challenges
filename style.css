@@ -19,13 +19,16 @@ img {
   max-width: 100%;
 }
 
-/*
 .container {
-    width: 100%;
-    max-width: 30rem;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
-*/
+@media (min-width: 1190px) {
+  .container {
+    max-width: 1190px;
+  }
+}
+
 .header__container {
   padding: 1.5rem;
   display: flex;
@@ -35,6 +38,12 @@ img {
 @media (min-width: 768px) {
   .header__container {
     padding: 2.5rem;
+  }
+}
+@media (min-width: 1190px) {
+  .header__container {
+    padding-top: 3.4375rem;
+    padding-bottom: 3.4375rem;
   }
 }
 .header__logo {
@@ -49,8 +58,16 @@ img {
 .buttons {
   display: flex;
 }
-@media (min-width: 1440px) {
-  .buttons > .btn {
+.buttons > .btn:not(:last-child) {
+  margin-right: 2rem;
+}
+@media (min-width: 768px) {
+  .buttons > .btn:not(:last-child) {
+    margin-right: 2.375rem;
+  }
+}
+@media (min-width: 1190px) {
+  .buttons > .btn:not(:last-child) {
     margin-right: 2.5rem;
   }
 }
@@ -87,8 +104,17 @@ img {
 }
 .btn--text {
   color: inherit;
+  padding-right: 0;
+  padding-left: 0;
 }
 
+@media (min-width: 1190px) {
+  .hero {
+    background-image: url("assets/shared/pattern-square.svg");
+    background-position: top 1.75rem left calc(50% + 595px + 127.5px);
+    background-repeat: no-repeat;
+  }
+}
 .hero__container {
   padding: 2.5rem 1.5rem;
   overflow: hidden;
@@ -103,9 +129,19 @@ img {
     align-items: center;
   }
 }
+@media (min-width: 1190px) {
+  .hero__container {
+    padding-top: 1.75rem;
+  }
+}
 @media (min-width: 768px) {
   .hero__content {
     grid-column: 1/span 7;
+  }
+}
+@media (min-width: 1190px) {
+  .hero__content {
+    grid-column: 1/span 6;
   }
 }
 .hero__title {
@@ -117,7 +153,7 @@ img {
   margin: 0 0 2rem;
   max-width: 8em;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1190px) {
   .hero__title {
     font-size: 3.5rem;
     margin-bottom: 0 0 1.5rem;
@@ -153,6 +189,13 @@ img {
     padding-top: 0;
   }
 }
+@media (min-width: 1190px) {
+  .hero__image {
+    grid-column: 7/span 6;
+    width: 100%;
+    min-height: 30rem;
+  }
+}
 .hero__image::before {
   content: "";
   background-image: url("assets/mobile/image-keyboard.jpg");
@@ -170,6 +213,12 @@ img {
   .hero__image::before {
     background-image: url("assets/tablet/image-keyboard.jpg");
     background-position: left center;
+  }
+}
+@media (min-width: 1190px) {
+  .hero__image::before {
+    background-image: url("assets/desktop/image-keyboard.jpg");
+    background-position: center;
   }
 }
 

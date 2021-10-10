@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap');
 
 $viewport-md: 768px;
-$viewport-lg: 1440px;
+$viewport-lg: 1190px;
 
 *,
 *::before,
@@ -22,13 +22,16 @@ img {
     display: block;
     max-width: 100%;
 }
-/*
+
 .container {
     width: 100%;
-    max-width: 30rem;
     margin: 0 auto;
+
+    @media (min-width: $viewport-lg) {
+        max-width: $viewport-lg;
+    }
 }
-*/
+
 .header {
     &__container {
         padding: 1.5rem;
@@ -38,6 +41,11 @@ img {
 
         @media (min-width: $viewport-md) {
             padding: 2.5rem;
+        }
+
+        @media (min-width: $viewport-lg) {
+            padding-top: 3.4375rem;
+            padding-bottom: 3.4375rem;
         }
     }
 
@@ -55,10 +63,12 @@ img {
 .buttons {
     display: flex;
 
-    > .btn {
+    > .btn:not(:last-child) {
+        
+        margin-right: 2rem;
 
         @media (min-width: $viewport-md) {
-            //margin-right: 2.375rem;
+            margin-right: 2.375rem;
         }
 
         @media (min-width: $viewport-lg) {
@@ -104,10 +114,18 @@ img {
 
     &--text {
         color: inherit;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
 .hero {
+    @media (min-width: $viewport-lg) {
+        background-image: url("assets/shared/pattern-square.svg");
+        background-position: top 1.75rem left calc(50% + #{$viewport-lg / 2} + 127.5px);
+        background-repeat: no-repeat;
+    }
+
     &__container {
         padding: 2.5rem 1.5rem;
         overflow: hidden;
@@ -120,11 +138,19 @@ img {
             gap: 1.5rem;
             align-items: center;
         }
+
+        @media (min-width: $viewport-lg) {
+            padding-top: 1.75rem;
+        }
     }
 
     &__content {
         @media (min-width: $viewport-md) {
             grid-column: 1 / span 7;
+        }
+
+        @media (min-width: $viewport-lg) {
+            grid-column: 1 / span 6;
         }
     }
 
@@ -171,6 +197,12 @@ img {
             padding-top: 0;
         }
 
+        @media (min-width: $viewport-lg) {
+            grid-column: 7 / span 6;
+            width: 100%;
+            min-height: 30rem;
+        }
+
         &::before {
             content: '';
             background-image: url('assets/mobile/image-keyboard.jpg');
@@ -187,6 +219,11 @@ img {
             @media (min-width: $viewport-md) {
                 background-image: url('assets/tablet/image-keyboard.jpg');
                 background-position: left center;
+            }
+
+            @media (min-width: $viewport-lg) {
+                background-image: url('assets/desktop/image-keyboard.jpg');
+                background-position: center;
             }
         }
     }
