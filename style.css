@@ -74,9 +74,16 @@ img {
   color: #fff;
   background-color: #F16718;
 }
+.btn--primary:hover, .btn--primary:active {
+  background-color: #FF9B62;
+}
 .btn--secondary {
   color: #162542;
   background-color: #E8EFF2;
+}
+.btn--secondary:hover, .btn--secondary:active {
+  color: #fff;
+  background-color: #162542;
 }
 .btn--text {
   color: inherit;

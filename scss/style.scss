@@ -84,11 +84,22 @@ img {
     &--primary {
         color: #fff;
         background-color: #F16718;
+
+        &:hover,
+        &:active {
+            background-color: #FF9B62;
+        }
     }
 
     &--secondary {
         color: #162542;
         background-color: #E8EFF2;
+
+        &:hover,
+        &:active {
+            color: #fff;
+            background-color: #162542;
+        }
     }
 
     &--text {
