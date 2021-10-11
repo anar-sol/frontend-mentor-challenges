@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* Variables */
+$very-light-graye: hsl(0, 0%, 95%);
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+$container-padding-y: 5.5rem;
+$container-padding-x: 1.5rem;
+
+$container-padding-lg-y: 10.5rem;
+$container-padding-lg-x: $container-padding-x;
+
+$card-min-width: 19.1875rem;
+$card-max-width: 24rem;
+
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: hsla(0, 0%, 100%, 0.75);
+    background: $very-light-graye;
+}
+
+
+/* Components */
+
+.container {
+    width: 100%;
+    min-width: $card-min-width + ($container-padding-x * 2);
+    max-width: $card-max-width + ($container-padding-x * 2);
+    padding: $container-padding-y $container-padding-x;
+    margin: 0 auto;
+
+    @media (min-width: 48em) {
+        max-width: ($card-max-width * 2) + ($container-padding-x * 2);
+    }
+
+    @media (min-width: 64em) {
+        max-width: ($card-min-width * 3) + ($container-padding-x * 2);
+        padding-top: $container-padding-lg-y;
+        padding-bottom: $container-padding-lg-y;
+    }
+}
+
+
+.grid {
+    border-radius: .5rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($card-min-width, 1fr));
+}
+
+
+.card {
+    padding: 3rem;
+
+    &__icon-container {
+        margin: 0 0 2.25rem;
+    }
+
+    &__icon-img {
+        display: block;
+    }
+
+    &__title {
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: $very-light-graye;
+        margin: 0 0 1.5rem;
+    }
+
+    &__text {
+        margin: 0 0 2rem;
+
+        @media (min-width: 64em) {
+            margin-bottom: 5.25rem;
+        }
+    }
+
+    &__btn {
+        font-family: inherit;
+        font-size: inherit;
+        background: $very-light-graye;
+        padding: .78rem 2rem;
+        border: 2px solid transparent;
+        border-radius: 1.5rem;
+        cursor: pointer;
+
+        &:active {
+            color: $very-light-graye;
+            background: transparent;
+            border-color: currentColor;
+        }
+    }
+
+    &--sedans {
+        background: $bright-orange;
+
+        .card__btn:not(:active) {
+            color: $bright-orange;
+        }
+    }
+
+    &--suvs {
+        background: $dark-cyan;
+
+        .card__btn:not(:active) {
+            color: $dark-cyan;
+        }
+    }
+
+    &--luxury {
+        background: $very-dark-cyan;
+
+        .card__btn:not(:active) {
+            color: $very-dark-cyan
+        }
+    }
+}
