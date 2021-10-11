@@ -31,9 +31,9 @@ img {
     padding-right: 2.5rem;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .container {
-    max-width: 1190px;
+    max-width: 1024px;
   }
 }
 
@@ -50,7 +50,7 @@ img {
     padding-bottom: 2.5rem;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .header__container {
     padding-top: 3.4375rem;
     padding-bottom: 3.4375rem;
@@ -76,7 +76,7 @@ img {
     margin-right: 2.375rem;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .buttons > .btn:not(:last-child) {
     margin-right: 2.5rem;
   }
@@ -118,10 +118,10 @@ img {
   padding-left: 0;
 }
 
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .hero {
     background-image: url("assets/shared/pattern-square.svg");
-    background-position: top 1.75rem left calc(50% + 595px + 127.5px);
+    background-position: top 1.75rem left calc(50% + 512px + 127.5px);
     background-repeat: no-repeat;
   }
 }
@@ -141,7 +141,7 @@ img {
     align-items: center;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .hero__container {
     padding-top: 1.75rem;
   }
@@ -151,7 +151,7 @@ img {
     grid-column: 1/span 7;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .hero__content {
     grid-column: 1/span 6;
   }
@@ -165,7 +165,7 @@ img {
   margin: 0 0 2rem;
   max-width: 8em;
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .hero__title {
     font-size: 3.5rem;
     margin-bottom: 0 0 1.5rem;
@@ -201,7 +201,7 @@ img {
     padding-top: 0;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .hero__image {
     grid-column: 7/span 6;
     width: 100%;
@@ -227,17 +227,17 @@ img {
     background-position: left center;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .hero__image::before {
     background-image: url("assets/desktop/image-keyboard.jpg");
     background-position: center;
   }
 }
 
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .description {
     background-image: url("assets/shared/pattern-square.svg");
-    background-position: bottom 2.5rem right calc(50% + 595px + 127.5px);
+    background-position: bottom 2.5rem right calc(50% + 512px + 127.5px);
     background-repeat: no-repeat;
   }
 }
@@ -254,7 +254,7 @@ img {
     gap: 4.5rem;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .description__container {
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
@@ -268,7 +268,7 @@ img {
     align-items: center;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .description__content {
     grid-column: 10/span 3;
     flex-direction: column;
@@ -291,7 +291,7 @@ img {
     margin: 0;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .description__title {
     margin-bottom: 1.75rem;
   }
@@ -325,7 +325,7 @@ img {
     gap: 1.875rem;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .description__images {
     grid-column: 1/span 8;
   }
@@ -348,7 +348,7 @@ img {
     background-image: url("assets/tablet/image-phone-and-keyboard.jpg");
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .description__images::before {
     background-image: url("assets/desktop/image-phone-and-keyboard.jpg");
   }
@@ -371,7 +371,7 @@ img {
     background-image: url("assets/tablet/image-glass-and-keyboard.jpg");
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .description__images::after {
     padding-top: 107.87%;
     background-image: url("assets/desktop/image-glass-and-keyboard.jpg");
@@ -392,7 +392,7 @@ img {
     gap: 4.5rem 4.3125rem;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .features__container {
     padding-top: 8rem;
     padding-bottom: 5.5625rem;
@@ -457,7 +457,7 @@ img {
     padding-bottom: 2.6875rem;
   }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1024px) {
   .footer__container {
     padding-top: 2.4375rem;
     padding-bottom: 2.4375rem;
