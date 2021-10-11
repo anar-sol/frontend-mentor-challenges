@@ -1,0 +1,11 @@
+.hamburger {
+    background-color: transparent;
+    padding: $hamburger-padding-y $hamburger-padding-x;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        opacity: $hamburger-hover-opacity;
+    }
+}

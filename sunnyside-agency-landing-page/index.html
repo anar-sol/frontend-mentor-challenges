@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="hero">
+      <header class="header">
+        <div class="container header__container">
+          <div class="logo header__logo">
+            <img class="logo__img" src="images/logo.svg" alt="Sunnyside">
+          </div>
+
+          <nav class="nav header__nav">
+            <div class="nav__item"><a href="#" class="nav__link">About</a></div>
+            <div class="nav__item"><a href="#" class="nav__link">Services</a></div>
+            <div class="nav__item"><a href="#" class="nav__link">Projects</a></div>
+            <div class="nav__item"><a href="#" class="nav__link nav__link--highlighted">Contact</a></div>
+          </nav>
+
+          <button class="hamburger header__hamburger">
+            <img class="hamburger__img" src="images/icon-hamburger.svg" alt="menu">
+          </button>
+        </div>
+      </header>
+
+      <div class="hero__content">
+        <h1 class="hero__title">We are creatives</h1>
+        <div class="hero__scroll-down"><img class="hero__scroll-down-icon" src="images/icon-arrow-down.svg"
+            alt="Scroll down"></div>
+      </div>
+    </div>
+
+    <section class="service service--1">
+      <div class="service__image"></div>
+      <div class="service__body">
+        <div class="service__content">
+          <h2 class="service__title">Transform your brand</h2>
+          <p class="service__text"> We are a full-service creative agency specializing in helping brands grow fast.
+            Engage
+            your clients through compelling visuals that do most of the marketing for you.</p>
+          <div class="service__more"><a href="#" class="service__link">Learn more</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service service--2">
+      <div class="service__image"></div>
+      <div class="service__body">
+        <div class="service__content">
+          <h2 class="service__title">Stand out to the right audience</h2>
+          <p class="service__text">Using a collaborative formula of designers, researchers, photographers,
+            videographers,
+            and copywriters, we’ll build and extend your brand in digital places.</p>
+          <div class="service__more"><a href="#" class="service__link">Learn more</a></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const hamberger = document.querySelector(".header__hamburger");
+    const nav = document.querySelector(".header__nav");
+
+    hamberger.addEventListener("click", () => {
+      nav.classList.toggle("nav--expanded");
+    });
+  </script>
+</body>
+
+</html>
