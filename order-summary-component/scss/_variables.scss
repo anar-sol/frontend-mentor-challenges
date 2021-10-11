@@ -1,0 +1,138 @@
+/* Breakpoints */
+
+$breakpoint-lg: 45em;
+
+/* Colors */
+
+$bright-blue: #3829e0;
+$bright-blue-bis: #766cf1;
+$dark-blue: #1f2e55;
+$desaturated-blue: #717fa6;
+$pale-blue: #e0e8ff;
+$very-pale-blue: #f7f9ff;
+$white: #fff;
+
+/* Typography */
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+$font-base: "Red Hat Display", sans-serif;
+
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+/* Body */
+
+$body-bg-color: $pale-blue;
+$body-bg-image: "images/pattern-background-mobile.svg";
+$body-bg-position: center top;
+$body-bg-size: 100%;
+
+$body-bg-image-lg: "images/pattern-background-desktop.svg";
+
+/* Wrapper */
+
+$wrapper-max-width: 31.125rem;
+$wrapper-padding-x: 1.5rem;
+
+/* Order summary */
+
+$order-summary-bg: $white;
+$order-summary-border-radius: 1.25rem;
+$order-summary-box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+
+/* Order summary image */
+
+$order-summary-image-ratio: 46.5%;
+$order-summary-bg-image: "images/illustration-hero.svg";
+$order-summary-bg-position: center;
+$order-summary-bg-size: cover;
+
+/* Order summary body */
+
+$order-summary-body-padding-y-min: 2rem;
+$order-summary-body-padding-y-max: 3rem;
+$order-summary-body-padding-x-min: 1.5rem;
+$order-summary-body-padding-x-max: 3rem;
+
+/* Order summary title */
+
+$order-summary-title-font-size-min: 1.375rem;
+$order-summary-title-font-size-max: 1.75rem;
+$order-summary-title-line-height: 1.3;
+$order-summary-title-font-weight: $font-weight-black;
+$order-summary-title-text-align: center;
+$order-summary-title-color: $dark-blue;
+$order-summary-title-margin-bottom: 1rem;
+
+/* Order summary text */
+
+$order-summary-text-font-size: 1rem;
+$order-summary-text-line-height: 1.6;
+$order-summary-text-font-weight: $font-weight-medium;
+$order-summary-text-text-align: center;
+$order-summary-text-color: $desaturated-blue;
+$order-summary-text-margin-bottom: 1.5rem;
+
+/* Order summary item */
+
+$order-summary-item-bg-color: $very-pale-blue;
+$order-summary-item-padding-min: 1rem;
+$order-summary-item-padding-max: 1.5rem;
+$order-summary-item-radius: 0.75rem;
+$order-summary-item-margin-bottom: 1.5rem;
+
+/* Order summary item icon */
+
+$order-summary-item-icon-width: 3rem;
+$order-summary-item-icon-height: 3rem;
+$order-summary-item-icon-margin-right: 1.25rem;
+$order-summary-item-icon-image: "images/icon-music.svg";
+
+/* Order summary item title */
+
+$order-summary-item-title-font-size-min: 0.875rem;
+$order-summary-item-title-font-size-max: 1rem;
+$order-summary-item-title-line-height: 1.3;
+$order-summary-item-title-font-weight: $font-weight-black;
+$order-summary-item-title-color: $dark-blue;
+$order-summary-item-title-margin-bottom: 0.375rem;
+
+/* Order summary item price */
+
+$order-summary-item-price-font-size-min: 0.875rem;
+$order-summary-item-price-font-size-max: 1rem;
+$order-summary-item-price-line-height: 1.3;
+$order-summary-item-price-font-weight: $font-weight-medium;
+$order-summary-item-price-color: $desaturated-blue;
+
+/* Order summary item link */
+
+$order-summary-item-link-font-size: 0.75rem;
+$order-summary-item-link-line-height: 1.3;
+$order-summary-item-link-font-weight: $font-weight-bold;
+$order-summary-item-link-color: $bright-blue;
+
+$order-summary-item-link-text-decoration-hover: none;
+$order-summary-item-link-color-hover: $bright-blue-bis;
+
+/* Order summary btn */
+
+$order-summary-btn-font-size: 0.9375rem;
+$order-summary-btn-line-height: 1.25;
+$order-summary-btn-font-weight: $font-weight-black;
+$order-summary-btn-text-align: center;
+$order-summary-btn-text-decoration: none;
+$order-summary-btn-padding: 0.9375rem;
+$order-summary-btn-radius: 0.75rem;
+$order-summary-btn-margin: 1.5rem;
+
+$order-summary-btn-primary-color: $white;
+$order-summary-btn-primary-bg-color: $bright-blue;
+$order-summary-btn-primary-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
+
+$order-summary-btn-primary-bg-color-hover: $bright-blue-bis;
+
+$order-summary-btn-secondary-color: $desaturated-blue;
+$order-summary-btn-secondary-color-hover: $dark-blue;
