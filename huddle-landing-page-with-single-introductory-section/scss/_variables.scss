@@ -1,0 +1,110 @@
+/* Colors */
+
+$color-primary: #674baf;
+$color-primary-light: #e882e8;
+$color-white: #fff;
+
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+$font-stack-base: 'Open Sans', sans-serif;
+$font-stack-headings: 'Poppins', sans-serif;
+
+$font-size-small: .75rem;
+$font-size-base: 1rem;
+$font-size-big: 1.5rem;
+$font-size-bigger: 2.5rem;
+
+$line-height: 1.5;
+
+$font-weight-base: 400;
+$font-weight-bold: 600;
+
+
+/* Body */
+
+$body-color: $color-white;
+$body-bg: $color-primary;
+
+
+/* Breakpoints */
+
+$breakpoint-md: 75em;
+$breakpoint-lg: 90em;
+
+
+/* General */
+
+$padding-x: 2.5rem;
+$padding-x-lg: 5rem;
+
+
+/* Header */
+
+$header-padding-y: 2rem;
+$header-padding-y-lg: 3.4375rem;
+
+$header-logo-width: 7.5rem;
+$header-logo-width-lg: 12.5rem;
+
+
+/* Hero */
+
+$hero-padding-top: 1.6875rem;
+$hero-padding-top-lg: 1.8rem;
+$hero-padding-bottom: 1.5rem;
+$hero-padding-bottom-lg: 0;
+
+$hero-image-ratio: 70.6%;
+$hero-image-max-width-lg: 43.5rem;
+$hero-image-margin-bottom: 3.75rem;
+$hero-image-margin-right-lg: 3.6875rem;
+
+$hero-title-font-family: $font-stack-headings;
+$hero-title-font-size: $font-size-big;
+$hero-title-font-size-lg: $font-size-bigger;
+$hero-title-line-height: $line-height;
+$hero-title-font-weight: $font-weight-bold;
+$hero-title-margin-bottom: 1rem;
+$hero-title-margin-bottom-lg: 1.5rem;
+
+$hero-content-margin-top-lg: 2.33rem;
+
+$hero-text-font-size-lg: 1.125rem;
+$hero-text-max-width-lg: 32.5rem;
+$hero-text-margin-bottom: 1.5rem;
+
+$hero-cta-font-size: $font-size-small;
+$hero-cta-font-size-lg: 1.125rem;
+$hero-cta-padding-y: .6875rem;
+$hero-cta-padding-y-lg: .9rem;
+$hero-cta-padding-x: 4.6875rem;
+$hero-cta-padding-x-lg: 4rem;
+$hero-cta-color: $color-primary;
+$hero-cta-bg: $color-white;
+$hero-cta-radius: 1.2rem;
+$hero-cta-radius-lg: 1.75rem;
+$hero-cta-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.27);
+$hero-cta-color-hover: $color-white;
+$hero-cta-bg-hover: $color-primary-light;
+
+
+/* Footer */
+
+$footer-padding-y: 2.5rem;
+$footer-padding-top-lg: 1.6875rem;
+$footer-padding-bottom-lg: 2.5rem;
+
+
+/* Social links */
+
+$social-links-icon-width: 1.75rem;
+$social-links-icon-width-lg: 2.5rem;
+$social-links-icon-height: 1.75rem;
+$social-links-icon-height-lg: 2.5rem;
+$social-links-icon-margin: .65625rem;
+$social-links-icon-margin-lg: 1rem;
+$social-links-icon-color-hover: $color-primary-light;
+
