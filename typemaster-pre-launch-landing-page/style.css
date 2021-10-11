@@ -237,7 +237,7 @@ img {
 @media (min-width: 1190px) {
   .description {
     background-image: url("assets/shared/pattern-square.svg");
-    background-position: bottom 2.5rem right calc(50% + 595px + 127.5px);
+    background-position: bottom 1.875rem right calc(50% + 595px + 127.5px);
     background-repeat: no-repeat;
   }
 }
