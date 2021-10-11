@@ -1,0 +1,116 @@
+/** Colors */
+
+$color-primary: #ce9797;
+
+$color-dark: #413a3a;
+$background: #fff;
+
+$error: #f96262;
+
+
+/** Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+$font-stack: 'Josefin Sans', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 600;
+
+
+/* Breakpoints */
+
+$breakpoint-lg: 90em;
+
+
+/* Coming soon */
+
+$coming-soon-badding-x: 2rem;
+
+$coming-soon-badding-x-lg: 10.3125rem;
+
+$coming-soon-bg: linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%);
+
+
+/* Header */
+
+$coming-soon-header-padding-y: 2rem;
+$coming-soon-header-padding-x: $coming-soon-badding-x;
+
+$coming-soon-header-padding-y-lg: 4rem;
+$coming-soon-header-padding-x-lg: $coming-soon-badding-x-lg;
+
+
+/* Logo */
+
+$coming-soon-logo-width: 6.25rem;
+$coming-soon-logo-width-lg: 9.875rem;
+
+
+/* Image */
+
+$coming-soon-image-ratio: 66.66%;
+
+
+/* Content */
+
+
+$coming-soon-content-padding-y: 4rem;
+$coming-soon-content-padding-x: $coming-soon-badding-x;
+
+$coming-soon-content-max-width-lg: 27.8125rem + $coming-soon-badding-x * 2;
+
+
+/* Title */
+
+$content-title-font-size: 2.5rem;
+$content-title-line-height: 1.05;
+$content-title-font-weight: $font-weight-bold;
+$content-title-letter-spacing: .68rem;
+$content-title-color: $color-dark;
+$content-title-margin-bottom: 1rem;
+
+$content-title-font-size-lg: 4rem;
+$content-title-line-height-lg: 1.1;
+$content-title-margin-bottom-lg: 1.5rem;
+
+$content-title-highlighted-font-weight: $font-weight-light;
+$content-title-highlighted-color: $color-primary;
+
+
+/* Text */
+
+$content-text-font-size: .875rem;
+$content-text-line-height: 1.57;
+$content-text-font-weight: $font-weight-medium;
+$content-text-color: $color-primary;
+$content-text-margin-bottom: 2rem;
+
+$content-text-font-size: 1rem;
+$content-text-line-height: 1.75;
+$content-text-margin-bottom: 2.5rem;
+
+
+/* Form label */
+
+$form-label-font-size: .875rem;
+$form-label-line-height: 2;
+$form-label-font-weight: $font-weight-medium;
+$form-label-color: change-color($color-primary, $alpha: .5);
+
+
+$form-field-font-family: inherit;
+$form-field-color: $color-dark;
+$form-field-bg: transparent;
+$form-field-border-size: 1px;
+$form-field-border: $form-field-border-size solid $color-primary;
+$form-field-radius: 1.75rem;
+$form-field-padding-y: .5rem;
+$form-field-padding-left: 1.5rem;
+$form-field-padding-right: 7.8125rem;
+$form-field-height: 3rem;
+
+$form-button-bg: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+$form-button-width: 4rem;
+$form-button-height: $form-field-height;
