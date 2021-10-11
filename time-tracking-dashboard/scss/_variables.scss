@@ -1,0 +1,29 @@
+/* Colors */
+
+$color-primary: #5747ea;
+$color-light-red: #ff8b64;
+$color-soft-blue: #55c2e6;
+$color-red: #ff5e7d;
+$color-lime-green: #4BCF82;
+$color-violet: #7335d2;
+$color-soft-orange: #f1c75b;
+$color-background: #0e1323;
+$color-surface: #1c204b;
+$color-on-primary: #fff;
+$color-on-primary-light: change-color($color-on-primary, $alpha: .67);
+$color-on-surface: #fff;
+$color-on-surface-light: change-color($color-on-surface, $alpha: .67);
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+$font-stack: 'Rubik', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+/* Other */
+
+$border-radius: 1rem;
