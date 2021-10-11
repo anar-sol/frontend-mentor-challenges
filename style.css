@@ -234,6 +234,13 @@ img {
   }
 }
 
+@media (min-width: 1190px) {
+  .description {
+    background-image: url("assets/shared/pattern-square.svg");
+    background-position: bottom 2.5rem right calc(50% + 595px + 127.5px);
+    background-repeat: no-repeat;
+  }
+}
 .description__container {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -247,11 +254,25 @@ img {
     gap: 4.5rem;
   }
 }
+@media (min-width: 1190px) {
+  .description__container {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+}
 @media (min-width: 768px) {
   .description__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media (min-width: 1190px) {
+  .description__content {
+    grid-column: 10/span 3;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 .description__title {
@@ -268,6 +289,11 @@ img {
   .description__title {
     text-align: left;
     margin: 0;
+  }
+}
+@media (min-width: 1190px) {
+  .description__title {
+    margin-bottom: 1.75rem;
   }
 }
 .description__text {
@@ -299,6 +325,11 @@ img {
     gap: 1.875rem;
   }
 }
+@media (min-width: 1190px) {
+  .description__images {
+    grid-column: 1/span 8;
+  }
+}
 .description__images::before {
   grid-column: 1/span 3;
   content: "";
@@ -314,6 +345,12 @@ img {
 @media (min-width: 768px) {
   .description__images::before {
     grid-column: 1/span 4;
+    background-image: url("assets/tablet/image-phone-and-keyboard.jpg");
+  }
+}
+@media (min-width: 1190px) {
+  .description__images::before {
+    background-image: url("assets/desktop/image-phone-and-keyboard.jpg");
   }
 }
 .description__images::after {
@@ -331,6 +368,13 @@ img {
 @media (min-width: 768px) {
   .description__images::after {
     grid-column: 5/span 8;
+    background-image: url("assets/tablet/image-glass-and-keyboard.jpg");
+  }
+}
+@media (min-width: 1190px) {
+  .description__images::after {
+    padding-top: 107.87%;
+    background-image: url("assets/desktop/image-glass-and-keyboard.jpg");
   }
 }
 
