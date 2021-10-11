@@ -260,6 +260,8 @@ img {
         }
 
         @media (min-width: $viewport-lg) {
+            padding-top: 1.875rem;
+            padding-bottom: 1.875rem;
             grid-template-columns: repeat(12, 1fr);
             gap: 2rem;
             align-items: center;
@@ -323,7 +325,6 @@ img {
 
         @media (min-width: $viewport-md) {
             width: 100%;
-            grid-template-columns: repeat(12, 1fr);
             position: static;
             gap: 1.875rem;
         }
@@ -350,6 +351,7 @@ img {
             }
 
             @media (min-width: $viewport-lg) {
+                grid-column: 1 / span 3;
                 background-image: url('assets/desktop/image-phone-and-keyboard.jpg');
             }
         }
@@ -372,6 +374,7 @@ img {
             }
 
             @media (min-width: $viewport-lg) {
+                grid-column: 4 / span 5;
                 padding-top: 107.87%;
                 background-image: url('assets/desktop/image-glass-and-keyboard.jpg');
             }
@@ -394,7 +397,7 @@ img {
         }
 
         @media (min-width: $viewport-lg) {
-            padding-top: 8rem;
+            padding-top: 8.625rem;
             padding-bottom: 5.5625rem;
             grid-template-columns: repeat(4, 1fr);
             gap: 1.875rem;
