@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    max-width: $container-max-width;
+    min-height: 100vh;
+    padding: $container-padding;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $viewport-desktop-min) {
+        max-width: $container-max-width-desktop-max;
+    }
+}
