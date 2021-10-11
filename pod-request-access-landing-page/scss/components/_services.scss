@@ -1,0 +1,41 @@
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+        flex: 0 1 auto;
+
+        &--spotify {
+            width: 56px;
+
+            @media (min-width: $breakpoint-sm) {
+                width: 96px;
+            }
+        }
+
+        &--apple {
+            width: 56px;
+
+            @media (min-width: $breakpoint-sm) {
+                width: 78px;
+            }
+        }
+
+        &--google {
+            width: 100px;
+
+            @media (min-width: $breakpoint-sm) {
+                width: 125px;
+            }
+        }
+
+        &--pocket {
+            width: 77px;
+
+            @media (min-width: $breakpoint-sm) {
+                width: 129px;
+            }
+        }
+    }
+}

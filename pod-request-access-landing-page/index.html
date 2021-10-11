@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Pod request access landing page</title>
+</head>
+
+<body>
+  <main>
+    <article class="request-access">
+      <div class="container">
+        <header class="request-access__header">
+          <div class="request-access__logo logo">
+            <img src="assets/desktop/logo.svg" alt="pod">
+          </div>
+        </header>
+        <div class="request-access__body">
+          <div class="request-access__content">
+            <h1 class="request-access__title"><span class="request-access__title-highlighted">Publish your podcasts</span>
+              everywhere.</h1>
+            <p class="request-access__text">Upload your audio to Pod with a single click. We’ll then distribute your
+              podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+          </div>
+          <ul class="request-access__services services">
+            <li class="services__item services__item--spotify"><img src="assets/desktop/spotify.svg" alt="Spotify"></li>
+            <li class="services__item services__item--apple"><img src="assets/desktop/apple-podcast.svg" alt="Apple Podcasts"></li>
+            <li class="services__item services__item--google"><img src="assets/desktop/google-podcasts.svg" alt="Google Podcasts"></li>
+            <li class="services__item services__item--pocket"><img src="assets/desktop/pocket-casts.svg" alt="Pocket Casts"></li>
+          </ul>
+          <form action="" class="request-access__form form" novalidate>
+            <div class="text-field">
+              <input class="text-field__input" type="email" name="email" id="email" placeholder=" " required>
+              <label class="text-field__label" for="email">Email address</label>
+              <p class="text-field__error"></p>
+            </div>
+            <button class="form__submit" type="submit">Request access</button>
+          </form>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    const errors = {}
+    errors[TextField.VALUE_MISSING] = 'Oops! Please add your email';
+    errors[TextField.TYPE_MISMATCH] = 'Oops! Please check your email';
+    const textField = new TextField(document.querySelector('.text-field'), errors);
+    TextField.activateFormValidation(document.querySelector('.form'));
+  </script>
+</body>
+
+</html>

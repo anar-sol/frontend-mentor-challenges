@@ -1,0 +1,33 @@
+/* Breakpoints */
+
+$breakpoint-sm: 600px;
+$breakpoint-md: 940px;
+
+/* Colors */
+
+$color-primary: #54e6af;
+$color-primary-bis: #b3ffe2;
+$color-background: #121725;
+$color-surface: #2c344b;
+$color-error: #fb3e3e;
+
+$color-on-primary: $color-background;
+
+$color-on-surface: #fff;
+$color-on-surface-high-emphasis: change-color($color-on-surface, $alpha: .87);
+$color-on-surface-medium-emphasis: change-color($color-on-surface, $alpha: .6);
+
+$color-on-background: #fff;
+$color-on-background-high-emphasis: change-color($color-on-background, $alpha: .87);
+$color-on-background-medium-emphasis: change-color($color-on-background, $alpha: .6);
+
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
+
+$font-stack: 'Chivo', sans-serif;
+$line-height-base: 1.6;
+
+$font-weight-light: 300;
+$font-weight-bold: 700;
