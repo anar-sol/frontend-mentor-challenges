@@ -378,3 +378,96 @@ img {
         }
     }
 }
+
+.features {
+    &__container {
+        padding-top: 5.4375rem;
+        padding-bottom: 2.875rem;
+        display: grid;
+        gap: 4rem;
+
+        @media (min-width: $viewport-md) {
+            padding-top: 6.375rem;
+            padding-bottom: 6.1875rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4.5rem 4.3125rem;
+        }
+
+        @media (min-width: $viewport-lg) {
+            padding-top: 8rem;
+            padding-bottom: 5.5625rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.875rem;
+        }
+    }
+}
+
+.feature {
+    &__icon-container {
+        background-color: #F16718;
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto 3rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: $viewport-md) {
+            margin-left: 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        line-height: 1.1667;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        color: #162542;
+        max-width: 8.04em;
+        margin: 0 auto 1.5rem;
+
+        @media (min-width: $viewport-md) {
+            text-align: left;
+            margin-left: 0;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        max-width: 30em;
+        margin: 0 auto;
+
+        @media (min-width: $viewport-md) {
+            text-align: left;
+            margin-left: 0;
+        }
+    }
+}
+
+.footer {
+    &__container {
+        padding-top: 3.125rem;
+        padding-bottom: 3.125rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: $viewport-md) {
+            padding-top: 2.6875rem;
+            padding-bottom: 2.6875rem;
+        }
+
+        @media (min-width: $viewport-lg) {
+            padding-top: 2.4375rem;
+            padding-bottom: 2.4375rem;
+        }
+    }
+}
+
+.trademark {
+    &__highlighted {
+        font-weight: 700;
+    }
+}
