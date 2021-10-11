@@ -1,0 +1,434 @@
+@import "variables";
+
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-stack;
+    background-color: $default-bg;
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Site header */
+
+.site-header {
+    padding: $site-header-padding-top 0 $site-header-padding-bottom;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $breakpoint-md) {
+        padding-bottom: $site-header-padding-bottom-md;
+    }
+}
+
+
+/* Section */
+
+.section {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: $section-number-vertical-line-height;
+            background-color: $section-number-vertical-line-color;
+        }
+    }
+
+    &__number {
+        width: $section-number-width;
+        height: $section-number-height;
+        font-size: $section-number-font-size;
+        line-height: $section-number-line-height;
+        font-weight: $section-number-font-weight;
+        color: $section-number-color;
+        border: $sectoin-number-border;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $default-bg;
+    }
+
+    &__body {
+        padding: $section-body-padding-y $section-body-padding-x;
+
+        @media (min-width: $breakpoint-md) {
+            padding: $section-body-padding-top-md $section-body-padding-x-md
+            $section-body-padding-bottom-md $section-body-padding-x-md;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            padding: $section-body-padding-top-lg $section-body-padding-x-lg
+            $section-body-padding-bottom-md $section-body-padding-x-lg;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        max-width: $section-content-max-width;
+        margin: 0 auto;
+    }
+
+    &__overline {
+        display: block;
+        font-size: $section-overline-font-size;
+        line-height: $section-overline-line-height;
+        font-weight: $section-overline-font-weight;
+        letter-spacing: $section-overline-letter-spacing;
+        text-transform: $section-overline-text-transform;
+        color: $section-overline-color;
+        margin-bottom: $section-overline-margin-bottom;
+
+        @media (min-width: $breakpoint-md) {
+            margin-bottom: $section-overline-margin-bottom-md;
+        }
+    }
+
+    &__title {
+        font-size: $section-title-font-size;
+        line-height: $section-title-line-height;
+        font-weight: $section-title-font-weight;
+        text-align: center;
+        color: $section-title-color;
+        margin: 0 0 $section-title-margin-bottom;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: $section-title-font-size-md;
+            line-height: $section-title-line-height-md;
+        }
+    }
+
+    &__text {
+        font-size: $section-text-font-size;
+        line-height: $section-text-line-height;
+        font-weight: $section-text-font-weight;
+        text-align: center;
+        color: $section-text-color;
+        margin: 0;
+
+        &:not(:last-child) {
+            margin: 0 0 $section-text-margin-bottom;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            font-size: $section-text-font-size-md;
+            line-height: $section-text-line-height-md;
+        }
+    }
+
+    &__gallery {
+        margin-bottom: $section-gallery-margin-bottom;
+
+        @media (min-width: $breakpoint-md) {
+            margin-bottom: $section-gallery-margin-bottom-md;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            margin-bottom: $section-gallery-margin-bottom-lg;
+        }
+    }
+
+    &--hero {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $breakpoint-lg) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            padding-bottom: $section-padding-bottom-lg;
+        }
+
+        /* section--hero header left and right */
+        &::before {
+            content: "";
+            display: block;
+            height: 0;
+            padding-top: $section-hero-header-ratio;
+            background-image: url("assets/tablet/image-hero.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (min-width: $breakpoint-md) {
+                padding-top: $section-hero-header-ratio-md;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                height: revert;
+                padding-top: 0;
+                flex: 0 0 25.1%;
+                background-image: url("assets/desktop/image-hero-left.png");
+                background-position: right top;
+                background-size: auto 100%;
+                margin-bottom: $section-hero-body-padding-y-lg;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &::after {
+            @media (min-width: $breakpoint-lg) {
+                content: "";
+                flex: 0 0 25.1%;
+                background-image: url("assets/desktop/image-hero-right.png");
+                background-position: left bottom;
+                background-size: auto 100%;
+                margin-top: $section-hero-body-padding-y-lg;
+                background-repeat: no-repeat;
+            }
+        }
+
+        /* section--hero body */
+        .section__body {
+            padding-top: $section-hero-body-padding-top;
+
+            @media (min-width: $breakpoint-md) {
+                padding-top: $section-hero-body-padding-top-md;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                flex: 1 0;
+                padding: $section-hero-body-padding-y-lg $section-hero-body-padding-x-lg
+                    0 $section-hero-body-padding-x-lg;
+            }
+        }
+
+        .section__content {
+            max-width: $section-hero-content-max-width;
+            margin: 0 auto;
+
+            @media (min-width: $breakpoint-lg) {
+                max-width: $section-hero-content-max-width-lg;
+            }
+        }
+
+        .section__title {
+            font-size: $section-hero-title-font-size;
+            line-height: $section-hero-title-line-height;
+            margin-bottom: $section-hero-title-margin-bottom;
+
+            @media (min-width: $breakpoint-md) {
+                font-size: $section-hero-title-font-size-md;
+                line-height: $section-hero-title-line-height-md;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                font-size: $section-hero-title-font-size-lg;
+                margin-bottom: $section-hero-title-margin-bottom-lg;
+            }
+        }
+
+        .button--info {
+            padding-left: $section-hero-button-info-padding-y;
+            padding-right: $section-hero-button-info-padding-y;
+        }
+    }
+
+    &--features {
+        .section__body {
+            padding-bottom: $section-body-padding-y - ($section-number-height / 2);
+
+            @media (min-width: $breakpoint-md) {
+                padding-bottom: $section-body-padding-bottom-md - ($section-number-height / 2);
+            }
+        }
+
+        .section__title {
+            max-width: $section-features-title-max-width;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (min-width: $breakpoint-md) {
+                max-width: $section-features-title-max-width-md;
+            }
+        }
+    }
+
+    &--footer {
+
+        .section__header {
+            position: relative;
+            bottom: - $section-number-height / 2;
+        }
+
+        .section__body {
+            padding-top: $section-footer-body-paddin-top;
+            padding-bottom: $section-footer-body-paddin-bottom;
+            background-color: $primary;
+            background-image: url("assets/mobile/image-footer.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: soft-light;
+
+            @media (min-width: $breakpoint-md) {
+                padding-bottom: $section-footer-body-paddin-bottom-md;
+                background-image: url("assets/tablet/image-footer.jpg");
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                padding-top: $section-footer-body-paddin-top-lg;
+                padding-bottom: $section-footer-body-paddin-bottom-lg;
+                background-image: url("assets/desktop/image-footer.jpg");
+            }
+        }
+
+        .section__content {
+            @media (min-width: $breakpoint-lg) {
+                max-width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .section__title {
+            color: $section-footer-title-color;
+            margin-bottom: $section-footer-title-margin-bottom;
+
+            @media (min-width: $breakpoint-md) {
+                margin-bottom: $section-footer-title-margin-bottom-md;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                text-align: left;
+                margin: 0;
+            }
+        }
+
+        .section__text {
+            font-size: $section-footer-text-font-size;
+            line-height: $section-footer-line-height;
+            color: $section-footer-text-color;
+
+            @media (min-width: $breakpoint-md) {
+                margin-bottom: $section-footer-text-margin-bottom-md;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                text-align: left;
+                max-width: $section-footer-text-max-width-lg;
+                margin: 0;
+            }
+        }
+
+        .button--download {
+            background-color: $section-footer-button-download-bg;
+
+            &:hover {
+                background-color: $section-footer-button-download-bg-hover;
+            }
+        }
+
+        .button__version {
+            color: $section-footer-button-version-color;
+        }
+    }
+}
+
+
+/* Button group */
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $breakpoint-md) {
+        flex-direction: row;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: $button-group-item-margin;
+
+        @media (min-width: $breakpoint-md) {
+            margin-bottom: 0;
+            margin-right: $button-group-item-margin;
+        }
+    }
+
+}
+
+
+/* Button */
+
+.button {
+    display: inline-block;
+    font-family: inherit;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    font-weight: $button-font-weight;
+    text-decoration: none;
+    padding: $button-padding-y $button-padding-x;
+    border-radius: $button-radius;
+    color: $button-color;
+    cursor: pointer;
+
+    &__version {
+        color: $button-version-color;
+    }
+
+    &--download {
+        background-color: $button-download-bg;
+
+        &:hover {
+            background-color: $button-download-bg-hover;
+        }
+    }
+
+    &--info {
+        background-color: $button-info-bg;
+
+        &:hover {
+            background-color: $button-info-bg-hover;
+        }
+    }
+}
+
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gallery-grid-gap;
+
+    @media (min-width: $breakpoint-md) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: $gallery-grid-gap-md;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        gap: $gallery-grid-gap-lg;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: $gallery-image-radius;
+        object-fit: cover;
+    }
+}

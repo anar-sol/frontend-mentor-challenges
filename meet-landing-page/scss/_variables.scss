@@ -1,0 +1,187 @@
+/* Color */
+
+$primary: #4d96a9;
+$primary-light: #71c0d4;
+$primary-lighter: #8fe3f9;
+
+$secondary: #855fb1;
+$secondary-light: #b18bdd;
+$secondary-lighter: #d9b8ff;
+
+$text-color-dark: #28283d;
+$text-color-medium: #87879d;
+$text-color-light: #fafafa;
+
+$default-bg: $text-color-light;
+
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+$font-stack: 'Red Hat Display', sans-serif;
+
+$font-size-small: 1rem;
+$font-size-medium: 1.125rem;
+$font-size-big: 2.5rem;
+$font-size-bigger: 4rem;
+
+$line-height-small: 1.625;
+$line-height-medium: 1.44;
+$line-height-big: 1.1;
+$line-height-bigger: 1;
+
+$font-weight-medium: 500;
+$font-weight-bold: 900;
+
+
+/* Breakpoints */
+
+$breakpoint-md: 48em;
+$breakpoint-lg: 80em;
+
+/* Site header */
+
+$site-header-padding-top: 3rem;
+$site-header-padding-bottom-md: 4rem;
+$site-header-padding-bottom: 3.375rem;
+
+
+/* Section */
+
+$section-body-padding-y: 4rem;
+$section-body-padding-top-md: 4.25rem;
+$section-body-padding-bottom-md: 5rem;
+$section-body-padding-top-lg: 4rem;
+$section-body-padding-bottom-md: 5rem;
+$section-body-padding-x: 1.5rem;
+$section-body-padding-x-md: 2.5rem;
+$section-body-padding-x-lg: 10.3125rem;
+
+$section-content-max-width: 35.8125rem;
+
+$section-number-width: 3.5rem;
+$section-number-height: 3.5rem;
+
+$section-number-font-size: $font-size-small;
+$section-number-line-height: $line-height-small;
+$section-number-color: $text-color-medium;
+$section-number-font-weight: $font-weight-bold;
+$sectoin-number-border: 1px solid change-color($text-color-medium, $alpha: .25);
+$section-number-vertical-line-height: 84px;
+$section-number-vertical-line-color: change-color($text-color-medium, $alpha: .25);
+
+$section-overline-font-size: $font-size-small;
+$section-overline-line-height: $line-height-small;
+$section-overline-font-weight: $font-weight-bold;
+$section-overline-letter-spacing: .25rem;
+$section-overline-text-transform: uppercase;
+$section-overline-color: $primary;
+$section-overline-margin-bottom: 1.5rem;
+$section-overline-margin-bottom-md: 1rem;
+
+$section-title-font-size: 2rem;
+$section-title-font-size-md: $font-size-big;
+$section-title-line-height: 1.125;
+$section-title-line-height-md: $line-height-big;
+$section-title-font-weight: $font-weight-bold;
+$section-title-color: $text-color-dark;
+$section-title-margin-bottom: 2rem;
+
+$section-text-font-size: $font-size-small;
+$section-text-font-size-md: $font-size-medium;
+$section-text-line-height: $line-height-small;
+$section-text-line-height-md: $line-height-medium;
+$section-text-font-weight: $font-weight-medium;
+$section-text-color: $text-color-medium;
+$section-text-margin-bottom: 2rem;
+
+$section-gallery-margin-bottom: 4rem;
+$section-gallery-margin-bottom-md: 3rem;
+$section-gallery-margin-bottom-lg: 5rem;
+
+
+/* Section hero */
+
+$section-padding-bottom-lg: 6.875rem;
+
+$section-hero-header-ratio: 40.8%;
+$section-hero-header-ratio-md: 39.45%;
+
+$section-hero-body-padding-top: 3rem;
+$section-hero-body-padding-top-md: 4.5rem;
+
+$section-hero-body-padding-y-lg: 4.75rem;
+$section-hero-body-padding-x-lg: 5.5rem;
+
+$section-hero-content-max-width: 28.5625rem;
+$section-hero-content-max-width-lg: 33.75rem;
+
+$section-hero-title-font-size: 2.5rem;
+$section-hero-title-font-size-md: 3rem;
+$section-hero-title-font-size-lg: 4rem;
+$section-hero-title-line-height: 1.1;
+$section-hero-title-line-height-md: 1;
+$section-hero-title-margin-bottom: 1.5rem;
+$section-hero-title-margin-bottom-lg: 2.125rem;
+
+$section-hero-button-info-padding-y: 1.8125rem;
+
+
+/* Section features */
+
+$section-features-title-max-width: 20.4375rem;
+$section-features-title-max-width-md: 27.8125rem;
+
+
+/* Section footer */
+
+$section-footer-body-paddin-top: 5.75rem;
+$section-footer-body-paddin-top-lg: 7.25rem;
+$section-footer-body-paddin-bottom: 4.5rem;
+$section-footer-body-paddin-bottom-md: 4.125rem;
+$section-footer-body-paddin-bottom-lg: 6.5rem;
+
+$section-footer-title-color: $text-color-light;
+$section-footer-title-margin-bottom: 1.5rem;
+$section-footer-title-margin-bottom-md: 2rem;
+
+$section-footer-text-font-size: $font-size-medium;
+$section-footer-line-height: $line-height-medium;
+$section-footer-text-color: $text-color-light;
+$section-footer-text-margin-bottom-md: 2.5rem;
+$section-footer-text-max-width-lg: 21.875rem;
+
+$section-footer-button-download-bg: $secondary;
+$section-footer-button-download-bg-hover: $secondary-light;
+$section-footer-button-version-color: $secondary-lighter;
+
+/* Button group */
+
+$button-group-item-margin: 1rem;
+
+/* Button */
+
+$button-font-size: $font-size-small;
+$button-line-height: $line-height-small;
+$button-font-weight: $font-weight-bold;
+
+$button-padding-y: 1rem;
+$button-padding-x: 2.5rem;
+
+$button-radius: 1.8125rem;
+
+$button-color: $text-color-light;
+$button-download-bg: $primary;
+$button-download-bg-hover: $primary-light;
+$button-info-bg: $secondary;
+$button-info-bg-hover: $secondary-light;
+$button-version-color: $primary-lighter;
+
+
+/* Gallery */
+
+$gallery-grid-gap: 1.5rem;
+$gallery-grid-gap-md: .75rem;
+$gallery-grid-gap-lg: 1.875rem;
+$gallery-image-radius: .5rem;
