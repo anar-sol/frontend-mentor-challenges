@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!--
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  -->
+</head>
+<body>
+  <main>
+    <div class="container">
+      <article class="article-card">
+
+        <div class="article-card__media">
+          <img src="images/drawers.jpg" alt="" class="article-card__image">
+        </div>
+
+        <div class="article-card__body">
+
+          <div class="article-card__content">
+            <h1 class="article-card__title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>  
+            <p class="article-card__excerpt">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+          </div>
+
+          <footer class="article-card__footer">
+
+            <div class="article-card__meta">
+              <address class="article-card__author">
+                <img src="images/avatar-michelle.jpg" alt="Michelle Appleton picture" class="article-card__author-image">
+                <p class="article-card__author-name">Michelle Appleton</p>
+              </address>
+              <time class="article-card__date" datetime="2020-06-28">28 Jun 2020</time>
+            </div>
+  
+            <div class="article-card__share-btn-container">
+              <div class="article-card__share-options">
+                <div class="article-card__share-title">Share</div>
+                <div class="article-card__share-links">
+                  <a href="#" aria-label="Facebook" class="article-card__share-link article-card__share-link--facebook">
+                    <svg class="article-card__share-link-icon">
+                      <use href="images/icons.svg#icon-facebook"/>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Twitter" class="article-card__share-link article-card__share-link--twitter">
+                    <svg class="article-card__share-link-icon">
+                      <use href="images/icons.svg#icon-twitter"/>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Pinterest" class="article-card__share-link article-card__share-link--pinterest">
+                    <svg class="article-card__share-link-icon">
+                      <use href="images/icons.svg#icon-pinterest"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              
+              <button class="article-card__share-btn" type="button" aria-label="Share">
+                <svg class="article-card__share-icon">
+                  <use href="images/icons.svg#icon-share"/>
+                </svg>
+              </button>
+            </div>
+          </footer>
+
+        </div>
+
+      </article>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

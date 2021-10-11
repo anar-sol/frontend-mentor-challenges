@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+/* Variables */
+
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$desaturated-dark-blue: hsl(214, 17%, 51%);
+$grayish-blue: hsl(212, 23%, 69%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+$white: hsl(0, 0%, 100%);
+
+
+$font-stack: 'Manrope', sans-serif;
+
+$font-size-normal: .8125rem;
+
+$line-height-normal: 1.5;
+
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+// Breakpoints
+
+$breakpoint: 48.625em;
+
+// Container
+
+$container-padding-y: 4.5rem;
+$container-padding-x: 1.5rem;
+
+$container-max-width: 100%;
+
+// Article card
+
+$article-card-radius: .5rem;
+
+$article-card-max-width: 45.625rem;
+
+$article-card-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.125);
+
+// Article card body
+
+$article-card-body-padding-y: 2.25rem;
+$article-card-body-padding-x: 2rem;
+$article-card-body-padding-bottom: 1.25rem;
+
+$article-card-body-padding-y-lg: 2rem;
+$article-card-body-padding-x-lg: 2rem;
+
+// Article card content
+
+$article-card-content-margin-bottom: 1.5rem;
+
+$article-card-content-margin-bottom-lg: .75rem;
+
+// Article card title
+
+$article-card-title-font-size: 1rem;
+$article-card-title-line-height: 1.5;
+$article-card-title-font-weight: $font-weight-bold;
+
+$article-card-title-color: $very-dark-grayish-blue;
+
+$article-card-title-margin-bottom: .66rem;
+
+$article-card-title-line-height-lg: 1.4;
+
+// Article card excerpt
+
+$article-card-excerpt-font-size: $font-size-normal;
+$article-card-excerpt-line-height: 1.55;
+$article-card-excerpt-font-weight: $font-weight-normal;
+$article-card-excerpt-letter-spacing: 0.01rem;
+
+$article-card-excerpt-color: $desaturated-dark-blue;
+
+$article-card-excerpt-margin-bottom: .5rem;
+
+// Article card author image
+
+$article-card-author-image-width: 2.5rem;
+$article-card-author-image-height: 2.5rem;
+
+$article-card-author-image-margin-right: 1rem;
+
+// Article card author name
+
+$article-card-author-font-size: $font-size-normal;
+$article-card-author-font-weight: $font-weight-bold;
+
+$article-card-author-color: $very-dark-grayish-blue;
+
+// Article card date
+
+$article-card-date-font-size: $font-size-normal;
+$article-card-date-font-weight: $font-weight-normal;
+
+$article-card-date-color: $grayish-blue;
+
+// Article card share options
+
+$article-card-share-options-color: $white;
+$article-card-share-options-bg: $very-dark-grayish-blue;
+
+$article-card-share-options-padding-y: 1.375rem;
+$article-card-share-options-padding-x: $article-card-body-padding-x;
+
+$article-card-share-options-padding-y-lg: 1.08rem;
+$article-card-share-options-padding-x-lg: 2.25rem;
+
+$article-card-share-options-radius: .66rem;
+
+$article-card-share-options-shadow: 0 1rem 1rem -.66rem rgba(0, 0, 0, .25);
+
+
+// Article card share title
+
+$article-card-share-title-font-size: $font-size-normal;
+$article-card-share-title-line-height: 1;
+$article-card-share-title-font-weight: 400;
+$article-card-share-title-letter-spacing: .33rem;
+$article-card-share-title-color: $grayish-blue;
+$article-card-title-margin-right: 1rem;
+
+$article-card-title-font-size-lg: 1.25rem;
+
+// Article card share link
+
+$article-card-share-link-width: 1.25rem;
+$article-card-share-link-height: 1.25rem;
+$article-card-share-link-margin-right: 1rem;
+
+// Article card share button
+
+$article-card-share-btn-width: 2rem;
+$article-card-share-btn-height: 2rem;
+
+$article-card-share-btn-color: $very-dark-grayish-blue;
+$article-card-share-btn-bg: $light-grayish-blue;
+
+$article-card-share-btn-active-color: $white;
+$article-card-share-btn-active-bg: $desaturated-dark-blue;
+
+$article-card-share-btn-z-index: 10;
+
+
+// Article card share icon
+
+$article-card-share-icon-width: 63%;
+$article-card-share-icon-height: 63%;
+
+
+/* Base style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-stack;
+    background: $light-grayish-blue;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+    max-width: $container-max-width;
+    padding: $container-padding-y $container-padding-x;
+    margin: 0 auto;
+}
+
+
+/* article-card */
+
+.article-card {
+    background: $white;
+    border-radius: $article-card-radius;
+    //overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $article-card-box-shadow;
+    max-width: $article-card-max-width;
+
+    @media (min-width: $breakpoint) {
+        flex-direction: row;
+    }
+
+    &__media {
+        width: 100%;
+        height: 0;
+        padding-top: 61.1621%;
+        position: relative;
+        border-top-left-radius: $article-card-radius;
+        border-bottom-left-radius: $article-card-radius;
+        overflow: hidden;
+
+        @media (min-width: $breakpoint) {
+            width: 40%;
+            height: auto;
+            padding: 0;
+            flex: 0 0 auto;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: 50% 25%;
+
+        @media (min-width: $breakpoint) {
+            position: revert;
+        }
+    }
+
+    &__body {
+        padding: $article-card-body-padding-y $article-card-body-padding-x;
+        padding-bottom: $article-card-body-padding-bottom;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @media (min-width: $breakpoint) {
+            padding: $article-card-body-padding-y-lg $article-card-body-padding-x-lg;
+        }
+    }
+
+    &__content {
+        margin-bottom: $article-card-content-margin-bottom;
+
+        @media (min-width: $breakpoint) {
+            margin-bottom: $article-card-content-margin-bottom-lg;
+        }
+    }
+
+    &__title {
+        font-size: $article-card-title-font-size;
+        line-height: $article-card-title-line-height;
+        font-weight: $article-card-title-font-weight;
+        color: $article-card-title-color;
+        margin: 0 0 $article-card-title-margin-bottom;
+
+        @media (min-width: $breakpoint) {
+            font-size: $article-card-title-font-size-lg;
+            line-height: $article-card-title-line-height-lg;
+        }
+    }
+
+    &__excerpt {
+        font-size: $article-card-excerpt-font-size;
+        line-height: $article-card-excerpt-line-height;
+        font-weight: $article-card-excerpt-font-weight;
+        letter-spacing: $article-card-excerpt-letter-spacing;
+        color: $article-card-excerpt-color;
+        margin: 0 0 $article-card-excerpt-margin-bottom;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__meta {
+        padding-left: $article-card-author-image-width + $article-card-author-image-margin-right;
+        position: relative;
+    }
+
+    &__author-image {
+        width: $article-card-author-image-width;
+        height: $article-card-author-image-height;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: center;
+    }
+
+    &__author-name {
+        font-size: $article-card-author-font-size;
+        font-weight: $article-card-author-font-weight;
+        font-style: normal;
+        color: $article-card-author-color;
+        margin: 0;
+    }
+
+    &__date {
+        font-size: $article-card-date-font-size;
+        font-weight: $article-card-date-font-weight;
+        color: $article-card-date-color;
+    }
+
+    &__share-btn-container {
+        @media (min-width: $breakpoint) {
+            position: relative;
+        }
+    }
+
+    &__share-options {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $article-card-share-options-color;
+        background: $article-card-share-options-bg;
+        padding: $article-card-share-options-padding-y $article-card-share-options-padding-x;
+        width: 100%;
+        align-items: center;
+        display: none;
+
+        @media (min-width: $breakpoint) {
+            width: auto;
+            bottom: calc(100% + 1.75rem);
+            left: 50%;
+            transform: translate(-50%, 0);
+            padding: $article-card-share-options-padding-y-lg $article-card-share-options-padding-x-lg;
+            border-radius: $article-card-share-options-radius;
+            box-shadow: $article-card-share-options-shadow;
+
+            &::after {
+                content: '';
+                width: 1rem;
+                height: 1rem;
+                background: $article-card-share-options-bg;
+                transform: translate(-50%, 50%) rotate(45deg);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                box-shadow: $article-card-share-options-shadow;
+            }
+        }
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__share-title {
+        font-size: $article-card-share-title-font-size;
+        line-height: $article-card-share-title-line-height;
+        font-weight: $article-card-share-title-font-weight;
+        letter-spacing: $article-card-share-title-letter-spacing;
+        text-transform: uppercase;
+        color: $article-card-share-title-color;
+        margin-right: $article-card-title-margin-right;
+    }
+
+    &__share-links {
+        display: flex;
+    }
+
+    &__share-link {
+        width: $article-card-share-link-width;
+        height: $article-card-share-link-height;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: $article-card-share-link-margin-right;
+        }
+    }
+
+    &__share-link-icon {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__share-btn {
+        width: $article-card-share-btn-width;
+        height: $article-card-share-btn-height;
+        color: $article-card-share-btn-color;
+        background: $article-card-share-btn-bg;
+        border: none;
+        border-radius: 50%;
+        z-index: $article-card-share-btn-z-index;
+        position: absolute;
+        right: $article-card-share-options-padding-x;
+        bottom: 1rem;
+        transform: rotate(0deg);
+        transition: all 500ms ease 50ms;
+
+        @media (min-width: $breakpoint) {
+            position: revert;
+        }
+
+        &--active {
+            color: $article-card-share-btn-active-color;
+            background: $article-card-share-btn-active-bg;
+            transform: rotate(360deg);
+        }
+    }
+
+    &__share-icon {
+        width: $article-card-share-icon-width;
+        height: $article-card-share-icon-height;
+    }
+}
