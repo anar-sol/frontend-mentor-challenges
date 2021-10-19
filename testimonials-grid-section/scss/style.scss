@@ -18,7 +18,7 @@ $color-on-gray-medium: change-color($color-on-gray, $alpha: 0.67);
 
 $breakpoint-small: 36rem;
 $breakpoint-medium: 42rem;
-$breakpoint-large: 71.375rem;
+$breakpoint-large: 72.375rem;
 
 *,
 *::before,
@@ -48,6 +48,9 @@ img {
 .testimonials {
     background-color: #ecf2f8;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__container {
         width: 100%;

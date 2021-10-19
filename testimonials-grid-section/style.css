@@ -27,6 +27,9 @@ img {
 .testimonials {
   background-color: #ecf2f8;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .testimonials__container {
   width: 100%;
@@ -45,9 +48,9 @@ img {
     margin: 0 auto;
   }
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonials__container {
-    max-width: 71.375rem;
+    max-width: 72.375rem;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: repeat(2, auto);
     gap: 1.5rem 1.875rem;
@@ -102,7 +105,7 @@ img {
     grid-column: 1/span 2;
   }
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--daniel {
     background-position: top 0 right 5rem;
   }
@@ -113,7 +116,7 @@ img {
 .testimonial--daniel .testimonial__body {
   gap: 2.5rem;
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--daniel .testimonial__body {
     gap: 1rem;
   }
@@ -128,7 +131,7 @@ img {
   background-color: #48556a;
   color: rgba(255, 255, 255, 0.67);
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--jonathan {
     grid-column: 3/span 1;
   }
@@ -143,12 +146,12 @@ img {
   background-color: #fff;
   color: rgba(72, 85, 106, 0.67);
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--jeanette {
     grid-column: 1/span 1;
   }
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--jeanette .testimonial__body {
     gap: 1.5rem;
   }
@@ -168,12 +171,12 @@ img {
     grid-column: 1/span 2;
   }
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--patrick {
     grid-column: 2/span 2;
   }
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--patrick .testimonial__body {
     gap: 1.5rem;
   }
@@ -196,13 +199,13 @@ img {
     grid-column: 1/span 2;
   }
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--kira {
     grid-column: 4/span 1;
     grid-row: 1/span 2;
   }
 }
-@media (min-width: 71.375rem) {
+@media (min-width: 72.375rem) {
   .testimonial--kira .testimonial__body {
     gap: 1.5rem;
   }
