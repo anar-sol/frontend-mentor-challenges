@@ -256,13 +256,12 @@ img {
     }
 }
 
-/*
+
 .sr-only {
     width: 1px;
     height: 1px;
     position: absolute;
     top: auto;
-    left: 10000px;
+    left: -10000px;
     overflow: hidden;
 }
-*/

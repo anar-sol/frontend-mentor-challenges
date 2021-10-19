@@ -217,15 +217,13 @@ img {
   color: #48556a;
 }
 
-/*
 .sr-only {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    top: auto;
-    left: 10000px;
-    overflow: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  overflow: hidden;
 }
-*/
 
 /*# sourceMappingURL=style.css.map */
