@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+$color-primary: #733fc8;
+$color-on-primary: #fff;
+$color-on-primary-medium: change-color($color-on-primary, $alpha: 0.67);
+
+$color-white: #fff;
+$color-on-white: #48556a;
+$color-on-white-medium: change-color($color-on-white, $alpha: 0.67);
+
+$color-black: #19202d;
+$color-on-black: #fff;
+$color-on-black-medium: change-color($color-on-black, $alpha: 0.67);
+
+$color-gray: #48556a;
+$color-on-gray: #fff;
+$color-on-gray-medium: change-color($color-on-gray, $alpha: 0.67);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 0.8125rem;
+    line-height: 1.3846;
+    font-weight: 500;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.testimonials {
+    background-color: #ecf2f8;
+
+    &__container {
+        padding: 4.4375rem 1.5rem;
+        display: grid;
+        gap: 1.5rem;
+    }
+}
+
+.testimonial {
+    padding: 1.625rem 2rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 40px 60px 50px -47px hsla(217, 19%, 35%, 0.25);
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.125rem;
+    }
+
+    &__user-pic {
+        width: 1.75rem;
+        height: 1.75rem;
+        outline: 0.125rem solid transparent;
+        border-radius: 50%;
+        margin-right: 1.0625rem;
+    }
+
+    &__user-name {
+        font-size: inherit;
+        line-height: 1;
+        font-weight: inherit;
+        margin-bottom: 0.25rem;
+    }
+
+    &__user-status {
+        font-size: 0.6875rem;
+        line-height: 1;
+    }
+
+    &__body {
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__text {
+        &--highlighted {
+            font-size: 1.25rem;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+    }
+
+    &--daniel {
+        background-color: $color-primary;
+        color: $color-on-primary-medium;
+        background-image: url("images/bg-pattern-quotation.svg");
+        background-position: top 0 right 1.5rem;
+        background-repeat: no-repeat;
+
+        .testimonial__user-pic {
+            outline-color: #a775f1;
+        }
+
+        .testimonial__body {
+            gap: 2.5rem;
+        }
+
+        .testimonial__user-name {
+            color: $color-on-primary;
+        }
+
+        .testimonial__text--highlighted {
+            color: $color-on-primary;
+        }
+    }
+
+    &--jonathan {
+        background-color: $color-gray;
+        color: $color-on-gray-medium;
+
+        .testimonial__user-name {
+            color: $color-on-gray;
+        }
+
+        .testimonial__text--highlighted {
+            color: $color-on-gray;
+        }
+    }
+
+    &--jeanette {
+        background-color: $color-white;
+        color: $color-on-white-medium;
+
+        .testimonial__user-name {
+            color: $color-on-white;
+        }
+
+        .testimonial__text--highlighted {
+            color: $color-on-white;
+        }
+    }
+
+    &--patrick {
+        background-color: $color-black;
+        color: $color-on-black-medium;
+
+        .testimonial__user-name {
+            color: $color-on-black;
+        }
+
+        .testimonial__text--highlighted {
+            color: $color-on-black;
+        }
+
+        .testimonial__user-pic {
+            outline-color: #733fc8;
+        }
+    }
+
+    &--kira {
+        background-color: $color-white;
+        color: $color-on-white-medium;
+
+        .testimonial__user-name {
+            color: $color-on-white;
+        }
+
+        .testimonial__text--highlighted {
+            color: $color-on-white;
+        }
+    }
+}
+
+/*
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: auto;
+    left: 10000px;
+    overflow: hidden;
+}
+*/
