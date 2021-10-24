@@ -9,6 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Tip calculator app</title>
+
+  <script async src="script.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,7 @@
               <label for="tip-bill" class="text-field__label">
                 <h2 class="tip__input-heading">Bill</h2>
               </label>
-              <input type="number" id="tip-bill" class="text-field__input">
+              <input type="number" value="0" id="tip-bill" class="text-field__input">
             </div>
 
             <div class="control-group">
@@ -39,7 +41,7 @@
               <button id="tip-btn-25" class="btn">25%</button>
               <button id="tip-btn-50" class="btn">50%</button>
               <div class="text-field control-group__text-field">
-                <input type="number" id="tip-tip" class="text-field__input">
+                <input type="number" value="0" id="tip-tip" class="text-field__input">
                 <label for="tip-tip" class="text-field__label text-field__label--contained">Custom tip %</label>
             </div>
 
@@ -47,7 +49,7 @@
               <label for="tip-people" class="text-field__label">
                 <h2 class="tip__input-heading">Number of People</h2>
               </label>
-              <input type="number" id="tip-people" class="text-field__input">
+              <input type="number" value="0" id="tip-people" class="text-field__input">
             </div>
           </div>
 
@@ -56,14 +58,14 @@
               <label for="tip-amount" class="tip__output-label">
                 <h2 class="tip__output-heading">Tip Amount <span>/ person</span></h2>
               </label>
-              <output id="tip-amount" for="bill people custom-tip"></output>
+              <output id="tip-amount" for="bill people custom-tip">$0</output>
             </div>
 
             <div class="tip__output-field">
-              <label for="total" class="tip__output-label">
+              <label for="tip-total" class="tip__output-label">
                 <h2 class="tip__output-heading">Total <span>/ person</span></h2>
               </label>
-              <output id="total" for="bill people custom-tip"></output>
+              <output id="tip-total" for="bill people custom-tip">$0</output>
             </div>
 
             <button type="button" id="tip-reset" class="btn btn--highlighted">Reset</button>
