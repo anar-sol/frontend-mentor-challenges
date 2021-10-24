@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Tip calculator app</title>
 </head>
+
 <body>
 
-  Bill
+  <main>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <h1 class="main-title">Spli<br>tter</h1>
+        </div>
+      </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <article class="tip">
+        <div class="tip__container">
+          <div class="tip__inputs">
+            <div class="text-field">
+              <label for="tip-bill" class="text-field__label">
+                <h2 class="tip__input-heading">Bill</h2>
+              </label>
+              <input type="number" id="tip-bill" class="text-field__input">
+            </div>
 
-  Number of People
+            <div class="control-group">
+              <h2 class="tip__input-heading">Select Tip %</h2>
+              <button id="tip-btn-5" class="btn">5%</button>
+              <button id="tip-btn-10" class="btn">10%</button>
+              <button id="tip-btn-15" class="btn btn--highlighted">15%</button>
+              <button id="tip-btn-25" class="btn">25%</button>
+              <button id="tip-btn-50" class="btn">50%</button>
+              <div class="text-field control-group__text-field">
+                <input type="number" id="tip-tip" class="text-field__input">
+                <label for="tip-tip" class="text-field__label text-field__label--contained">Custom tip %</label>
+            </div>
 
-  Tip Amount
-  / person
+            <div class="text-field">
+              <label for="tip-people" class="text-field__label">
+                <h2 class="tip__input-heading">Number of People</h2>
+              </label>
+              <input type="number" id="tip-people" class="text-field__input">
+            </div>
+          </div>
 
-  Total
-  / person
+          <div class="tip__outputs">
+            <div class="tip__output-field">
+              <label for="tip-amount" class="tip__output-label">
+                <h2 class="tip__output-heading">Tip Amount <span>/ person</span></h2>
+              </label>
+              <output id="tip-amount" for="bill people custom-tip"></output>
+            </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <div class="tip__output-field">
+              <label for="total" class="tip__output-label">
+                <h2 class="tip__output-heading">Total <span>/ person</span></h2>
+              </label>
+              <output id="total" for="bill people custom-tip"></output>
+            </div>
+
+            <button type="button" id="tip-reset" class="btn btn--highlighted">Reset</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
 </body>
+
 </html>
