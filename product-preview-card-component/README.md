@@ -5,8 +5,8 @@ This is a solution to the [Product preview card component challenge on Frontend 
 ## Table of contents
 
 - [The challenge](#the-challenge)
-- [Screenshot](#screenshot)
-- [Links](#links)
+- [Screenshots](#screenshots)
+- [Live solution](#link)
 - [Built with](#built-with)
 - [Author](#author)
 
@@ -17,15 +17,15 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
 
-## Screenshot
+## Screenshots
 
 ![](./screenshot-desktop.png)
 
 ![](./screenshot-mobile.png)
 
-## Links
+## Link
 
-- [Live Site Solution](https://anar-sol.github.io/frontend-mentor-challenges/product-preview-card-component/)
+- [Live Solution](https://anar-sol.github.io/frontend-mentor-challenges/product-preview-card-component/)
 
 ## Built with
 
