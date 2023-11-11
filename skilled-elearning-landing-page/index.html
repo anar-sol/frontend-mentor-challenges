@@ -301,6 +301,7 @@
             background: var(--orange-pink-gradient);
             padding: 1.5rem 1.75rem 2rem;
             border-radius: .625rem;
+            height: 100%;
         }
 
 
@@ -433,22 +434,31 @@
                     <a href="#" class="btn btn--hero">Get Started</a>
                 </div>
                 <picture>
-                    <source media="(min-width: 992px)" type="image/webp" srcset="./assets/image-hero-desktop.webp, ./assets/image-hero-desktop@2x.webp 2x">
-                    <source media="(min-width: 992px)" type="image/png" srcset="./assets/image-hero-desktop.png, ./assets/image-hero-desktop@2x.png 2x">
+                    <source media="(min-width: 992px)" type="image/webp"
+                        srcset="./assets/image-hero-desktop.webp, ./assets/image-hero-desktop@2x.webp 2x">
+                    <source media="(min-width: 992px)" type="image/png"
+                        srcset="./assets/image-hero-desktop.png, ./assets/image-hero-desktop@2x.png 2x">
 
-                    <source media="(min-width: 768px)" type="image/webp" srcset="./assets/image-hero-tablet.webp, ./assets/image-hero-tablet@2x.webp 2x">
-                    <source media="(min-width: 768px)" type="image/png" srcset="./assets/image-hero-tablet.png, ./assets/image-hero-tablet@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/webp"
+                        srcset="./assets/image-hero-tablet.webp, ./assets/image-hero-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/png"
+                        srcset="./assets/image-hero-tablet.png, ./assets/image-hero-tablet@2x.png 2x">
 
-                    <source type="image/webp" srcset="./assets/image-hero-mobile.webp, ./assets/image-hero-mobile@2x.webp 2x">
-                    <source type="image/png" srcset="./assets/image-hero-mobile.png, ./assets/image-hero-mobile@2x.png 2x">
+                    <source type="image/webp"
+                        srcset="./assets/image-hero-mobile.webp, ./assets/image-hero-mobile@2x.webp 2x">
+                    <source type="image/png"
+                        srcset="./assets/image-hero-mobile.png, ./assets/image-hero-mobile@2x.png 2x">
 
-                    <img class="hero__img" src="./assets/image-hero-mobile.png" alt="29k members and 1951 hours of course">
+                    <img class="hero__img" src="./assets/image-hero-mobile.png"
+                        alt="29k members and 1951 hours of course">
                 </picture>
             </div>
         </section>
         <section class="courses">
             <ul role="list">
-                <h2 class="courses__title">Check out our most popular courses!</h2>
+                <li>
+                    <h2 class="courses__title">Check out our most popular courses!</h2>
+                </li>
                 <li>
                     <section class="card">
                         <svg class="card__icon" aria-hidden="true" width="56" height="56"
