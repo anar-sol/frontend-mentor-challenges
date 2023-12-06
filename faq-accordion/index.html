@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>FAQ accordion | Frontend Mentor</title>
+
+  <style>
+    @font-face {
+      font-family: "Work Sans";
+      src: local("Work Sans"), url("assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-white: #fff;
+      --color-light-pink: hsl(275, 100%, 97%);
+      --color-grayish-purple: hsl(292, 16%, 49%);
+      --color-purple: hsl(282, 53%, 48%);
+      --color-dark-purple: hsl(292, 42%, 14%);
+    }
+
+    body {
+      font-family: "Work Sans", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    body,
+    h1,
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: url("./assets/images/background-pattern-mobile.svg") no-repeat top / 100%, var(--color-light-pink);
+    }
+
+    .faq {
+      color: var(--color-grayish-purple);
+      background-color: var(--color-white);
+      width: calc(100% - 1.5rem * 2);
+      max-width: 37.5rem;
+      padding: 1.5rem;
+      margin: 0 1.5rem;
+      border-radius: .5rem;
+      box-shadow: 0px 20px 20px hsla(292, 42%, 14%, 0.125);
+    }
+
+    .faq h1 {
+      color: var(--color-dark-purple);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+    }
+
+    .faq h1::before {
+      content: "";
+      background: url("assets/images/icon-star.svg") no-repeat center / cover;
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 1.5rem;
+    }
+
+    .faq details {
+      padding: 1.25rem 0;
+    }
+
+    .faq details:first-of-type {
+      padding-top: 0;
+    }
+
+    .faq details:last-of-type {
+      padding-bottom: 0;
+    }
+
+    .faq details:not(:last-of-type) {
+      border-bottom: 2px solid var(--color-light-pink);
+    }
+
+    .faq summary {
+      color: var(--color-dark-purple);
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq details[open] summary {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq summary::after {
+      content: "";
+      background: url("assets/images/icon-plus.svg") no-repeat center / cover;
+      display: inline-block;
+      width: 1.75rem;
+      height: 1.75rem;
+      margin-left: 1.5rem;
+      flex: 0 0 auto;
+    }
+
+    .faq details[open] summary::after {
+      background-image: url("assets/images/icon-minus.svg");
+    }
+
+    .faq summary:hover,
+    .faq summary:active {
+      color: var(--color-purple);
+    }
+
+    .faq summary:hover::after,
+    .faq summary:active::after {
+      filter: opacity(70%);
+    }
+
+    @media (min-width: 60rem) {
+      main {
+        background: url("./assets/images/background-pattern-desktop.svg") no-repeat top / 100% auto, var(--color-light-pink);
+      }
+
+      .faq {
+        padding: 3.25rem 2.5rem 2.5rem;
+        border-radius: 1rem;
+      }
+
+      .faq h1 {
+        font-size: 3.25rem;
+        line-height: 1;
+        margin-bottom: 2.5rem;
+      }
+
+      .faq h1::before {
+        width: 2.375rem;
+        height: 2.375rem;
+        margin-inline-end: 1.875rem;
+      }
+
+      .faq details {
+        padding: 1.5rem 0;
+      }
+
+      .faq summary {
+        font-size: 1.125rem;
+      }
+
+      .faq details[open] summary {
+        margin-bottom: 1.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="faq">
+      <h1>FAQs</h1>
+
+      <details>
+        <summary>What is Frontend Mentor, and how will it help me?</summary>
+        <p>Frontend Mentor offers realistic coding challenges to help developers improve their
+          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+          all levels and ideal for portfolio building.</p>
+      </details>
+
+      <details>
+        <summary>Is Frontend Mentor free?</summary>
+        <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+          option providing access to a range of projects suitable for all skill levels.</p>
+      </details>
+
+      <details>
+        <summary>Can I use Frontend Mentor projects in my portfolio?</summary>
+        <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+          way to showcase your skills to potential employers!</p>
+      </details>
+
+      <details>
+        <summary>How can I get help if I'm stuck on a challenge?</summary>
+        <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help
+          channel where you can ask questions and seek support from other community members.</p>
+      </details>
+    </article>
+  </main>
+</body>
+
+</html>
