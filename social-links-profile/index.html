@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Social links profile</title>
+
+  <style>
+    @font-face {
+      font-family: "Inter";
+      src: local("Inter"), url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+    }
+
+    /* reset */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body,
+    h1,
+    p,
+    ul {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    :root {
+      --color-green: hsl(75, 94%, 57%);
+      --color-white: hsl(0, 0%, 100%);
+      --color-grey: hsl(0, 0%, 20%);
+      --color-dark-grey: hsl(0, 0%, 12%);
+      --color-off-black: hsl(0, 0%, 8%);
+
+      --text-base: .875rem;
+
+      --font-normal: 400;
+      --font-semibold: 600;
+      --font-bold: 700;
+
+      --font-stack: "Inter", sans-serif;
+
+      --spacing-base: .25rem;
+      --spacing-1: calc(var(--spacing-base) * 1);
+      --spacing-2: calc(var(--spacing-base) * 2);
+      --spacing-3: calc(var(--spacing-base) * 3);
+      --spacing-4: calc(var(--spacing-base) * 4);
+      --spacing-5: calc(var(--spacing-base) * 5);
+      --spacing-6: calc(var(--spacing-base) * 6);
+      --spacing-7: calc(var(--spacing-base) * 7);
+      --spacing-8: calc(var(--spacing-base) * 8);
+      --spacing-9: calc(var(--spacing-base) * 9);
+      --spacing-10: calc(var(--spacing-base) * 10);
+
+      --radius-base: .25rem;
+      --radius-1: calc(var(--radius-base) * 1);
+      --radius-2: calc(var(--radius-base) * 2);
+      --radius-3: calc(var(--radius-base) * 3);
+      --radius-full: 50%
+    }
+
+    /* base style */
+    body {
+      font-family: var(--font-stack);
+      font-size: var(--text-base);
+      line-height: 1.42;
+      background: var(--color-off-black);
+      color: var(--color-white);
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* profile start */
+    .profile {
+      background: var(--color-dark-grey);
+      padding: var(--spacing-5) var(--spacing-6) var(--spacing-6);
+      border-radius: var(--radius-3);
+      text-align: center;
+      width: 100%;
+      max-width: 24rem;
+      margin: 0 var(--spacing-6);
+    }
+
+    .profile img {
+      width: 5.75rem;
+      height: 5.75rem;
+      border-radius: var(--radius-full);
+      margin: 0 auto var(--spacing-7);
+    }
+
+    .profile h1 {
+      font-size: 1.5rem;
+      line-height: 1;
+      font-weight: var(--font-semibold);
+      letter-spacing: 0.008em;
+      margin-block-end: var(--spacing-3);
+    }
+
+    .profile__location {
+      font-weight: var(--font-bold);
+      color: var(--color-green);
+      margin-block-end: var(--spacing-6);
+    }
+
+    .profile address {
+      margin-block-start: var(--spacing-6);
+    }
+
+    .profile ul>*+* {
+      margin-block-start: var(--spacing-5);
+    }
+
+    .profile ul a {
+      line-height: 1.28;
+      font-weight: var(--font-bold);
+      text-decoration: none;
+      display: block;
+      background: var(--color-grey);
+      color: inherit;
+      padding: var(--spacing-3);
+      border-radius: var(--radius-2);
+    }
+
+    .profile ul a:hover,
+    .profile ul a:active {
+      background: var(--color-green);
+      color: var(--color-dark-grey);
+    }
+
+    @media (min-width: 48rem) {
+      .profile {
+        padding: var(--spacing-9) var(--spacing-10) var(--spacing-10);
+      }
+    }
+
+    /* profile end */
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="profile">
+      <img src="assets/images/avatar-jessica.jpeg" alt="Jessica">
+      <h1>Jessica Randall</h1>
+      <p class="profile__location">London, United Kingdom</p>
+      <p>"Front-end developer and avid reader."</p>
+      <address>
+        <ul role="list">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Frontend Mentor</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </address>
+    </article>
+  </main>
+</body>
+
+</html>
