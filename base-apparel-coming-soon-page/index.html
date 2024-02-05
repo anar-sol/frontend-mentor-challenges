@@ -263,6 +263,12 @@
       right: calc(var(--button-width) + .5rem);
     }
 
+    @media (min-width: 75rem) {
+      .hero input:not(:placeholder-shown):not(:focus):invalid~.error-icon {
+        top: calc(var(--input-padding-block) + .125rem);
+      }
+    }
+
     .hero button {
       background: var(--gradient-2);
       border: none;
@@ -318,7 +324,6 @@
           </g>
         </svg>
       </header>
-      <!--<div class="hero__illustration"><img src="assets/images/hero-mobile.jpg" alt=""></div>-->
       <div class="hero__illustration">
         <picture>
           <source media="(max-width: 1199px)" srcset="assets/images/hero-mobile.jpg" />
@@ -375,6 +380,7 @@
     const form = document.querySelector("form");
 
     if (form) {
+      form.noValidate = true;
       form.addEventListener("invalid", event => {
         event.preventDefault();
         const isValid = event.target.validity.valid;
@@ -387,7 +393,7 @@
         } else {
           errorMessage.innerText = "";
         }
-      });
+      }, true);
 
       form.addEventListener("submit", event => {
         if (!event.target.checkValidity()) {
