@@ -8,6 +8,110 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | News homepage</title>
+
+  <style>
+    /* ---------- base style ---------- */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /*
+    * 1. Prevent adjustments of font size after orientation changes in iOS.
+    * 2. Disable tap highlights on iOS.
+    */
+    html {
+      /* 1 */
+      -webkit-text-size-adjust: 100%;
+      /* 2 */
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /*
+    * Remove the margin in all browsers.
+    */
+    body {
+      margin: 0;
+    }
+
+    /*
+    * Remove the default font size and weight for headings.
+    */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    /*
+    * Reset links to optimize for opt-in styling instead of opt-out.
+    */
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    /*
+    * Use the modern Firefox focus style for all focusable elements.
+    */
+    :-moz-focusring {
+      outline: auto;
+    }
+
+    /*
+    * Removes the default spacing and border for appropriate elements.
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 0;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*
+    * 1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+    * 2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+    * This can trigger a poorly considered lint error in some tools but is included by design.
+    */
+
+    img,
+    svg {
+      /* 1 */
+      display: block;
+      /* 2 */
+      vertical-align: middle;
+    }
+
+    /*
+    * Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+    */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Make elements with the HTML hidden attribute stay hidden by default */
+    [hidden] {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -113,3 +217,5 @@
   https://web.dev/learn/html/navigation/#skip-to-content-link
   https://css-tricks.com/how-to-create-a-skip-to-content-link/ 
 -->
+
+<!-- https://unpkg.com/tailwindcss@3.4.1/src/css/preflight.css -->
