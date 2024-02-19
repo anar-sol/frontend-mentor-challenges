@@ -221,9 +221,12 @@
       --logo-width-lg: 4rem;
 
       /* navigation button */
-      --navigation-btn-block-padding: .5rem;
+      --navigation-btn-hover-color: var(--color-soft-red);
+      --navigation-btn-block-padding: 0;
       --navigation-btn-inline-padding: .25rem;
-      --navigation-btn-width: calc(2.5rem + var(--navigation-btn-inline-padding) * 2);
+      --navigation-btn-open-width: 2.5rem;
+      --navigation-btn-height: 2rem;
+      --navigation-btn-close-width: 2rem;
 
       /* navigation item */
       --navigation-item-hover-color: var(--color-soft-red);
@@ -301,26 +304,46 @@
       }
     }
 
-    /* ---------- navigation btn ---------- */
-    .navigation-btn {
-      width: var(--navigation-btn-width);
+    /* ---------- navigation ---------- */
+    .navigation__btn {
+      fill: currentColor;
+      height: var(--navigation-btn-height);
       padding-block: var(--navigation-btn-block-padding);
       padding-inline: var(--navigation-btn-inline-padding);
+      position: relative;
+      z-index: 1;
       display: none;
     }
 
-    @media (max-width: calc(900px - 1px)) {
-      .navigation-btn {
-        display: block;
-      }
+    .open-icon {
+      width: var(--navigation-btn-open-width);
+      display: initial;
     }
 
-    /* ---------- navigation ---------- */
-    .navigation ul {
+    .close-icon {
+      width: var(--navigation-btn-close-width);
+      display: none;
+    }
+
+    .navigation__btn[aria-expanded="true"] .close-icon {
+      display: initial;
+    }
+
+    .navigation__btn[aria-expanded="true"] .open-icon {
+      display: none;
+    }
+
+    .navigation__btn:hover,
+    .navigation__btn:active,
+    .navigation__btn:focus {
+      color: var(--navigation-btn-hover-color);
+    }
+
+    .navigation__panel {
       display: flex;
     }
 
-    .navigation ul>*+* {
+    .navigation__panel>*+* {
       margin-inline-start: var(--navigation-item-spacing);
     }
 
@@ -343,24 +366,38 @@
     */
 
     @media (max-width: calc(900px - 1px)) {
-      .navigation ul {
-        flex-direction: column;
-        padding: 1.5rem;
+      .navigation {}
+      
+      .navigation__btn {
+        display: block;
       }
 
-      .navigation ul>*+* {
-        margin-inline-start: 0;
-        margin-block-start: .5rem;
-      }
-
-      .navigation {
-        padding-block-start: 8.5rem;
+      .navigation__panel {
+        padding: 8.5rem 1.5rem 1.5rem;
         background: var(--color-off-white);
+        flex-direction: column;
         position: absolute;
         top: 0;
         right: 0;
         width: 68%;
         height: 100vh;
+        display: none;
+        /*
+        transform: translateX(100%);
+        transition: transform .3s;
+        */
+      }
+
+      .navigation__panel>*+* {
+        margin-inline-start: 0;
+        margin-block-start: .5rem;
+      }
+
+      .navigation__panel.navigation__panel--expanded {
+        display: flex;
+        /*
+        transform: translateX(0);
+        */
       }
     }
 
@@ -381,18 +418,26 @@
         </svg>
       </a>
 
-      <button aria-label="Open main navigation menu" class="navigation-btn">
-        <svg role="img" viewBox="0 0 40 17" xmlns="http://www.w3.org/2000/svg">
-          <title>Open menu</title>
-          <g fill="#00001A" fill-rule="evenodd">
-            <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
-            <path d="M0 0h40v3H0z" />
-          </g>
-        </svg>
-      </button>
+      <nav class="navigation" aria-label="menu">
+        <button aria-label="Open menu" aria-controls="navigationPannel" aria-expanded="false" class="navigation__btn">
+          <svg class="open-icon" aria-hidden="true" role="img" viewBox="0 0 40 17" xmlns="http://www.w3.org/2000/svg">
+            <title>Open menu</title>
+            <g fill-rule="evenodd">
+              <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+              <path d="M0 0h40v3H0z" />
+            </g>
+          </svg>
 
-      <nav class="navigation" aria-label="main navigation menu">
-        <ul role="list">
+          <svg class="close-icon" aria-hidden="true" role="img" viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg">
+            <title>Close menu</title>
+            <g fill-rule="evenodd">
+              <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+              <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+            </g>
+          </svg>
+        </button>
+
+        <ul class="navigation__panel" role="list" id="navigationPannel">
           <li><a class="navigation__link" aria-current="page" href="/news-homepage/">Home</a></li>
           <li><a class="navigation__link" href="#">New</a></li>
           <li><a class="navigation__link" href="#">Popular</a></li>
@@ -467,6 +512,31 @@
       </article>
     </main>
   </div>
+
+  <script>
+    /* -------- header navigation -------- */
+    const navigationBtn = document.querySelector(".navigation__btn");
+    const navigationPannel = document.querySelector(`#${navigationBtn.getAttribute("aria-controls")}`);
+
+    navigationBtn.addEventListener("click", () => {
+      const isExpanded = navigationBtn.getAttribute("aria-expanded") === "true";
+      if (isExpanded) {
+        navigationPannel.classList.remove("navigation__panel--expanded");
+      } else {
+        navigationPannel.classList.add("navigation__panel--expanded");
+      }
+      navigationBtn.setAttribute("aria-label", isExpanded ? "Open menu" : "Close menu");
+      navigationBtn.setAttribute("aria-expanded", String(!isExpanded));
+    });
+
+    window.addEventListener("keydown", event => {
+      const isExpanded = navigationBtn.getAttribute("aria-expanded") === "true";
+      if (isExpanded && event.key === "Escape") {
+        navigationBtn.focus();
+        navigationBtn.click();
+      }
+    });
+  </script>
 </body>
 
 </html>
@@ -485,3 +555,4 @@
 <!-- https://unpkg.com/tailwindcss@3.4.1/src/css/preflight.css -->
 <!-- https://css-tricks.com/inclusively-hidden/ -->
 <!-- https://www.sarasoueidan.com/blog/accessible-icon-buttons/#technique-%234%3A-aria-label-on-the-%3Csvg%3E-icon -->
+<!-- https://www.impressivewebs.com/accessible-keyboard-friendly-hamburger-menu-slide-out-navigation/ -->
