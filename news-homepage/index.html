@@ -421,6 +421,54 @@
         visibility: visible;
       }
 
+      /* ---------- card ---------- */
+      .card {
+
+      }
+
+      .card__title {
+        font-size: 1.125rem;
+        font-weight: 800;
+        line-height: 1.33;
+        color: var(--color-very-dark-blue);
+      }
+
+      .card--featured .card__title {
+        font-size: 2.5rem;
+        line-height: 1;
+      }
+
+      .card--simple .card__title {
+        font-size: 1.25rem;
+        line-height: 1.2;
+      }
+
+      .card__btn {
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: .3em;
+        text-transform: uppercase;
+        display: inline-block;
+        background: var(--color-soft-red);
+        color: var(--color-off-white);
+        padding: 1rem 2rem;
+      }
+
+      .card__btn:hover,
+      .card__btn:active {
+        background: var(--color-very-dark-blue);
+      }
+
+      /* ---------- new feed ---------- */
+      .new-feed {
+        background: var(--color-very-dark-blue);
+        padding: 1rem;
+      }
+
+      .new-feed .card__title {
+        color: var(--color-off-white);
+      }
   </style>
 </head>
 
