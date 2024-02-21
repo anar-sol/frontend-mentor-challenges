@@ -228,6 +228,34 @@
       --navigation-item-block-padding: .5rem;
       --navigation-item-inline-padding: .25rem;
       --navigation-item-spacing: 2rem;
+
+      /* card */
+      --card-title-font-size: 1.125rem;
+      --card-title-font-weight: 800;
+      --card-title-line-height: 1.33;
+      --card-title-color: var(--color-very-dark-blue);
+
+      --card-featured-font-size: 2.5rem;
+      --card-featured-line-height: 1;
+
+      --card-simple-font-size: 1.25rem;
+      --card-simple-line-height: 1.2;
+
+      --card-btn-font-size: 0.875rem;
+      --card-btn-font-weight: 700;
+      --card-btn-letter-spacing: .3em;
+      --card-btn-text-transform: uppercase;
+      --card-btn-line-height: 1;
+      --card-btn-color: var(--color-off-white);
+      --card-btn-block-padding: 1rem;
+      --card-btn-inline-padding: 2rem;
+      --card-btn-background: var(--color-soft-red);
+      --card-btn-hover-background: var(--color-very-dark-blue);
+      --card-btn-color: var(--color-off-white);
+
+      /* news feed */
+      --news-feed-padding: 1rem;
+      --news-feed-background: var(--color-very-dark-blue);
     }
 
     @media (min-width: 900px) {
@@ -345,8 +373,7 @@
     }
 
     /* ---------- navigation ---------- */
-    .navigation {
-    }
+    .navigation {}
 
     .navigation__panel {
       display: flex;
@@ -403,72 +430,188 @@
 
     /* ---------- overlay ---------- */
     .overlay {
-        content: "";
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: var(--color-very-dark-blue);
-        opacity: 0;
-        z-index: 1;
-        visibility: hidden;
-        transition: opacity .3s, visibility .3s;
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--color-very-dark-blue);
+      opacity: 0;
+      z-index: 1;
+      visibility: hidden;
+      transition: opacity .3s, visibility .3s;
+    }
+
+    .overlay.overlay--expanded {
+      opacity: .5;
+      visibility: visible;
+    }
+
+    /* ---------- card ---------- */
+    .card:not(.card--featured):not(.card--simple) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1.5rem;
+    }
+
+    .card__illustration {
+      align-self: stretch;
+      object-fit: cover;
+    }
+
+    .card .card__body>*+* {
+      margin-block-start: .75rem;
+    }
+
+    .card.card--featured>*+* {
+      margin-block-start: 1.5rem;
+    }
+
+    .card.card--featured .card__body>*+* {
+      margin-block-start: 1.5rem;
+    }
+
+    .card.card--simple .card__body>*+* {
+      margin-block-start: .75rem;
+    }
+
+    .card__number {
+      font-size: 1.875rem;
+      line-height: 1.066;
+      font-weight: 700;
+      color: var(--color-grayish-blue);
+    }
+
+    .card__title {
+      font-size: var(--card-title-font-size);
+      font-weight: var(--card-title-font-weight);
+      line-height: var(--card-title-line-height);
+      color: var(--card-title-color);
+    }
+
+    .card--featured .card__title {
+      font-size: var(--card-featured-font-size);
+      line-height: var(--card-featured-line-height);
+    }
+
+    .card--simple .card__title {
+      font-size: var(--card-simple-font-size);
+      line-height: var(--card-simple-line-height);
+    }
+
+    .card__btn {
+      font-size: var(--card-btn-font-size);
+      font-weight: var(--card-btn-font-weight);
+      line-height: var(--card-btn-line-height);
+      letter-spacing: var(--card-btn-letter-spacing);
+      text-transform: var(--card-btn-text-transform);
+      display: inline-block;
+      background: var(--card-btn-background);
+      color: var(--card-btn-color);
+      padding: var(--card-btn-block-padding) var(--card-btn-inline-padding);
+    }
+
+    .card__btn:hover,
+    .card__btn:active,
+    .card__btn:focus {
+      background: var(--card-btn-hover-background);
+    }
+
+    /* ---------- news feed ---------- */
+    .news-feed {
+      background: var(--news-feed-background);
+      padding: var(--news-feed-padding);
+      padding-block-end: 0;
+      color: var(--color-grayish-blue);
+    }
+
+    .news-feed__title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-soft-orange);
+      margin-bottom: .125rem;
+    }
+
+    .news-feed .card {
+      padding-block-start: 1.75rem;
+      padding-block-end: 1.75rem;
+    }
+
+    .news-feed .card:not(:last-child) {
+      border-block-end: 1px solid var(--color-grayish-blue);
+    }
+
+    .news-feed .card__title {
+      color: var(--color-off-white);
+    }
+
+    /* ---------- articles feed ---------- */
+    .articles-feed {
+      font-size: 15px;
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .articles-feed {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ---------- main content --------- */
+    .main-content {
+      display: grid;
+      gap: 4rem;
+      padding-block-end: 4rem;
+    }
+
+    @media (min-width: 900px) {
+      .main-content {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
       }
 
-      .overlay.overlay--expanded {
-        opacity: .5;
-        visibility: visible;
+      .card.card--featured {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
       }
 
-      /* ---------- card ---------- */
-      .card {
-
+      .card.card--featured picture {
+        grid-column: 1 / 3;
       }
 
-      .card__title {
-        font-size: 1.125rem;
-        font-weight: 800;
-        line-height: 1.33;
-        color: var(--color-very-dark-blue);
+      .card.card--featured>*+* {
+        margin-block-start: 0;
       }
 
-      .card--featured .card__title {
-        font-size: 2.5rem;
-        line-height: 1;
+      .card.card--featured .card__body>*+* {
+        margin-block-start: 0;
       }
 
-      .card--simple .card__title {
-        font-size: 1.25rem;
-        line-height: 1.2;
+      .card.card--featured .card__body {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      .card.card--featured .card__title {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
       }
 
       .card__btn {
-        font-size: 0.875rem;
-        font-weight: 700;
-        line-height: 1;
-        letter-spacing: .3em;
-        text-transform: uppercase;
-        display: inline-block;
-        background: var(--color-soft-red);
-        color: var(--color-off-white);
-        padding: 1rem 2rem;
+        align-self: end;
+        justify-self: start;
       }
 
-      .card__btn:hover,
-      .card__btn:active {
-        background: var(--color-very-dark-blue);
+      .articles-feed {
+        grid-column: 1 / 4;
       }
-
-      /* ---------- new feed ---------- */
-      .new-feed {
-        background: var(--color-very-dark-blue);
-        padding: 1rem;
-      }
-
-      .new-feed .card__title {
-        color: var(--color-off-white);
-      }
+    }
   </style>
 </head>
 
@@ -519,7 +662,10 @@
     <main id="main-content" class="main-content">
       <h1 class="sr-only">W. Home</h1>
       <article class="card card--featured">
-        <img class="card__illustration" src="assets/images/image-web-3-desktop.jpg" alt="">
+        <picture>
+          <source media="(max-width: 899px)" srcset="assets/images/image-web-3-mobile.jpg" />
+          <img class="card__illustration" src="assets/images/image-web-3-desktop.jpg" alt="">
+        </picture>
         <div class="card__body">
           <h2 class="card__title"><a href="#">The Bright Future of Web 3.0?</a></h2>
           <p class="card__excerpt">We dive into the next evolution of the web that claims to put the power of the
@@ -528,8 +674,8 @@
         </div>
       </article>
 
-      <section class="new-feed">
-        <h2 class="new-feed__title">New</h2>
+      <section class="news-feed">
+        <h2 class="news-feed__title">New</h2>
 
         <article class="card card--simple">
           <div class="card__body">
@@ -553,32 +699,36 @@
         </article>
       </section>
 
-      <article class="card">
-        <img class="card__illustration" src="assets/images/image-retro-pcs.jpg" alt="">
-        <div class="card__body">
-          <div class="card__number">01</div>
-          <h2 class="card__title"><a href="#">Reviving Retro PCs</a></h2>
-          <p class="card__excerpt">What happens when old PCs are given modern upgrades?</p>
-        </div>
-      </article>
+      <section class="articles-feed">
+        <h2 class="articles-feed__title sr-only">Last Articles</h2>
 
-      <article class="card">
-        <img class="card__illustration" src="assets/images/image-top-laptops.jpg" alt="">
-        <div class="card__body">
-          <div class="card__number">02</div>
-          <h2 class="card__title"><a href="#">Top 10 Laptops of 2022</a></h2>
-          <p class="card__excerpt">Our best picks for various needs and budgets.</p>
-        </div>
-      </article>
+        <article class="card">
+          <img class="card__illustration" src="assets/images/image-retro-pcs.jpg" alt="">
+          <div class="card__body">
+            <div class="card__number">01</div>
+            <h3 class="card__title"><a href="#">Reviving Retro PCs</a></h3>
+            <p class="card__excerpt">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </article>
 
-      <article class="card">
-        <img class="card__illustration" src="assets/images/image-gaming-growth.jpg" alt="">
-        <div class="card__body">
-          <div class="card__number">02</div>
-          <h2 class="card__title"><a href="#">The Growth of Gaming</a></h2>
-          <p class="card__excerpt">How the pandemic has sparked fresh opportunities.</p>
-        </div>
-      </article>
+        <article class="card">
+          <img class="card__illustration" src="assets/images/image-top-laptops.jpg" alt="">
+          <div class="card__body">
+            <div class="card__number">02</div>
+            <h3 class="card__title"><a href="#">Top 10 Laptops of 2022</a></h3>
+            <p class="card__excerpt">Our best picks for various needs and budgets.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__illustration" src="assets/images/image-gaming-growth.jpg" alt="">
+          <div class="card__body">
+            <div class="card__number">03</div>
+            <h3 class="card__title"><a href="#">The Growth of Gaming</a></h3>
+            <p class="card__excerpt">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </article>
+      </section>
     </main>
   </div>
 
