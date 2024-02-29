@@ -1,0 +1,6 @@
+/* ---------- wrapper ---------- */
+.wrapper {
+    max-inline-size: var(--wrapper-max-inline-size);
+    padding-inline: var(--wrapper-inline-padding);
+    margin-inline: auto;
+}

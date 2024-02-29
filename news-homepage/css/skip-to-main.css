@@ -1,0 +1,15 @@
+/* ---------- skip to main content ---------- */
+.skip-to-main {
+    background: var(--skip-to-main-background);
+    color: var(--skip-to-main-color);
+    padding: var(--skip-to-main-padding);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: transform var(--skip-to-main-transition-time);
+}
+
+.skip-to-main:focus {
+    transform: translateY(0%);
+}

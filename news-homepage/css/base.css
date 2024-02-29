@@ -1,0 +1,8 @@
+/* ---------- base style ---------- */
+
+body {
+    color: var(--color-dark-grayish-blue);
+    font-family: var(--font-stack);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}

@@ -1,0 +1,14 @@
+/* ---------- header ---------- */
+.header {
+    padding-block-start: var(--header-block-start-padding);
+    padding-block-end: var(--header-block-end-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* ---------- logo ---------- */
+.logo {
+    width: var(--logo-width);
+}

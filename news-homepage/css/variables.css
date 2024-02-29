@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Inter";
+    src: local("Inter"), url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+/* ---------- variables ---------- */
+
+:root {
+    --color-soft-orange: hsl(35, 77%, 62%);
+    --color-soft-red: hsl(5, 85%, 63%);
+    --color-off-white: hsl(36, 100%, 99%);
+    --color-grayish-blue: hsl(233, 8%, 79%);
+    --color-dark-grayish-blue: hsl(236, 13%, 42%);
+    --color-very-dark-blue: hsl(240, 100%, 5%);
+
+    --font-stack: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-size-base: 1rem;
+    --line-height-base: 1.5;
+
+    --spacer-base: .25rem;
+    --spacer-1: calc(var(--spacer-base) * 1);
+    --spacer-2: calc(var(--spacer-base) * 2);
+    --spacer-3: calc(var(--spacer-base) * 3);
+    --spacer-4: calc(var(--spacer-base) * 4);
+
+    /* wrapper */
+    --wrapper-inline-padding: var(--spacer-4);
+    --wrapper-max-inline-size: calc(30rem + var(--wrapper-inline-padding) * 2);
+
+    /* header */
+    --header-block-start-padding: 1.75rem;
+    --header-block-end-padding: 1.75rem;
+
+    /* skip to main */
+    --skip-to-main-background: var(--color-very-dark-blue);
+    --skip-to-main-color: var(--color-off-white);
+    --skip-to-main-padding: .5rem;
+    --skip-to-main-transition-time: .3s;
+
+    /* logo */
+    --logo-width: 3rem;
+
+    /* navigation button */
+    --navigation-btn-hover-color: var(--color-soft-red);
+    --navigation-btn-width: 2.5rem;
+    --navigation-btn-height: 1.75rem;
+    --navigation-btn-fixed-top: var(--header-block-start-padding);
+    --navigation-btn-fixed-right: var(--wrapper-inline-padding);
+
+    /* navigation item */
+    --navigation-item-hover-color: var(--color-soft-red);
+    --navigation-item-block-padding: .5rem;
+    --navigation-item-inline-padding: .25rem;
+    --navigation-item-spacing: 2rem;
+
+    /* card */
+    --card-title-font-size: 1.125rem;
+    --card-title-font-weight: 800;
+    --card-title-line-height: 1.33;
+    --card-title-color: var(--color-very-dark-blue);
+
+    --card-featured-font-size: 2.5rem;
+    --card-featured-line-height: 1;
+
+    --card-simple-font-size: 1.25rem;
+    --card-simple-line-height: 1.2;
+
+    --card-btn-font-size: 0.875rem;
+    --card-btn-font-weight: 700;
+    --card-btn-letter-spacing: .3em;
+    --card-btn-text-transform: uppercase;
+    --card-btn-line-height: 1;
+    --card-btn-color: var(--color-off-white);
+    --card-btn-block-padding: 1rem;
+    --card-btn-inline-padding: 2rem;
+    --card-btn-background: var(--color-soft-red);
+    --card-btn-hover-background: var(--color-very-dark-blue);
+    --card-btn-color: var(--color-off-white);
+
+    /* news feed */
+    --news-feed-padding: 1rem;
+    --news-feed-background: var(--color-very-dark-blue);
+}
+
+@media (min-width: 48rem) {
+    :root {
+        --wrapper-max-inline-size: calc(52rem + var(--wrapper-inline-padding) * 2);
+    }
+}
+
+@media (min-width: 70rem) {
+    :root {
+        --wrapper-max-inline-size: calc(69.5rem + var(--wrapper-inline-padding) * 2);
+
+        /* header */
+        --header-block-start-padding: 5.5rem;
+        --header-block-end-padding: 3.5rem;
+
+        /* logo */
+        --logo-width: 4rem;
+    }
+}
