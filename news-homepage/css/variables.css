@@ -28,7 +28,7 @@
     --spacer-8: calc(var(--spacer-base) * 8);
     --spacer-16: calc(var(--spacer-base) * 16);
 
-    --transition-time: var(--transition-time);
+    --transition-time: .3s;
 
     /* wrapper */
     --wrapper-inline-padding: var(--spacer-4);
