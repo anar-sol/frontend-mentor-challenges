@@ -22,36 +22,59 @@
     --spacer-2: calc(var(--spacer-base) * 2);
     --spacer-3: calc(var(--spacer-base) * 3);
     --spacer-4: calc(var(--spacer-base) * 4);
+    --spacer-5: calc(var(--spacer-base) * 5);
+    --spacer-6: calc(var(--spacer-base) * 6);
+    --spacer-7: calc(var(--spacer-base) * 7);
+    --spacer-8: calc(var(--spacer-base) * 8);
+    --spacer-16: calc(var(--spacer-base) * 16);
+
+    --transition-time: var(--transition-time);
 
     /* wrapper */
     --wrapper-inline-padding: var(--spacer-4);
     --wrapper-max-inline-size: calc(30rem + var(--wrapper-inline-padding) * 2);
 
     /* header */
-    --header-block-start-padding: 1.75rem;
-    --header-block-end-padding: 1.75rem;
+    --header-block-start-padding: var(--spacer-7);
+    --header-block-end-padding: var(--spacer-7);
 
     /* skip to main */
     --skip-to-main-background: var(--color-very-dark-blue);
     --skip-to-main-color: var(--color-off-white);
-    --skip-to-main-padding: .5rem;
-    --skip-to-main-transition-time: .3s;
+    --skip-to-main-padding: var(--spacer-2);
+    --skip-to-main-transition-time: var(--transition-time);
 
     /* logo */
     --logo-width: 3rem;
 
+    /* navigation */
+    --navigation-color: var(--color-very-dark-blue);
+    --navigation-background: var(--color-off-white);
+    --navigation-padding-block-start: 7rem;
+    --navigation-width: 68%;
+    --navigation-transition-time: var(--transition-time);
+    --navigation-panel-padding: var(--spacer-6);
+
     /* navigation button */
+    --navigation-btn-color: var(--color-very-dark-blue);
     --navigation-btn-hover-color: var(--color-soft-red);
     --navigation-btn-width: 2.5rem;
     --navigation-btn-height: 1.75rem;
     --navigation-btn-fixed-top: var(--header-block-start-padding);
     --navigation-btn-fixed-right: var(--wrapper-inline-padding);
+    --navigation-btn-close-icon-width: 2rem;
 
     /* navigation item */
     --navigation-item-hover-color: var(--color-soft-red);
-    --navigation-item-block-padding: .5rem;
-    --navigation-item-inline-padding: .25rem;
-    --navigation-item-spacing: 2rem;
+    --navigation-item-block-padding: var(--spacer-2);
+    --navigation-item-inline-padding: var(--spacer-1);
+    --navigation-item-spacing: var(--spacer-8);
+    --navigation-item-vertical-spacing: var(--spacer-2);
+
+    /* overlay */
+    --overlay-background: var(--color-very-dark-blue);
+    --overlay-transition-time: var(--transition-time);
+    --overlay-opacity: .5;
 
     /* card */
     --card-title-font-size: 1.125rem;
@@ -80,23 +103,36 @@
     /* news feed */
     --news-feed-padding: 1rem;
     --news-feed-background: var(--color-very-dark-blue);
+
+    /* main grid */
+    --main-grid-column-gap: var(--spacer-16);
+    --main-grid-row-gap: var(--spacer-16);
+    --main-grid-padding-block-end: var(--spacer-16);
 }
 
 @media (min-width: 48rem) {
     :root {
+        /* wrapper */
         --wrapper-max-inline-size: calc(52rem + var(--wrapper-inline-padding) * 2);
+
+        /* logo */
+        --logo-width: 4rem;
+
+        /* main grid */
+        --main-grid-column-gap: var(--spacer-4);
     }
 }
 
 @media (min-width: 70rem) {
     :root {
+        /* wrapper */
         --wrapper-max-inline-size: calc(69.5rem + var(--wrapper-inline-padding) * 2);
 
         /* header */
         --header-block-start-padding: 5.5rem;
         --header-block-end-padding: 3.5rem;
 
-        /* logo */
-        --logo-width: 4rem;
+        /* main grid */
+        --main-grid-column-gap: var(--spacer-8);
     }
 }
