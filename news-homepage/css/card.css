@@ -2,6 +2,10 @@
 
 /* ----- base card ----- */
 
+.card {
+    cursor: pointer;
+}
+
 .card:not(.card--featured):not(.card--simple) {
     display: grid;
     grid-template-columns: 1fr 2fr;
