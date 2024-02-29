@@ -10,6 +10,8 @@
   <title>Frontend Mentor | News homepage</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="module" src="js/index.js"></script>
 </head>
 
 <body>
@@ -60,7 +62,7 @@
       <h1 class="sr-only">W. Home</h1>
       <article class="card card--featured">
         <picture>
-          <source media="(max-width: 767px)" srcset="assets/images/image-web-3-mobile.jpg" width="686" height="600" />
+          <source media="(max-width: 767px)" srcset="assets/images/image-web-3-mobile.jpg" width="686" height="600">
           <img class="card__illustration" src="assets/images/image-web-3-desktop.jpg" alt="" width="1460" height="600">
         </picture>
         <div class="card__body">
@@ -128,72 +130,6 @@
       </section>
     </main>
   </div>
-
-  <script>
-    /* -------- card -------- */
-    const cards = document.querySelectorAll(".card");
-    cards.forEach(card => {
-      card.addEventListener("click", () => {
-        const mainLink = card.querySelector(".card__main-link");
-        const isTextSelected = window.getSelection().toString();
-        if (!isTextSelected && mainLink) {
-          mainLink.click();
-        }
-      });
-    });
-
-    /* -------- header navigation -------- */
-    const navigationBtn = document.querySelector(".menuBtn");
-    const navigation = document.querySelector(`#${navigationBtn.getAttribute("aria-controls")}`);
-    const overlay = document.querySelector(".overlay");
-
-    navigationBtn.addEventListener("click", () => {
-      const isExpanded = navigationBtn.getAttribute("aria-expanded") === "true";
-      if (isExpanded) {
-        navigation.classList.remove("navigation--expanded");
-        overlay.classList.remove("overlay--expanded");
-        navigationBtn.classList.remove("menuBtn--fixed");
-      } else {
-        navigation.classList.add("navigation--expanded");
-        overlay.classList.add("overlay--expanded");
-        navigationBtn.classList.add("menuBtn--fixed");
-      }
-      navigationBtn.setAttribute("aria-label", isExpanded ? "Open menu" : "Close menu");
-      navigationBtn.setAttribute("aria-expanded", String(!isExpanded));
-    });
-
-    window.addEventListener("keydown", event => {
-      const isExpanded = navigationBtn.getAttribute("aria-expanded") === "true";
-      if (isExpanded && event.key === "Escape") {
-        navigationBtn.focus();
-        navigationBtn.click();
-      }
-    });
-
-    overlay.addEventListener("click", () => {
-      const isExpanded = navigationBtn.getAttribute("aria-expanded") === "true";
-      if (isExpanded) {
-        navigationBtn.focus();
-        navigationBtn.click();
-      }
-    });
-  </script>
 </body>
 
 </html>
-
-<!-- https://css-tricks.com/block-links-the-search-for-a-perfect-solution/#aa-method-4-sprinkle-javascript-on-the-second-method -->
-<!-- https://www.visionaustralia.org/business-consulting/digital-access/blog/how-to-make-read-more-links-accessible -->
-<!-- https://www.w3.org/WAI/tutorials/images/functional/#example-1-image-used-alone-as-a-linked-logo -->
-<!-- https://css-tricks.com/accessible-svgs/#aa-2-inline-svg -->
-<!--
-  https://webaim.org/techniques/skipnav/
-  https://webaim.org/techniques/css/invisiblecontent/#skipnavlinks 
-  https://web.dev/learn/html/navigation/#skip-to-content-link
-  https://css-tricks.com/how-to-create-a-skip-to-content-link/ 
--->
-
-<!-- https://unpkg.com/tailwindcss@3.4.1/src/css/preflight.css -->
-<!-- https://css-tricks.com/inclusively-hidden/ -->
-<!-- https://www.sarasoueidan.com/blog/accessible-icon-buttons/#technique-%234%3A-aria-label-on-the-%3Csvg%3E-icon -->
-<!-- https://www.impressivewebs.com/accessible-keyboard-friendly-hamburger-menu-slide-out-navigation/ -->
