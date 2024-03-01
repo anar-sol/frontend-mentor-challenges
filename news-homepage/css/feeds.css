@@ -26,6 +26,12 @@
     color: var(--color-off-white);
 }
 
+.news-feed .card__title a:hover,
+.news-feed .card__title a:active,
+.news-feed .card__title a:focus {
+    color: var(--color-soft-orange);
+}
+
 /* ---------- articles feed ---------- */
 .articles-feed {
     font-size: 15px;

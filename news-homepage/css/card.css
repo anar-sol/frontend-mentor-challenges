@@ -28,6 +28,12 @@
     color: var(--color-grayish-blue);
 }
 
+.card:not(.card--featured):not(.card--simple) .card__title a:hover,
+.card:not(.card--featured):not(.card--simple) .card__title a:active,
+.card:not(.card--featured):not(.card--simple) .card__title a:focus {
+    color: var(--color-soft-red);
+}
+
 .card .card__title {
     font-size: var(--card-title-font-size);
     font-weight: var(--card-title-font-weight);
