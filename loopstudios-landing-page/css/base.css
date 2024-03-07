@@ -1,0 +1,5 @@
+/* ---------- base style ---------- */
+
+body {
+    font-family: var(--base-font-stack);
+}
