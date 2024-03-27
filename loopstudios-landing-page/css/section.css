@@ -1,0 +1,20 @@
+/* section.css */
+
+.section.section--hero {
+    font-family: var(--section-hero-font);
+    font-size: var(--section-hero-font-size);
+    line-height: var(--section-hero-line-height);
+    font-weight: var(--section-hero-font-weight);
+    text-transform: var(--section-hero-text-transform);
+    color: var(--section-hero-color);
+    background: var(--section-hero-background);
+    height: var(--section-hero-min-height);
+    display: grid;
+    align-items: center;
+}
+
+.section.section--hero .section__body {
+    padding: var(--section-hero-body-padding);
+    border: var(--section-hero-body-border);
+    max-width: var(--section-hero-body-max-width);
+}

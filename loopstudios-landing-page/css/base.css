@@ -3,3 +3,9 @@
 body {
     font-family: var(--base-font-stack);
 }
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font-stack);
+}

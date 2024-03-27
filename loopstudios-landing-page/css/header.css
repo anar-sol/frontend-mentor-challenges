@@ -1,0 +1,82 @@
+/* ---------- header ---------- */
+.main-header {
+    color: var(--header-color);
+    padding-block: var(--header-block-padding);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-header > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* ---------- logo ---------- */
+.logo {
+    width: var(--logo-width);
+    z-index: 1;
+}
+
+/* ---------- menu button ---------- */
+.menu-btn {
+    width: var(--menu-btn-width);
+    height: var(--menu-btn-height);
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+.menu-btn .menu-btn__close-icon {
+    display: none;
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__close-icon {
+    display: initial;
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__open-icon {
+    display: none;
+}
+
+/* navigation */
+.navigation {
+    font-family: var(--heading-font-stack);
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    background: #000;
+    display: grid;
+    align-items: center;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform .3s;
+}
+
+.navigation.navigation--expanded {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.navigation .navigation__panel {
+    padding: 1.5rem;
+}
+
+.navigation .navigation__panel > * + * {
+    margin-top: 1.5rem;
+}
+
+/* prevents scrolling when the menu is expanded */
+body.no-scroll {
+    overflow: hidden;
+}
